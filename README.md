@@ -213,9 +213,6 @@ TouhouEirinHospital/
 **Q：启动时提示找不到 `runner.tehrpa`？**  
 A：确认 `runner.tehrpa` 与 `TEHloader.py` 位于同一目录，并从该目录启动。
 
-**Q：能否删除 `TEHrunner.py`？**  
-A：发布运行时可以不附带它。开发和重新打包时需要保留源码以及 `TEHpacker.py`。
-
 **Q：本地 Ollama 模式是否完全离线？**  
 A：LLM 请求默认发送到本机 Ollama，但游戏中的角色资料和图片功能仍可能访问外部网站。
 
