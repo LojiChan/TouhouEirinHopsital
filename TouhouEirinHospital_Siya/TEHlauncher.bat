@@ -41,5 +41,5 @@ goto RUN
 :RUN
 echo.
 echo 正在启动加载器...
-python TEHrunner.py --load
+python TEHloader.py --load
 pause
