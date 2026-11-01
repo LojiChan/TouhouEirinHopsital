@@ -1,0 +1,346 @@
+# ============================================================
+# 永远亭医疗模拟器 — 行动集 AG1
+# 格式：[ACTION] id=... name=... alias=... unlock=... category=... subject=... target=... effect=... duration=... contraindication=... note=...
+# category 取值：检验|影像|理学检查|治疗|护理|会诊|卫教|手术|特殊|威胁|注射|引流|植入|消融|创
+# ============================================================
+
+# ── 检验 ──────────────────────────────────────
+[ACTION] id=AG1-001 name=验血 alias=Blood Test unlock=easy category=检验 subject=全部 target=血液 effect=解锁WBC|CRP|电解质|肝肾功能 duration=即时 contraindication=无 note=基础检查
+[ACTION] id=AG1-002 name=验尿 alias=Urinalysis unlock=easy category=检验 subject=全部 target=尿液 effect=解锁尿常规|尿培养|尿沉渣 duration=即时 contraindication=无 note=基础检查
+[ACTION] id=AG1-003 name=验便 alias=Stool Test unlock=easy category=检验 subject=消化|儿科 target=粪便 effect=解锁便常规|隐血|寄生虫 duration=即时 contraindication=无 note=基础检查
+[ACTION] id=AG1-004 name=血培养 alias=Blood Culture unlock=normal category=检验 subject=急诊|内科 target=血液 effect=解锁病原菌|药敏 duration=24-48h contraindication=无 note=感染诊断
+[ACTION] id=AG1-005 name=痰培养 alias=Sputum Culture unlock=normal category=检验 subject=呼吸 target=痰液 effect=解锁病原菌|药敏 duration=24-48h contraindication=无 note=呼吸感染
+[ACTION] id=AG1-006 name=尿培养 alias=Urine Culture unlock=normal category=检验 subject=内科|妇产 target=尿液 effect=解锁病原菌|药敏 duration=24-48h contraindication=无 note=尿路感染
+[ACTION] id=AG1-007 name=胸水培养 alias=Pleural Fluid Culture unlock=normal category=检验 subject=呼吸 target=胸水 effect=解锁病原菌|药敏 duration=24-48h contraindication=无 note=胸水感染
+[ACTION] id=AG1-008 name=脑脊液培养 alias=CSF Culture unlock=hard category=检验 subject=神经 target=脑脊液 effect=解锁病原菌|药敏 duration=24-48h contraindication=无 note=脑膜炎诊断
+[ACTION] id=AG1-009 name=心肌酶谱 alias=Cardiac Enzymes unlock=normal category=检验 subject=心血管|急诊 target=血液 effect=解锁Troponin|CK-MB|LDH duration=即时 contraindication=无 note=心梗诊断
+[ACTION] id=AG1-010 name=肝功能 alias=Liver Function unlock=easy category=检验 subject=全部 target=血液 effect=解锁ALT|AST|胆红素|白蛋白 duration=即时 contraindication=无 note=基础检查
+[ACTION] id=AG1-011 name=肾功能 alias=Renal Function unlock=easy category=检验 subject=全部 target=血液 effect=解锁BUN|Cr|eGFR duration=即时 contraindication=无 note=基础检查
+[ACTION] id=AG1-012 name=电解质 alias=Electrolytes unlock=easy category=检验 subject=全部 target=血液 effect=解锁Na|K|Cl|Ca|Mg duration=即时 contraindication=无 note=基础检查
+[ACTION] id=AG1-013 name=血糖 alias=Blood Glucose unlock=easy category=检验 subject=内分泌|急诊 target=血液 effect=解锁血糖 duration=即时 contraindication=无 note=基础检查
+[ACTION] id=AG1-014 name=糖化血红蛋白 alias=HbA1c unlock=normal category=检验 subject=内分泌 target=血液 effect=解锁HbA1c duration=即时 contraindication=无 note=长期血糖
+[ACTION] id=AG1-015 name=血脂 alias=Lipid Panel unlock=easy category=检验 subject=心血管|内分泌 target=血液 effect=解锁TC|TG|LDL|HDL duration=即时 contraindication=无 note=基础检查
+[ACTION] id=AG1-016 name=凝血功能 alias=Coagulation Panel unlock=normal category=检验 subject=急诊|外科 target=血液 effect=解锁PT|APTT|INR|D-二聚体 duration=即时 contraindication=无 note=出血诊断
+[ACTION] id=AG1-017 name=D-二聚体 alias=D-Dimer unlock=normal category=检验 subject=急诊|呼吸 target=血液 effect=解锁D-二聚体 duration=即时 contraindication=无 note=血栓诊断
+[ACTION] id=AG1-018 name=动脉血气 alias=Arterial Blood Gas unlock=normal category=检验 subject=急诊|呼吸 target=动脉血 effect=解锁pH|PaO2|PaCO2|HCO3 duration=即时 contraindication=无 note=呼吸衰竭
+[ACTION] id=AG1-019 name=血氨 alias=Blood Ammonia unlock=normal category=检验 subject=消化|神经 target=血液 effect=解锁血氨 duration=即时 contraindication=无 note=肝性脑病
+[ACTION] id=AG1-020 name=血药浓度 alias=Drug Level unlock=hard category=检验 subject=全部 target=血液 effect=解锁药物浓度 duration=即时 contraindication=无 note=治疗药物监测
+[ACTION] id=AG1-021 name=激素水平 alias=Hormone Panel unlock=normal category=检验 subject=内分泌 target=血液 effect=解锁T3|T4|TSH|皮质醇 duration=即时 contraindication=无 note=内分泌检查
+[ACTION] id=AG1-022 name=肿瘤标志物 alias=Tumor Markers unlock=hard category=检验 subject=肿瘤 target=血液 effect=解锁AFP|CEA|CA19-9|PSA duration=即时 contraindication=无 note=肿瘤筛查
+[ACTION] id=AG1-023 name=自身抗体 alias=Autoantibodies unlock=hard category=检验 subject=风湿|内科 target=血液 effect=解锁ANA|抗dsDNA|RF duration=即时 contraindication=无 note=自身免疫
+[ACTION] id=AG1-024 name=免疫球蛋白 alias=Immunoglobulins unlock=normal category=检验 subject=内科 target=血液 effect=解锁IgG|IgA|IgM|IgE duration=即时 contraindication=无 note=免疫检查
+[ACTION] id=AG1-025 name=补体 alias=Complement unlock=normal category=检验 subject=内科 target=血液 effect=解锁C3|C4 duration=即时 contraindication=无 note=免疫检查
+[ACTION] id=AG1-026 name=病毒载量 alias=Viral Load unlock=hard category=检验 subject=内科 target=血液 effect=解锁病毒载量 duration=24-48h contraindication=无 note=病毒感染
+[ACTION] id=AG1-027 name=PCR检测 alias=PCR Test unlock=normal category=检验 subject=全部 target=血液|痰|拭子 effect=解锁病原体核酸 duration=2-6h contraindication=无 note=病原检测
+[ACTION] id=AG1-028 name=基因检测 alias=Genetic Test unlock=hard category=检验 subject=全部 target=血液|组织 effect=解锁基因突变|药物代谢 duration=24-72h contraindication=无 note=精准医学
+[ACTION] id=AG1-029 name=染色体核型 alias=Karyotype unlock=hard category=检验 subject=血液|妇产 target=血液|羊水 effect=解锁染色体异常 duration=7-14d contraindication=无 note=遗传诊断
+[ACTION] id=AG1-030 name=骨髓穿刺 alias=Bone Marrow Biopsy unlock=hard category=检验 subject=血液 target=骨髓 effect=解锁骨髓细胞学 duration=即时 contraindication=出血倾向|感染 note=血液病诊断
+[ACTION] id=AG1-031 name=腰椎穿刺 alias=Lumbar Puncture unlock=hard category=检验 subject=神经 target=脑脊液 effect=解锁脑脊液常规|生化|培养 duration=即时 contraindication=颅内高压|出血倾向 note=脑膜炎诊断
+[ACTION] id=AG1-032 name=腹腔穿刺 alias=Abdominal Paracentesis unlock=normal category=检验 subject=消化|急诊 target=腹水 effect=解锁腹水常规|生化|培养 duration=即时 contraindication=肠梗阻|出血倾向 note=腹水诊断
+[ACTION] id=AG1-033 name=胸腔穿刺 alias=Thoracentesis unlock=normal category=检验 subject=呼吸|急诊 target=胸水 effect=解锁胸水常规|生化|培养 duration=即时 contraindication=出血倾向 note=胸水诊断
+[ACTION] id=AG1-034 name=关节穿刺 alias=Arthrocentesis unlock=normal category=检验 subject=骨科|风湿 target=关节液 effect=解锁关节液常规|结晶|培养 duration=即时 contraindication=皮肤感染 note=关节炎诊断
+[ACTION] id=AG1-035 name=心包穿刺 alias=Pericardiocentesis unlock=hard category=检验 subject=心血管|急诊 target=心包液 effect=解锁心包液常规|生化 duration=即时 contraindication=出血倾向 note=心包积液
+[ACTION] id=AG1-036 name=痰涂片 alias=Sputum Smear unlock=easy category=检验 subject=呼吸 target=痰液 effect=解锁革兰染色|抗酸染色 duration=即时 contraindication=无 note=快速诊断
+[ACTION] id=AG1-037 name=血涂片 alias=Blood Smear unlock=normal category=检验 subject=血液 target=血液 effect=解锁血细胞形态|疟原虫 duration=即时 contraindication=无 note=血液病诊断
+[ACTION] id=AG1-038 name=尿沉渣 alias=Urine Sediment unlock=easy category=检验 subject=内科|妇产 target=尿液 effect=解锁细胞|管型|结晶 duration=即时 contraindication=无 note=尿路诊断
+[ACTION] id=AG1-039 name=便隐血 alias=Fecal Occult Blood unlock=easy category=检验 subject=消化 target=粪便 effect=解锁隐血 duration=即时 contraindication=无 note=消化道出血
+[ACTION] id=AG1-040 name=幽门螺杆菌检测 alias=H. Pylori Test unlock=normal category=检验 subject=消化 target=呼气|粪便|血液 effect=解锁幽门螺杆菌 duration=即时 contraindication=无 note=胃病诊断
+
+# ── 影像 ──────────────────────────────────────
+[ACTION] id=AG1-041 name=X光 alias=X-Ray unlock=easy category=影像 subject=全部 target=胸部|骨骼|腹部 effect=解锁骨骼|肺部|气液平面 duration=即时 contraindication=妊娠 note=基础影像
+[ACTION] id=AG1-042 name=胸部X光 alias=Chest X-Ray unlock=easy category=影像 subject=呼吸|心血管 target=胸部 effect=解锁肺部|心影|肋膈角 duration=即时 contraindication=妊娠 note=呼吸心血管
+[ACTION] id=AG1-043 name=腹部X光 alias=Abdominal X-Ray unlock=easy category=影像 subject=消化|急诊 target=腹部 effect=解锁肠管|气液平面|结石 duration=即时 contraindication=妊娠 note=急腹症
+[ACTION] id=AG1-044 name=骨骼X光 alias=Bone X-Ray unlock=easy category=影像 subject=骨科|急诊 target=骨骼 effect=解锁骨折|脱位|骨质 duration=即时 contraindication=妊娠 note=骨科
+[ACTION] id=AG1-045 name=CT alias=Computed Tomography unlock=normal category=影像 subject=全部 target=全身 effect=解锁断层影像|密度|增强 duration=即时 contraindication=妊娠|碘过敏 note=断层影像
+[ACTION] id=AG1-046 name=头颅CT alias=Head CT unlock=normal category=影像 subject=神经|急诊 target=头颅 effect=解锁出血|梗死|占位 duration=即时 contraindication=妊娠 note=神经急诊
+[ACTION] id=AG1-047 name=胸部CT alias=Chest CT unlock=normal category=影像 subject=呼吸|急诊 target=胸部 effect=解锁肺实质|纵隔|胸膜 duration=即时 contraindication=妊娠|碘过敏 note=呼吸诊断
+[ACTION] id=AG1-048 name=腹部CT alias=Abdominal CT unlock=normal category=影像 subject=消化|急诊 target=腹部 effect=解锁腹腔脏器|积液|穿孔 duration=即时 contraindication=妊娠|碘过敏 note=急腹症
+[ACTION] id=AG1-049 name=冠脉CT alias=Coronary CT unlock=hard category=影像 subject=心血管 target=冠状动脉 effect=解锁冠脉狭窄|钙化 duration=即时 contraindication=妊娠|碘过敏|心律不整 note=冠心病
+[ACTION] id=AG1-050 name=CT血管造影 alias=CT Angiography unlock=hard category=影像 subject=心血管|神经 target=血管 effect=解锁血管狭窄|动脉瘤|夹层 duration=即时 contraindication=妊娠|碘过敏|肾衰 note=血管成像
+[ACTION] id=AG1-051 name=MRI alias=Magnetic Resonance Imaging unlock=normal category=影像 subject=全部 target=全身 effect=解锁软组织|神经|关节 duration=即时 contraindication=金属植入|幽闭恐惧 note=软组织
+[ACTION] id=AG1-052 name=头颅MRI alias=Head MRI unlock=normal category=影像 subject=神经 target=头颅 effect=解锁脑实质|白质|脑干 duration=即时 contraindication=金属植入 note=神经诊断
+[ACTION] id=AG1-053 name=脊柱MRI alias=Spine MRI unlock=normal category=影像 subject=神经|骨科 target=脊柱 effect=解锁脊髓|椎间盘|神经根 duration=即时 contraindication=金属植入 note=脊柱诊断
+[ACTION] id=AG1-054 name=腹部MRI alias=Abdominal MRI unlock=normal category=影像 subject=消化|妇产 target=腹部 effect=解锁肝胆胰脾|子宫|卵巢 duration=即时 contraindication=金属植入 note=腹部诊断
+[ACTION] id=AG1-055 name=心脏MRI alias=Cardiac MRI unlock=hard category=影像 subject=心血管 target=心脏 effect=解锁心肌|瓣膜|功能 duration=即时 contraindication=金属植入 note=心脏结构
+[ACTION] id=AG1-056 name=MRA alias=Magnetic Resonance Angiography unlock=hard category=影像 subject=心血管|神经 target=血管 effect=解锁血管狭窄|动脉瘤 duration=即时 contraindication=金属植入 note=血管成像
+[ACTION] id=AG1-057 name=MRCP alias=MR Cholangiopancreatography unlock=hard category=影像 subject=消化 target=胆胰管 effect=解锁胆管|胰管 duration=即时 contraindication=金属植入 note=胆胰管
+[ACTION] id=AG1-058 name=超声 alias=Ultrasound unlock=easy category=影像 subject=全部 target=腹部|心脏|妇产 effect=解锁脏器|积液|胎儿 duration=即时 contraindication=无 note=无创
+[ACTION] id=AG1-059 name=腹部超声 alias=Abdominal Ultrasound unlock=easy category=影像 subject=消化|急诊 target=腹部 effect=解锁肝胆胰脾|积液 duration=即时 contraindication=无 note=急腹症
+[ACTION] id=AG1-060 name=心脏超声 alias=Echocardiography unlock=normal category=影像 subject=心血管 target=心脏 effect=解锁心腔|瓣膜|功能 duration=即时 contraindication=无 note=心脏结构
+[ACTION] id=AG1-061 name=经食道超声 alias=TEE unlock=hard category=影像 subject=心血管 target=心脏 effect=解锁心房|瓣膜|血栓 duration=即时 contraindication=食管病变 note=心脏细节
+[ACTION] id=AG1-062 name=妇产超声 alias=Obstetric Ultrasound unlock=easy category=影像 subject=妇产 target=子宫|胎儿 effect=解锁胎儿|胎盘|羊水 duration=即时 contraindication=无 note=产科
+[ACTION] id=AG1-063 name=血管超声 alias=Vascular Ultrasound unlock=normal category=影像 subject=心血管|外科 target=血管 effect=解锁狭窄|血栓|血流 duration=即时 contraindication=无 note=血管
+[ACTION] id=AG1-064 name=甲状腺超声 alias=Thyroid Ultrasound unlock=normal category=影像 subject=内分泌 target=甲状腺 effect=解锁结节|囊肿|血流 duration=即时 contraindication=无 note=甲状腺
+[ACTION] id=AG1-065 name=乳腺超声 alias=Breast Ultrasound unlock=normal category=影像 subject=妇产|肿瘤 target=乳腺 effect=解锁结节|囊肿 duration=即时 contraindication=无 note=乳腺
+[ACTION] id=AG1-066 name=超声造影 alias=Contrast Ultrasound unlock=hard category=影像 subject=消化|肿瘤 target=肝|肾 effect=解锁血流|肿瘤血供 duration=即时 contraindication=过敏 note=肿瘤诊断
+[ACTION] id=AG1-067 name=PET-CT alias=PET-CT unlock=hard category=影像 subject=肿瘤 target=全身 effect=解锁代谢|肿瘤|转移 duration=即时 contraindication=妊娠|糖尿病 note=肿瘤诊断
+[ACTION] id=AG1-068 name=骨扫描 alias=Bone Scan unlock=hard category=影像 subject=肿瘤|骨科 target=骨骼 effect=解锁骨转移|骨折|感染 duration=即时 contraindication=妊娠 note=骨诊断
+[ACTION] id=AG1-069 name=心肌灌注显像 alias=Myocardial Perfusion Imaging unlock=hard category=影像 subject=心血管 target=心肌 effect=解锁缺血|梗死 duration=即时 contraindication=妊娠|哮喘 note=冠心病
+[ACTION] id=AG1-070 name=肺通气灌注显像 alias=V/Q Scan unlock=hard category=影像 subject=呼吸 target=肺 effect=解锁肺栓塞|通气灌注 duration=即时 contraindication=妊娠 note=肺栓塞
+[ACTION] id=AG1-071 name=消化道钡餐 alias=Barium Meal unlock=normal category=影像 subject=消化 target=消化道 effect=解锁溃疡|肿瘤|狭窄 duration=即时 contraindication=肠梗阻|穿孔 note=消化道
+[ACTION] id=AG1-072 name=钡灌肠 alias=Barium Enema unlock=normal category=影像 subject=消化 target=结肠 effect=解锁息肉|肿瘤|狭窄 duration=即时 contraindication=肠梗阻|穿孔 note=结肠
+[ACTION] id=AG1-073 name=静脉肾盂造影 alias=IVP unlock=normal category=影像 subject=泌尿 target=肾|输尿管|膀胱 effect=解锁结石|狭窄|肿瘤 duration=即时 contraindication=碘过敏|肾衰 note=泌尿
+[ACTION] id=AG1-074 name=子宫输卵管造影 alias=HSG unlock=normal category=影像 subject=妇产 target=子宫|输卵管 effect=解锁通畅|畸形 duration=即时 contraindication=妊娠|感染 note=不孕
+[ACTION] id=AG1-075 name=关节造影 alias=Arthrography unlock=normal category=影像 subject=骨科 target=关节 effect=解锁软骨|韧带|半月板 duration=即时 contraindication=感染 note=关节
+[ACTION] id=AG1-076 name=乳腺钼靶 alias=Mammography unlock=normal category=影像 subject=妇产|肿瘤 target=乳腺 effect=解锁钙化|肿块 duration=即时 contraindication=妊娠 note=乳腺癌筛查
+[ACTION] id=AG1-077 name=数字减影血管造影 alias=DSA unlock=hard category=影像 subject=心血管|神经 target=血管 effect=解锁血管狭窄|动脉瘤|畸形 duration=即时 contraindication=碘过敏|肾衰 note=血管金标准
+[ACTION] id=AG1-078 name=内镜逆行胰胆管造影 alias=ERCP unlock=hard category=影像 subject=消化 target=胆胰管 effect=解锁结石|狭窄|肿瘤 duration=即时 contraindication=胰腺炎|感染 note=胆胰管
+[ACTION] id=AG1-079 name=术中超声 alias=Intraoperative Ultrasound unlock=hard category=影像 subject=外科 target=手术区 effect=解锁病灶定位 duration=即时 contraindication=无 note=术中导航
+[ACTION] id=AG1-080 name=术中导航 alias=Surgical Navigation unlock=hard category=影像 subject=外科|神经 target=手术区 effect=解锁精准定位 duration=即时 contraindication=无 note=术中导航
+
+# ── 理学检查 ──────────────────────────────────────
+[ACTION] id=AG1-081 name=问诊 alias=History Taking unlock=easy category=理学检查 subject=全部 target=患者 effect=解锁病史|症状|诱因 duration=即时 contraindication=无 note=基础
+[ACTION] id=AG1-082 name=视诊 alias=Inspection unlock=easy category=理学检查 subject=全部 target=患者 effect=解锁外观|皮肤|呼吸 duration=即时 contraindication=无 note=基础
+[ACTION] id=AG1-083 name=触诊 alias=Palpation unlock=easy category=理学检查 subject=全部 target=患者 effect=解锁压痛|肿块|温度 duration=即时 contraindication=无 note=基础
+[ACTION] id=AG1-084 name=叩诊 alias=Percussion unlock=easy category=理学检查 subject=全部 target=患者 effect=解锁浊音|鼓音|实音 duration=即时 contraindication=无 note=基础
+[ACTION] id=AG1-085 name=听诊 alias=Auscultation unlock=easy category=理学检查 subject=全部 target=患者 effect=解锁心音|呼吸音|肠鸣音 duration=即时 contraindication=无 note=基础
+[ACTION] id=AG1-086 name=量血压 alias=Blood Pressure unlock=easy category=理学检查 subject=全部 target=患者 effect=解锁血压 duration=即时 contraindication=无 note=基础
+[ACTION] id=AG1-087 name=量体温 alias=Temperature unlock=easy category=理学检查 subject=全部 target=患者 effect=解锁体温 duration=即时 contraindication=无 note=基础
+[ACTION] id=AG1-088 name=量脉搏 alias=Pulse unlock=easy category=理学检查 subject=全部 target=患者 effect=解锁脉搏 duration=即时 contraindication=无 note=基础
+[ACTION] id=AG1-089 name=量呼吸 alias=Respiration unlock=easy category=理学检查 subject=全部 target=患者 effect=解锁呼吸频率 duration=即时 contraindication=无 note=基础
+[ACTION] id=AG1-090 name=血氧监测 alias=Pulse Oximetry unlock=easy category=理学检查 subject=全部 target=患者 effect=解锁SpO2 duration=即时 contraindication=无 note=基础
+[ACTION] id=AG1-091 name=心电图 alias=ECG unlock=easy category=理学检查 subject=心血管|急诊 target=心脏 effect=解锁心律|ST段|QT duration=即时 contraindication=无 note=基础
+[ACTION] id=AG1-092 name=心电监护 alias=Cardiac Monitoring unlock=normal category=理学检查 subject=心血管|急诊 target=心脏 effect=解锁持续心律|ST段 duration=持续 contraindication=无 note=监护
+[ACTION] id=AG1-093 name=神经系统检查 alias=Neurological Exam unlock=normal category=理学检查 subject=神经 target=患者 effect=解锁意识|反射|肌力|感觉 duration=即时 contraindication=无 note=神经
+[ACTION] id=AG1-094 name=格拉斯哥昏迷评分 alias=GCS unlock=normal category=理学检查 subject=神经|急诊 target=患者 effect=解锁意识评分 duration=即时 contraindication=无 note=神经
+[ACTION] id=AG1-095 name=瞳孔检查 alias=Pupil Exam unlock=easy category=理学检查 subject=神经|急诊 target=瞳孔 effect=解锁瞳孔大小|光反射 duration=即时 contraindication=无 note=神经
+[ACTION] id=AG1-096 name=眼底检查 alias=Fundoscopy unlock=normal category=理学检查 subject=眼科|神经 target=眼底 effect=解锁视盘|血管|出血 duration=即时 contraindication=无 note=眼科
+[ACTION] id=AG1-097 name=腹部触诊 alias=Abdominal Palpation unlock=easy category=理学检查 subject=消化|急诊 target=腹部 effect=解锁压痛|反跳痛|肌紧张 duration=即时 contraindication=无 note=急腹症
+[ACTION] id=AG1-098 name=直肠指检 alias=Digital Rectal Exam unlock=normal category=理学检查 subject=消化|泌尿 target=直肠 effect=解锁肿块|出血|前列腺 duration=即时 contraindication=无 note=基础
+[ACTION] id=AG1-099 name=妇科检查 alias=Gynecological Exam unlock=normal category=理学检查 subject=妇产 target=盆腔 effect=解锁宫颈|子宫|附件 duration=即时 contraindication=无 note=妇产
+[ACTION] id=AG1-100 name=关节检查 alias=Joint Exam unlock=easy category=理学检查 subject=骨科|风湿 target=关节 effect=解锁肿胀|活动度|稳定性 duration=即时 contraindication=无 note=骨科
+
+# ── 治疗 ──────────────────────────────────────
+[ACTION] id=AG1-101 name=给氧 alias=Oxygen Therapy unlock=easy category=治疗 subject=全部 target=患者 effect=提升SpO2 duration=持续 contraindication=无 note=基础
+[ACTION] id=AG1-102 name=鼻导管给氧 alias=Nasal Cannula unlock=easy category=治疗 subject=全部 target=患者 effect=提升SpO2 3-5L duration=持续 contraindication=无 note=低流量
+[ACTION] id=AG1-103 name=面罩给氧 alias=Face Mask unlock=easy category=治疗 subject=全部 target=患者 effect=提升SpO2 5-10L duration=持续 contraindication=无 note=中流量
+[ACTION] id=AG1-104 name=储氧面罩给氧 alias=NRB Mask unlock=normal category=治疗 subject=急诊|呼吸 target=患者 effect=提升SpO2 10-15L duration=持续 contraindication=无 note=高流量
+[ACTION] id=AG1-105 name=高流量鼻导管 alias=HFNC unlock=hard category=治疗 subject=呼吸|急诊 target=患者 effect=提升SpO2|加温加湿 duration=持续 contraindication=无 note=高流量
+[ACTION] id=AG1-106 name=无创通气 alias=NIV unlock=hard category=治疗 subject=呼吸|急诊 target=患者 effect=辅助通气|减少插管 duration=持续 contraindication=意识障碍|呕吐 note=呼吸支持
+[ACTION] id=AG1-107 name=气管插管 alias=Endotracheal Intubation unlock=hard category=治疗 subject=急诊|麻醉 target=气道 effect=建立人工气道 duration=即时 contraindication=颈椎损伤 note=气道管理
+[ACTION] id=AG1-108 name=气管切开 alias=Tracheostomy unlock=hard category=手术 subject=急诊|外科 target=气道 effect=建立长期气道 duration=即时 contraindication=感染|凝血障碍 note=长期通气
+[ACTION] id=AG1-109 name=机械通气 alias=Mechanical Ventilation unlock=hard category=治疗 subject=急诊|呼吸 target=患者 effect=辅助通气 duration=持续 contraindication=无 note=呼吸支持
+[ACTION] id=AG1-110 name=吸痰 alias=Suction unlock=easy category=护理 subject=呼吸|急诊 target=气道 effect=清除分泌物 duration=即时 contraindication=无 note=护理
+[ACTION] id=AG1-111 name=雾化吸入 alias=Nebulization unlock=easy category=治疗 subject=呼吸 target=气道 effect=局部给药 duration=即时 contraindication=无 note=呼吸
+[ACTION] id=AG1-112 name=洗胃 alias=Gastric Lavage unlock=normal category=治疗 subject=急诊|毒物 target=胃 effect=清除毒物 duration=即时 contraindication=腐蚀性中毒|意识障碍 note=中毒
+[ACTION] id=AG1-113 name=活性炭灌服 alias=Activated Charcoal unlock=normal category=治疗 subject=急诊|毒物 target=胃 effect=吸附毒物 duration=即时 contraindication=肠梗阻|意识障碍 note=中毒
+[ACTION] id=AG1-114 name=导泻 alias=Catharsis unlock=normal category=治疗 subject=急诊|毒物 target=肠道 effect=促进排出 duration=即时 contraindication=肠梗阻 note=中毒
+[ACTION] id=AG1-115 name=灌肠 alias=Enema unlock=easy category=治疗 subject=消化|急诊 target=肠道 effect=清洁|给药 duration=即时 contraindication=肠梗阻|穿孔 note=基础
+[ACTION] id=AG1-116 name=胃肠减压 alias=Nasogastric Decompression unlock=normal category=治疗 subject=消化|外科 target=胃 effect=减压|引流 duration=持续 contraindication=食管静脉曲张 note=外科
+[ACTION] id=AG1-117 name=导尿 alias=Urinary Catheterization unlock=easy category=治疗 subject=全部 target=膀胱 effect=引流尿液 duration=持续 contraindication=尿道损伤 note=基础
+[ACTION] id=AG1-118 name=留置导尿 alias=Indwelling Catheter unlock=easy category=护理 subject=全部 target=膀胱 effect=持续引流 duration=持续 contraindication=尿路感染 note=护理
+[ACTION] id=AG1-119 name=胸腔引流 alias=Chest Tube Drainage unlock=normal category=引流 subject=呼吸|急诊 target=胸腔 effect=引流气液 duration=持续 contraindication=凝血障碍 note=气胸|胸水
+[ACTION] id=AG1-120 name=腹腔引流 alias=Abdominal Drainage unlock=normal category=引流 subject=消化|外科 target=腹腔 effect=引流积液 duration=持续 contraindication=凝血障碍 note=腹水|脓肿
+[ACTION] id=AG1-121 name=心包引流 alias=Pericardial Drainage unlock=hard category=引流 subject=心血管|急诊 target=心包 effect=引流心包液 duration=持续 contraindication=凝血障碍 note=心包积液
+[ACTION] id=AG1-122 name=脑室引流 alias=Ventricular Drainage unlock=hard category=引流 subject=神经 target=脑室 effect=引流脑脊液 duration=持续 contraindication=感染 note=脑积水
+[ACTION] id=AG1-123 name=胆道引流 alias=Biliary Drainage unlock=hard category=引流 subject=消化 target=胆道 effect=引流胆汁 duration=持续 contraindication=凝血障碍 note=胆道梗阻
+[ACTION] id=AG1-124 name=经皮肝穿刺胆道引流 alias=PTCD unlock=hard category=引流 subject=消化 target=胆道 effect=引流胆汁 duration=持续 contraindication=凝血障碍|腹水 note=胆道梗阻
+[ACTION] id=AG1-125 name=肾造瘘 alias=Nephrostomy unlock=hard category=引流 subject=泌尿 target=肾 effect=引流尿液 duration=持续 contraindication=凝血障碍 note=尿路梗阻
+[ACTION] id=AG1-126 name=膀胱造瘘 alias=Cystostomy unlock=hard category=引流 subject=泌尿 target=膀胱 effect=引流尿液 duration=持续 contraindication=凝血障碍 note=尿路梗阻
+[ACTION] id=AG1-127 name=伤口清创 alias=Wound Debridement unlock=normal category=治疗 subject=外科 target=伤口 effect=清除坏死|预防感染 duration=即时 contraindication=凝血障碍 note=外科
+[ACTION] id=AG1-128 name=换药 alias=Dressing Change unlock=easy category=护理 subject=外科 target=伤口 effect=清洁|保护 duration=即时 contraindication=无 note=护理
+[ACTION] id=AG1-129 name=止血 alias=Hemostasis unlock=normal category=治疗 subject=外科|急诊 target=出血点 effect=控制出血 duration=即时 contraindication=无 note=急救
+[ACTION] id=AG1-130 name=包扎 alias=Bandaging unlock=easy category=护理 subject=外科 target=伤口 effect=保护|固定 duration=即时 contraindication=无 note=护理
+[ACTION] id=AG1-131 name=固定 alias=Immobilization unlock=easy category=治疗 subject=骨科|急诊 target=骨折 effect=固定骨折 duration=即时 contraindication=无 note=骨科
+[ACTION] id=AG1-132 name=牵引 alias=Traction unlock=normal category=治疗 subject=骨科 target=骨折 effect=复位|固定 duration=持续 contraindication=无 note=骨科
+[ACTION] id=AG1-133 name=复位 alias=Reduction unlock=normal category=治疗 subject=骨科|急诊 target=关节|骨折 effect=复位 duration=即时 contraindication=骨折端暴露 note=骨科
+[ACTION] id=AG1-134 name=石膏固定 alias=Cast Immobilization unlock=easy category=治疗 subject=骨科 target=骨折 effect=固定 duration=持续 contraindication=肿胀|感染 note=骨科
+[ACTION] id=AG1-135 name=物理降温 alias=Physical Cooling unlock=easy category=治疗 subject=全部 target=患者 effect=降温 duration=即时 contraindication=寒战 note=退热
+[ACTION] id=AG1-136 name=冰敷 alias=Ice Pack unlock=easy category=治疗 subject=全部 target=患处 effect=降温|消肿 duration=即时 contraindication=循环障碍 note=基础
+[ACTION] id=AG1-137 name=热敷 alias=Hot Pack unlock=easy category=治疗 subject=全部 target=患处 effect=促进循环|消肿 duration=即时 contraindication=急性炎症|出血 note=基础
+[ACTION] id=AG1-138 name=体位引流 alias=Postural Drainage unlock=normal category=治疗 subject=呼吸 target=气道 effect=促进排痰 duration=即时 contraindication=颅内高压|心衰 note=呼吸
+[ACTION] id=AG1-139 name=拍背排痰 alias=Chest Physiotherapy unlock=easy category=护理 subject=呼吸 target=气道 effect=促进排痰 duration=即时 contraindication=骨折|出血 note=护理
+[ACTION] id=AG1-140 name=呼吸训练 alias=Breathing Exercise unlock=easy category=护理 subject=呼吸 target=患者 effect=改善通气 duration=即时 contraindication=无 note=护理
+
+# ── 护理 ──────────────────────────────────────
+[ACTION] id=AG1-141 name=卧床休息 alias=Bed Rest unlock=easy category=护理 subject=全部 target=患者 effect=减少耗氧 duration=持续 contraindication=无 note=基础
+[ACTION] id=AG1-142 name=抬高床头 alias=Elevate Head unlock=easy category=护理 subject=全部 target=患者 effect=改善呼吸|减少反流 duration=持续 contraindication=无 note=护理
+[ACTION] id=AG1-143 name=心电监护 alias=Cardiac Monitoring unlock=normal category=护理 subject=心血管|急诊 target=患者 effect=持续监测心律 duration=持续 contraindication=无 note=护理
+[ACTION] id=AG1-144 name=血压监测 alias=BP Monitoring unlock=easy category=护理 subject=全部 target=患者 effect=持续监测血压 duration=持续 contraindication=无 note=护理
+[ACTION] id=AG1-145 name=血氧监测 alias=SpO2 Monitoring unlock=easy category=护理 subject=全部 target=患者 effect=持续监测SpO2 duration=持续 contraindication=无 note=护理
+[ACTION] id=AG1-146 name=体温监测 alias=Temperature Monitoring unlock=easy category=护理 subject=全部 target=患者 effect=持续监测体温 duration=持续 contraindication=无 note=护理
+[ACTION] id=AG1-147 name=出入量记录 alias=Intake Output Record unlock=easy category=护理 subject=全部 target=患者 effect=记录出入量 duration=持续 contraindication=无 note=护理
+[ACTION] id=AG1-148 name=口腔护理 alias=Oral Care unlock=easy category=护理 subject=全部 target=口腔 effect=清洁|预防感染 duration=即时 contraindication=无 note=护理
+[ACTION] id=AG1-149 name=皮肤护理 alias=Skin Care unlock=easy category=护理 subject=全部 target=皮肤 effect=清洁|预防压疮 duration=即时 contraindication=无 note=护理
+[ACTION] id=AG1-150 name=翻身拍背 alias=Turn and Pat unlock=easy category=护理 subject=全部 target=患者 effect=预防压疮|排痰 duration=即时 contraindication=无 note=护理
+[ACTION] id=AG1-151 name=鼻饲 alias=Nasogastric Feeding unlock=normal category=护理 subject=全部 target=胃 effect=营养支持 duration=持续 contraindication=肠梗阻 note=护理
+[ACTION] id=AG1-152 name=肠外营养 alias=Parenteral Nutrition unlock=hard category=治疗 subject=全部 target=静脉 effect=营养支持 duration=持续 contraindication=严重肝损 note=营养
+[ACTION] id=AG1-153 name=静脉输液 alias=IV Fluid unlock=easy category=治疗 subject=全部 target=静脉 effect=补液|给药 duration=持续 contraindication=心衰|肾衰 note=基础
+[ACTION] id=AG1-154 name=静脉注射 alias=IV Injection unlock=easy category=注射 subject=全部 target=静脉 effect=快速给药 duration=即时 contraindication=无 note=基础
+[ACTION] id=AG1-155 name=肌肉注射 alias=IM Injection unlock=easy category=注射 subject=全部 target=肌肉 effect=给药 duration=即时 contraindication=凝血障碍 note=基础
+[ACTION] id=AG1-156 name=皮下注射 alias=SC Injection unlock=easy category=注射 subject=全部 target=皮下 effect=给药 duration=即时 contraindication=无 note=基础
+[ACTION] id=AG1-157 name=皮内注射 alias=ID Injection unlock=easy category=注射 subject=全部 target=皮内 effect=给药|皮试 duration=即时 contraindication=无 note=基础
+[ACTION] id=AG1-158 name=动脉穿刺 alias=Arterial Puncture unlock=normal category=注射 subject=急诊|呼吸 target=动脉 effect=采血|监测血压 duration=即时 contraindication=凝血障碍 note=血气
+[ACTION] id=AG1-159 name=中心静脉穿刺 alias=Central Venous Catheterization unlock=hard category=注射 subject=急诊|外科 target=中心静脉 effect=监测|给药|补液 duration=持续 contraindication=凝血障碍|感染 note=重症
+[ACTION] id=AG1-160 name=外周静脉穿刺 alias=Peripheral IV unlock=easy category=注射 subject=全部 target=外周静脉 effect=给药|补液 duration=持续 contraindication=无 note=基础
+[ACTION] id=AG1-161 name=骨髓穿刺注射 alias=Intraosseous Injection unlock=hard category=注射 subject=急诊 target=骨髓 effect=紧急给药 duration=即时 contraindication=骨折|感染 note=急救
+[ACTION] id=AG1-162 name=关节腔注射 alias=Intra-articular Injection unlock=normal category=注射 subject=骨科|风湿 target=关节 effect=局部给药 duration=即时 contraindication=感染 note=骨科
+[ACTION] id=AG1-163 name=鞘内注射 alias=Intrathecal Injection unlock=hard category=注射 subject=神经|肿瘤 target=蛛网膜下腔 effect=局部给药 duration=即时 contraindication=感染|凝血障碍 note=神经
+[ACTION] id=AG1-164 name=硬膜外注射 alias=Epidural Injection unlock=hard category=注射 subject=麻醉|妇产 target=硬膜外 effect=麻醉|镇痛 duration=即时 contraindication=感染|凝血障碍 note=麻醉
+[ACTION] id=AG1-165 name=局部浸润麻醉 alias=Local Infiltration Anesthesia unlock=easy category=注射 subject=外科 target=患处 effect=局部麻醉 duration=即时 contraindication=过敏 note=麻醉
+[ACTION] id=AG1-166 name=神经阻滞 alias=Nerve Block unlock=hard category=注射 subject=麻醉|骨科 target=神经 effect=区域麻醉 duration=即时 contraindication=感染|凝血障碍 note=麻醉
+[ACTION] id=AG1-167 name=静脉留置针 alias=IV Cannula unlock=easy category=注射 subject=全部 target=静脉 effect=持续给药 duration=持续 contraindication=无 note=基础
+[ACTION] id=AG1-168 name=输液泵 alias=Infusion Pump unlock=normal category=治疗 subject=全部 target=静脉 effect=精准给药 duration=持续 contraindication=无 note=护理
+[ACTION] id=AG1-169 name=微量泵 alias=Syringe Pump unlock=normal category=治疗 subject=全部 target=静脉 effect=精准给药 duration=持续 contraindication=无 note=护理
+[ACTION] id=AG1-170 name=输血 alias=Blood Transfusion unlock=hard category=治疗 subject=全部 target=静脉 effect=补充血容量 duration=持续 contraindication=溶血|过敏 note=急救
+
+# ── 会诊 ──────────────────────────────────────
+[ACTION] id=AG1-171 name=外科会诊 alias=Surgical Consult unlock=normal category=会诊 subject=全部 target=专科 effect=外科评估 duration=即时 contraindication=无 note=会诊
+[ACTION] id=AG1-172 name=内科会诊 alias=Internal Medicine Consult unlock=normal category=会诊 subject=全部 target=专科 effect=内科评估 duration=即时 contraindication=无 note=会诊
+[ACTION] id=AG1-173 name=心内科会诊 alias=Cardiology Consult unlock=normal category=会诊 subject=心血管 target=专科 effect=心血管评估 duration=即时 contraindication=无 note=会诊
+[ACTION] id=AG1-174 name=呼吸科会诊 alias=Pulmonology Consult unlock=normal category=会诊 subject=呼吸 target=专科 effect=呼吸评估 duration=即时 contraindication=无 note=会诊
+[ACTION] id=AG1-175 name=神经科会诊 alias=Neurology Consult unlock=normal category=会诊 subject=神经 target=专科 effect=神经评估 duration=即时 contraindication=无 note=会诊
+[ACTION] id=AG1-176 name=精神科会诊 alias=Psychiatric Consult unlock=normal category=会诊 subject=精神 target=专科 effect=精神评估 duration=即时 contraindication=无 note=会诊
+[ACTION] id=AG1-177 name=妇产科会诊 alias=OB/GYN Consult unlock=normal category=会诊 subject=妇产 target=专科 effect=妇产评估 duration=即时 contraindication=无 note=会诊
+[ACTION] id=AG1-178 name=儿科会诊 alias=Pediatric Consult unlock=normal category=会诊 subject=儿科 target=专科 effect=儿科评估 duration=即时 contraindication=无 note=会诊
+[ACTION] id=AG1-179 name=麻醉科会诊 alias=Anesthesia Consult unlock=normal category=会诊 subject=麻醉 target=专科 effect=麻醉评估 duration=即时 contraindication=无 note=会诊
+[ACTION] id=AG1-180 name=重症科会诊 alias=ICU Consult unlock=hard category=会诊 subject=急诊 target=专科 effect=重症评估 duration=即时 contraindication=无 note=会诊
+[ACTION] id=AG1-181 name=感染科会诊 alias=Infectious Disease Consult unlock=normal category=会诊 subject=全部 target=专科 effect=感染评估 duration=即时 contraindication=无 note=会诊
+[ACTION] id=AG1-182 name=肿瘤科会诊 alias=Oncology Consult unlock=hard category=会诊 subject=肿瘤 target=专科 effect=肿瘤评估 duration=即时 contraindication=无 note=会诊
+[ACTION] id=AG1-183 name=风湿科会诊 alias=Rheumatology Consult unlock=normal category=会诊 subject=风湿 target=专科 effect=风湿评估 duration=即时 contraindication=无 note=会诊
+[ACTION] id=AG1-184 name=内分泌科会诊 alias=Endocrinology Consult unlock=normal category=会诊 subject=内分泌 target=专科 effect=内分泌评估 duration=即时 contraindication=无 note=会诊
+[ACTION] id=AG1-185 name=肾内科会诊 alias=Nephrology Consult unlock=normal category=会诊 subject=泌尿 target=专科 effect=肾评估 duration=即时 contraindication=无 note=会诊
+[ACTION] id=AG1-186 name=血液科会诊 alias=Hematology Consult unlock=normal category=会诊 subject=血液 target=专科 effect=血液评估 duration=即时 contraindication=无 note=会诊
+[ACTION] id=AG1-187 name=皮肤科会诊 alias=Dermatology Consult unlock=easy category=会诊 subject=皮肤 target=专科 effect=皮肤评估 duration=即时 contraindication=无 note=会诊
+[ACTION] id=AG1-188 name=眼科会诊 alias=Ophthalmology Consult unlock=easy category=会诊 subject=眼科 target=专科 effect=眼科评估 duration=即时 contraindication=无 note=会诊
+[ACTION] id=AG1-189 name=耳鼻喉科会诊 alias=ENT Consult unlock=easy category=会诊 subject=耳鼻喉 target=专科 effect=耳鼻喉评估 duration=即时 contraindication=无 note=会诊
+[ACTION] id=AG1-190 name=口腔科会诊 alias=Dental Consult unlock=easy category=会诊 subject=口腔 target=专科 effect=口腔评估 duration=即时 contraindication=无 note=会诊
+[ACTION] id=AG1-191 name=康复科会诊 alias=Rehabilitation Consult unlock=normal category=会诊 subject=全部 target=专科 effect=康复评估 duration=即时 contraindication=无 note=会诊
+[ACTION] id=AG1-192 name=营养科会诊 alias=Nutrition Consult unlock=normal category=会诊 subject=全部 target=专科 effect=营养评估 duration=即时 contraindication=无 note=会诊
+[ACTION] id=AG1-193 name=心理科会诊 alias=Psychology Consult unlock=normal category=会诊 subject=精神 target=专科 effect=心理评估 duration=即时 contraindication=无 note=会诊
+[ACTION] id=AG1-194 name=妖力会诊 alias=Youkai Consult unlock=hard category=会诊 subject=全部 target=灵梦|紫 effect=妖力评估|净化 duration=即时 contraindication=无 note=特殊
+[ACTION] id=AG1-195 name=博丽灵梦退治 alias=Hakurei Exorcism unlock=hard category=会诊 subject=全部 target=灵梦 effect=妖力净化 duration=即时 contraindication=无 note=特殊
+[ACTION] id=AG1-196 name=八云紫境界评估 alias=Yukari Boundary Assessment unlock=hard category=会诊 subject=全部 target=紫 effect=境界评估|稳定 duration=即时 contraindication=无 note=特殊
+[ACTION] id=AG1-197 name=月都科技会诊 alias=Lunar Tech Consult unlock=extra category=会诊 subject=全部 target=月都 effect=月都科技评估 duration=即时 contraindication=无 note=特殊
+[ACTION] id=AG1-198 name=永远亭秘药会诊 alias=Eientei Secret Consult unlock=hard category=会诊 subject=全部 target=永琳 effect=秘药评估 duration=即时 contraindication=无 note=特殊
+[ACTION] id=AG1-199 name=蓬莱山辉夜咨询 alias=Kaguya Consultation unlock=extra category=会诊 subject=全部 target=辉夜 effect=不死评估 duration=即时 contraindication=无 note=特殊
+[ACTION] id=AG1-200 name=因幡帝幸运咨询 alias=Tewi Luck Consult unlock=hard category=会诊 subject=全部 target=帝 effect=幸运评估 duration=即时 contraindication=无 note=特殊
+
+# ── 卫教 ──────────────────────────────────────
+[ACTION] id=AG1-201 name=戒烟指导 alias=Smoking Cessation unlock=easy category=卫教 subject=全部 target=患者 effect=戒烟 duration=即时 contraindication=无 note=卫教
+[ACTION] id=AG1-202 name=限酒指导 alias=Alcohol Reduction unlock=easy category=卫教 subject=全部 target=患者 effect=限酒 duration=即时 contraindication=无 note=卫教
+[ACTION] id=AG1-203 name=饮食指导 alias=Dietary Guidance unlock=easy category=卫教 subject=全部 target=患者 effect=饮食调整 duration=即时 contraindication=无 note=卫教
+[ACTION] id=AG1-204 name=运动指导 alias=Exercise Guidance unlock=easy category=卫教 subject=全部 target=患者 effect=运动调整 duration=即时 contraindication=无 note=卫教
+[ACTION] id=AG1-205 name=作息指导 alias=Sleep Hygiene unlock=easy category=卫教 subject=全部 target=患者 effect=作息调整 duration=即时 contraindication=无 note=卫教
+[ACTION] id=AG1-206 name=用药指导 alias=Medication Guidance unlock=easy category=卫教 subject=全部 target=患者 effect=用药教育 duration=即时 contraindication=无 note=卫教
+[ACTION] id=AG1-207 name=疾病教育 alias=Disease Education unlock=easy category=卫教 subject=全部 target=患者 effect=疾病认知 duration=即时 contraindication=无 note=卫教
+[ACTION] id=AG1-208 name=心理疏导 alias=Psychological Support unlock=normal category=卫教 subject=精神 target=患者 effect=心理支持 duration=即时 contraindication=无 note=卫教
+[ACTION] id=AG1-209 name=家属沟通 alias=Family Communication unlock=easy category=卫教 subject=全部 target=家属 effect=知情同意 duration=即时 contraindication=无 note=卫教
+[ACTION] id=AG1-210 name=出院指导 alias=Discharge Instructions unlock=easy category=卫教 subject=全部 target=患者 effect=出院教育 duration=即时 contraindication=无 note=卫教
+[ACTION] id=AG1-211 name=康复训练 alias=Rehabilitation Training unlock=normal category=卫教 subject=全部 target=患者 effect=功能恢复 duration=即时 contraindication=无 note=卫教
+[ACTION] id=AG1-212 name=呼吸训练指导 alias=Breathing Training unlock=easy category=卫教 subject=呼吸 target=患者 effect=呼吸功能 duration=即时 contraindication=无 note=卫教
+[ACTION] id=AG1-213 name=咳痰指导 alias=Sputum Clearance Guidance unlock=easy category=卫教 subject=呼吸 target=患者 effect=排痰 duration=即时 contraindication=无 note=卫教
+[ACTION] id=AG1-214 name=胰岛素注射指导 alias=Insulin Injection Training unlock=normal category=卫教 subject=内分泌 target=患者 effect=自我注射 duration=即时 contraindication=无 note=卫教
+[ACTION] id=AG1-215 name=血糖监测指导 alias=Glucose Monitoring Training unlock=normal category=卫教 subject=内分泌 target=患者 effect=自我监测 duration=即时 contraindication=无 note=卫教
+[ACTION] id=AG1-216 name=血压监测指导 alias=BP Monitoring Training unlock=easy category=卫教 subject=心血管 target=患者 effect=自我监测 duration=即时 contraindication=无 note=卫教
+[ACTION] id=AG1-217 name=抗凝用药指导 alias=Anticoagulation Guidance unlock=normal category=卫教 subject=心血管 target=患者 effect=抗凝教育 duration=即时 contraindication=无 note=卫教
+[ACTION] id=AG1-218 name=伤口护理指导 alias=Wound Care Guidance unlock=easy category=卫教 subject=外科 target=患者 effect=伤口护理 duration=即时 contraindication=无 note=卫教
+[ACTION] id=AG1-219 name=造口护理指导 alias=Stoma Care Guidance unlock=normal category=卫教 subject=外科 target=患者 effect=造口护理 duration=即时 contraindication=无 note=卫教
+[ACTION] id=AG1-220 name=导管护理指导 alias=Catheter Care Guidance unlock=normal category=卫教 subject=全部 target=患者 effect=导管护理 duration=即时 contraindication=无 note=卫教
+
+# ── 手术 ──────────────────────────────────────
+[ACTION] id=AG1-221 name=阑尾切除术 alias=Appendectomy unlock=normal category=手术 subject=外科|急诊 target=阑尾 effect=切除阑尾 duration=即时 contraindication=凝血障碍 note=急腹症
+[ACTION] id=AG1-222 name=胆囊切除术 alias=Cholecystectomy unlock=normal category=手术 subject=外科 target=胆囊 effect=切除胆囊 duration=即时 contraindication=凝血障碍 note=胆石症
+[ACTION] id=AG1-223 name=胃大部切除术 alias=Subtotal Gastrectomy unlock=hard category=手术 subject=外科 target=胃 effect=切除胃部 duration=即时 contraindication=凝血障碍 note=胃肿瘤
+[ACTION] id=AG1-224 name=肠切除术 alias=Bowel Resection unlock=hard category=手术 subject=外科 target=肠道 effect=切除肠段 duration=即时 contraindication=凝血障碍 note=肠坏死
+[ACTION] id=AG1-225 name=肠吻合术 alias=Bowel Anastomosis unlock=hard category=手术 subject=外科 target=肠道 effect=吻合肠段 duration=即时 contraindication=感染 note=肠切除后
+[ACTION] id=AG1-226 name=胃穿孔修补术 alias=Gastric Perforation Repair unlock=hard category=手术 subject=外科|急诊 target=胃 effect=修补穿孔 duration=即时 contraindication=凝血障碍 note=急腹症
+[ACTION] id=AG1-227 name=脾切除术 alias=Splenectomy unlock=hard category=手术 subject=外科|血液 target=脾 effect=切除脾脏 duration=即时 contraindication=凝血障碍 note=脾破裂
+[ACTION] id=AG1-228 name=肝部分切除术 alias=Partial Hepatectomy unlock=hard category=手术 subject=外科|肿瘤 target=肝 effect=切除肝段 duration=即时 contraindication=肝功能不全 note=肝肿瘤
+[ACTION] id=AG1-229 name=胰十二指肠切除术 alias=Whipple Procedure unlock=hard category=手术 subject=外科|肿瘤 target=胰头 effect=切除胰头十二指肠 duration=即时 contraindication=凝血障碍 note=胰头癌
+[ACTION] id=AG1-230 name=甲状腺切除术 alias=Thyroidectomy unlock=hard category=手术 subject=外科|内分泌 target=甲状腺 effect=切除甲状腺 duration=即时 contraindication=凝血障碍 note=甲状腺肿瘤
+[ACTION] id=AG1-231 name=乳腺切除术 alias=Mastectomy unlock=hard category=手术 subject=外科|肿瘤 target=乳腺 effect=切除乳腺 duration=即时 contraindication=凝血障碍 note=乳腺癌
+[ACTION] id=AG1-232 name=肺叶切除术 alias=Lobectomy unlock=hard category=手术 subject=外科|呼吸 target=肺 effect=切除肺叶 duration=即时 contraindication=肺功能不全 note=肺肿瘤
+[ACTION] id=AG1-233 name=食管切除术 alias=Esophagectomy unlock=hard category=手术 subject=外科|肿瘤 target=食管 effect=切除食管 duration=即时 contraindication=凝血障碍 note=食管癌
+[ACTION] id=AG1-234 name=冠脉搭桥术 alias=CABG unlock=hard category=手术 subject=心血管 target=冠状动脉 effect=搭桥 duration=即时 contraindication=凝血障碍 note=冠心病
+[ACTION] id=AG1-235 name=心脏瓣膜置换术 alias=Valve Replacement unlock=hard category=手术 subject=心血管 target=心脏瓣膜 effect=置换瓣膜 duration=即时 contraindication=凝血障碍 note=瓣膜病
+[ACTION] id=AG1-236 name=心脏移植术 alias=Heart Transplant unlock=extra category=手术 subject=心血管 target=心脏 effect=移植心脏 duration=即时 contraindication=免疫排斥 note=终末期心衰
+[ACTION] id=AG1-237 name=肺移植术 alias=Lung Transplant unlock=extra category=手术 subject=呼吸 target=肺 effect=移植肺 duration=即时 contraindication=免疫排斥 note=终末期肺病
+[ACTION] id=AG1-238 name=肝移植术 alias=Liver Transplant unlock=extra category=手术 subject=消化 target=肝 effect=移植肝 duration=即时 contraindication=免疫排斥 note=终末期肝病
+[ACTION] id=AG1-239 name=肾移植术 alias=Kidney Transplant unlock=extra category=手术 subject=泌尿 target=肾 effect=移植肾 duration=即时 contraindication=免疫排斥 note=终末期肾病
+[ACTION] id=AG1-240 name=骨髓移植术 alias=Bone Marrow Transplant unlock=extra category=手术 subject=血液|肿瘤 target=骨髓 effect=移植骨髓 duration=即时 contraindication=免疫排斥 note=血液病
+[ACTION] id=AG1-241 name=开颅术 alias=Craniotomy unlock=hard category=手术 subject=神经 target=颅脑 effect=减压|切除 duration=即时 contraindication=凝血障碍 note=脑肿瘤|出血
+[ACTION] id=AG1-242 name=脑室引流术 alias=Ventriculostomy unlock=hard category=手术 subject=神经 target=脑室 effect=引流脑脊液 duration=即时 contraindication=感染 note=脑积水
+[ACTION] id=AG1-243 name=脊髓减压术 alias=Spinal Decompression unlock=hard category=手术 subject=神经|骨科 target=脊髓 effect=减压 duration=即时 contraindication=凝血障碍 note=脊髓压迫
+[ACTION] id=AG1-244 name=椎间盘切除术 alias=Discectomy unlock=hard category=手术 subject=神经|骨科 target=椎间盘 effect=切除椎间盘 duration=即时 contraindication=凝血障碍 note=椎间盘突出
+[ACTION] id=AG1-245 name=关节置换术 alias=Joint Replacement unlock=hard category=手术 subject=骨科 target=关节 effect=置换关节 duration=即时 contraindication=感染 note=关节病
+[ACTION] id=AG1-246 name=骨折内固定术 alias=ORIF unlock=hard category=手术 subject=骨科 target=骨折 effect=内固定 duration=即时 contraindication=感染 note=骨折
+[ACTION] id=AG1-247 name=截肢术 alias=Amputation unlock=hard category=手术 subject=外科|骨科 target=肢体 effect=截除肢体 duration=即时 contraindication=凝血障碍 note=坏死|感染
+[ACTION] id=AG1-248 name=疝修补术 alias=Hernia Repair unlock=normal category=手术 subject=外科 target=疝 effect=修补缺损 duration=即时 contraindication=感染 note=疝
+[ACTION] id=AG1-249 name=痔切除术 alias=Hemorrhoidectomy unlock=normal category=手术 subject=外科 target=痔 effect=切除痔 duration=即时 contraindication=感染 note=痔疮
+[ACTION] id=AG1-250 name=前列腺切除术 alias=Prostatectomy unlock=hard category=手术 subject=泌尿 target=前列腺 effect=切除前列腺 duration=即时 contraindication=凝血障碍 note=前列腺增生
+[ACTION] id=AG1-251 name=肾切除术 alias=Nephrectomy unlock=hard category=手术 subject=泌尿 target=肾 effect=切除肾 duration=即时 contraindication=肾功能不全 note=肾肿瘤
+[ACTION] id=AG1-252 name=膀胱切除术 alias=Cystectomy unlock=hard category=手术 subject=泌尿 target=膀胱 effect=切除膀胱 duration=即时 contraindication=凝血障碍 note=膀胱癌
+[ACTION] id=AG1-253 name=子宫切除术 alias=Hysterectomy unlock=hard category=手术 subject=妇产 target=子宫 effect=切除子宫 duration=即时 contraindication=凝血障碍 note=子宫肿瘤
+[ACTION] id=AG1-254 name=卵巢切除术 alias=Oophorectomy unlock=hard category=手术 subject=妇产 target=卵巢 effect=切除卵巢 duration=即时 contraindication=凝血障碍 note=卵巢肿瘤
+[ACTION] id=AG1-255 name=剖宫产术 alias=Cesarean Section unlock=normal category=手术 subject=妇产 target=子宫 effect=娩出胎儿 duration=即时 contraindication=凝血障碍 note=产科
+[ACTION] id=AG1-256 name=白内障手术 alias=Cataract Surgery unlock=normal category=手术 subject=眼科 target=晶状体 effect=置换晶状体 duration=即时 contraindication=感染 note=白内障
+[ACTION] id=AG1-257 name=青光眼手术 alias=Glaucoma Surgery unlock=hard category=手术 subject=眼科 target=眼 effect=降眼压 duration=即时 contraindication=感染 note=青光眼
+[ACTION] id=AG1-258 name=玻璃体切除术 alias=Vitrectomy unlock=hard category=手术 subject=眼科 target=玻璃体 effect=切除玻璃体 duration=即时 contraindication=感染 note=视网膜病
+[ACTION] id=AG1-259 name=扁桃体切除术 alias=Tonsillectomy unlock=normal category=手术 subject=耳鼻喉 target=扁桃体 effect=切除扁桃体 duration=即时 contraindication=凝血障碍 note=扁桃体炎
+[ACTION] id=AG1-260 name=鼻窦手术 alias=Sinus Surgery unlock=normal category=手术 subject=耳鼻喉 target=鼻窦 effect=开放鼻窦 duration=即时 contraindication=感染 note=鼻窦炎
+
+# ── 特殊/妖力 ──────────────────────────────────────
+[ACTION] id=AG1-261 name=博丽结界净化 alias=Hakurei Barrier Purification unlock=hard category=特殊 subject=全部 target=患者 effect=净化妖力 duration=即时 contraindication=无 note=灵梦
+[ACTION] id=AG1-262 name=境界稳定 alias=Boundary Stabilization unlock=extra category=特殊 subject=全部 target=患者 effect=稳定境界 duration=即时 contraindication=无 note=紫
+[ACTION] id=AG1-263 name=月都科技治疗 alias=Lunar Tech Therapy unlock=extra category=特殊 subject=全部 target=患者 effect=月都科技 duration=即时 contraindication=无 note=月都
+[ACTION] id=AG1-264 name=永远亭秘药配方 alias=Eientei Secret Formula unlock=extra category=特殊 subject=全部 target=患者 effect=秘药 duration=即时 contraindication=无 note=永琳
+[ACTION] id=AG1-265 name=蓬莱之药给予 alias=Horai Elixir Administration unlock=extra category=特殊 subject=全部 target=患者 effect=不死 duration=即时 contraindication=无 note=辉夜
+[ACTION] id=AG1-266 name=铃仙幻视波诊断 alias=Lunatic Vision Diagnosis unlock=hard category=特殊 subject=全部 target=患者 effect=幻视诊断 duration=即时 contraindication=无 note=铃仙
+[ACTION] id=AG1-267 name=因幡幸运干预 alias=Inaba Luck Intervention unlock=extra category=特殊 subject=全部 target=患者 effect=幸运干预 duration=即时 contraindication=无 note=帝
+[ACTION] id=AG1-268 name=妖怪细胞培养 alias=Youkai Cell Culture unlock=extra category=特殊 subject=全部 target=患者 effect=细胞培养 duration=即时 contraindication=无 note=永远亭
+[ACTION] id=AG1-269 name=妖力中和 alias=Youkai Neutralization unlock=hard category=特殊 subject=全部 target=患者 effect=中和妖力 duration=即时 contraindication=无 note=永远亭
+[ACTION] id=AG1-270 name=灵界沟通 alias=Spirit Communication unlock=extra category=特殊 subject=精神|神经 target=患者 effect=灵界沟通 duration=即时 contraindication=无 note=永远亭
+[ACTION] id=AG1-271 name=魔法蘑菇鉴定 alias=Magic Mushroom Identification unlock=normal category=特殊 subject=中毒 target=样本 effect=鉴定蘑菇 duration=即时 contraindication=无 note=魔理沙
+[ACTION] id=AG1-272 name=时间停止辅助 alias=Time Stop Assistance unlock=extra category=特殊 subject=全部 target=患者 effect=暂停时间 duration=即时 contraindication=无 note=咲夜
+[ACTION] id=AG1-273 name=亡灵沟通 alias=Ghost Communication unlock=extra category=特殊 subject=精神 target=患者 effect=亡灵沟通 duration=即时 contraindication=无 note=幽幽子
+[ACTION] id=AG1-274 name=吸血鬼能力评估 alias=Vampire Ability Assessment unlock=hard category=特殊 subject=全部 target=患者 effect=评估能力 duration=即时 contraindication=无 note=蕾米莉亚
+[ACTION] id=AG1-275 name=半灵协调 alias=Half-Spirit Coordination unlock=hard category=特殊 subject=全部 target=患者 effect=协调半灵 duration=即时 contraindication=无 note=妖梦
+
+# ── 威胁/自由搏击 ──────────────────────────────────────
+[ACTION] id=AG1-276 name=口头警告 alias=Verbal Warning unlock=easy category=威胁 subject=全部 target=患者 effect=警告 duration=即时 contraindication=无 note=轻度
+[ACTION] id=AG1-277 name=严肃警告 alias=Serious Warning unlock=easy category=威胁 subject=全部 target=患者 effect=严肃警告 duration=即时 contraindication=无 note=中度
+[ACTION] id=AG1-278 name=威胁自由搏击 alias=Freedom Fight Threat unlock=normal category=威胁 subject=全部 target=患者 effect=威胁|患者配合度↑ duration=即时 contraindication=无 note=永琳式沟通
+[ACTION] id=AG1-279 name=自由搏击 alias=Free Fight unlock=hard category=威胁 subject=全部 target=患者 effect=物理制服|配合度↑ duration=即时 contraindication=患者虚弱 note=永远亭式沟通
+[ACTION] id=AG1-280 name=捆绑固定 alias=Restraint unlock=normal category=威胁 subject=精神|急诊 target=患者 effect=约束 duration=即时 contraindication=呼吸障碍 note=精神科
+[ACTION] id=AG1-281 name=镇静约束 alias=Sedation Restraint unlock=normal category=威胁 subject=精神|急诊 target=患者 effect=镇静|约束 duration=即时 contraindication=呼吸抑制 note=精神科
+[ACTION] id=AG1-282 name=强制给药 alias=Forced Medication unlock=normal category=威胁 subject=精神|急诊 target=患者 effect=强制给药 duration=即时 contraindication=无 note=精神科
+[ACTION] id=AG1-283 name=强制插管 alias=Forced Intubation unlock=hard category=威胁 subject=急诊 target=患者 effect=强制插管 duration=即时 contraindication=无 note=急救
+[ACTION] id=AG1-284 name=强制洗胃 alias=Forced Gastric Lavage unlock=normal category=威胁 subject=急诊|毒物 target=患者 effect=强制洗胃 duration=即时 contraindication=腐蚀性中毒 note=中毒
+[ACTION] id=AG1-285 name=强制隔离 alias=Forced Isolation unlock=normal category=威胁 subject=全部 target=患者 effect=隔离 duration=即时 contraindication=无 note=感染控制
+[ACTION] id=AG1-286 name=报警 alias=Call Police unlock=easy category=威胁 subject=全部 target=患者 effect=报警 duration=即时 contraindication=无 note=安全
+[ACTION] id=AG1-287 name=呼叫灵梦 alias=Call Reimu unlock=hard category=威胁 subject=全部 target=灵梦 effect=退治 duration=即时 contraindication=无 note=特殊
+[ACTION] id=AG1-288 name=呼叫紫 alias=Call Yukari unlock=extra category=威胁 subject=全部 target=紫 effect=境界干预 duration=即时 contraindication=无 note=特殊
+[ACTION] id=AG1-289 name=呼叫魔理沙 alias=Call Marisa unlock=hard category=威胁 subject=全部 target=魔理沙 effect=魔法干预 duration=即时 contraindication=无 note=特殊
+[ACTION] id=AG1-290 name=呼叫咲夜 alias=Call Sakuya unlock=hard category=威胁 subject=全部 target=咲夜 effect=时间停止 duration=即时 contraindication=无 note=特殊
+[ACTION] id=AG1-291 name=呼叫妖梦 alias=Call Youmu unlock=hard category=威胁 subject=全部 target=妖梦 effect=剑术干预 duration=即时 contraindication=无 note=特殊
+[ACTION] id=AG1-292 name=呼叫早苗 alias=Call Sanae unlock=hard category=威胁 subject=全部 target=早苗 effect=奇迹干预 duration=即时 contraindication=无 note=特殊
+[ACTION] id=AG1-293 name=呼叫芙兰 alias=Call Flandre unlock=extra category=威胁 subject=全部 target=芙兰 effect=破坏干预 duration=即时 contraindication=无 note=特殊
+[ACTION] id=AG1-294 name=呼叫辉夜 alias=Call Kaguya unlock=extra category=威胁 subject=全部 target=辉夜 effect=不死干预 duration=即时 contraindication=无 note=特殊
+[ACTION] id=AG1-295 name=呼叫永琳 alias=Call Eirin unlock=extra category=威胁 subject=全部 target=永琳 effect=永琳亲临 duration=即时 contraindication=无 note=特殊
+
+# ── 氦氩刀/消融 ──────────────────────────────────────
+[ACTION] id=AG1-296 name=氦氩刀 alias=Argon-Helium Cryoablation unlock=hard category=消融 subject=肿瘤|皮肤 target=病灶 effect=冷冻消融 duration=即时 contraindication=凝血障碍 note=冷冻治疗
+[ACTION] id=AG1-297 name=射频消融 alias=Radiofrequency Ablation unlock=hard category=消融 subject=心血管|肿瘤 target=病灶 effect=热消融 duration=即时 contraindication=凝血障碍 note=消融
+[ACTION] id=AG1-298 name=微波消融 alias=Microwave Ablation unlock=hard category=消融 subject=肿瘤 target=病灶 effect=热消融 duration=即时 contraindication=凝血障碍 note=消融
+[ACTION] id=AG1-299 name=激光消融 alias=Laser Ablation unlock=hard category=消融 subject=眼科|皮肤|肿瘤 target=病灶 effect=光消融 duration=即时 contraindication=凝血障碍 note=消融
+[ACTION] id=AG1-300 name=超声消融 alias=HIFU unlock=extra category=消融 subject=肿瘤|妇产 target=病灶 effect=无创消融 duration=即时 contraindication=凝血障碍 note=无创
+[ACTION] id=AG1-301 name=冷冻消融 alias=Cryoablation unlock=hard category=消融 subject=肿瘤|皮肤 target=病灶 effect=冷冻消融 duration=即时 contraindication=凝血障碍 note=消融
+[ACTION] id=AG1-302 name=化学消融 alias=Chemical Ablation unlock=hard category=消融 subject=肿瘤 target=病灶 effect=化学消融 duration=即时 contraindication=凝血障碍 note=消融
+[ACTION] id=AG1-303 name=酒精消融 alias=Alcohol Ablation unlock=hard category=消融 subject=肿瘤|心血管 target=病灶 effect=酒精消融 duration=即时 contraindication=凝血障碍 note=消融
+[ACTION] id=AG1-304 name=电灼术 alias=Electrocautery unlock=normal category=消融 subject=皮肤|外科 target=病灶 effect=电灼 duration=即时 contraindication=凝血障碍 note=消融
+[ACTION] id=AG1-305 name=冷冻治疗 alias=Cryotherapy unlock=normal category=消融 subject=皮肤 target=病灶 effect=冷冻 duration=即时 contraindication=凝血障碍 note=皮肤
+
+# ── 植入 ──────────────────────────────────────
+[ACTION] id=AG1-306 name=心脏起搏器植入 alias=Pacemaker Implantation unlock=hard category=植入 subject=心血管 target=心脏 effect=起搏 duration=即时 contraindication=感染 note=心脏
+[ACTION] id=AG1-307 name=植入式除颤器 alias=ICD Implantation unlock=hard category=植入 subject=心血管 target=心脏 effect=除颤 duration=即时 contraindication=感染 note=心脏
+[ACTION] id=AG1-308 name=冠脉支架植入 alias=Coronary Stent unlock=hard category=植入 subject=心血管 target=冠状动脉 effect=支架 duration=即时 contraindication=凝血障碍 note=冠心病
+[ACTION] id=AG1-309 name=人工关节植入 alias=Joint Prosthesis unlock=hard category=植入 subject=骨科 target=关节 effect=人工关节 duration=即时 contraindication=感染 note=骨科
+[ACTION] id=AG1-310 name=人工晶体植入 alias=Intraocular Lens unlock=normal category=植入 subject=眼科 target=眼 effect=人工晶体 duration=即时 contraindication=感染 note=眼科
+[ACTION] id=AG1-311 name=人工耳蜗植入 alias=Cochlear Implant unlock=hard category=植入 subject=耳鼻喉 target=耳 effect=人工耳蜗 duration=即时 contraindication=感染 note=耳科
+[ACTION] id=AG1-312 name=脑深部电刺激植入 alias=DBS Implantation unlock=extra category=植入 subject=神经 target=脑 effect=电刺激 duration=即时 contraindication=感染 note=神经
+[ACTION] id=AG1-313 name=脊髓电刺激植入 alias=Spinal Cord Stimulator unlock=extra category=植入 subject=神经 target=脊髓 effect=电刺激 duration=即时 contraindication=感染 note=神经
+[ACTION] id=AG1-314 name=胰岛素泵植入 alias=Insulin Pump Implantation unlock=hard category=植入 subject=内分泌 target=皮下 effect=胰岛素输注 duration=即时 contraindication=感染 note=内分泌
+[ACTION] id=AG1-315 name=透析导管植入 alias=Dialysis Catheter unlock=hard category=植入 subject=泌尿 target=中心静脉 effect=透析通路 duration=即时 contraindication=感染 note=透析
+[ACTION] id=AG1-316 name=腹膜透析管植入 alias=Peritoneal Dialysis Catheter unlock=hard category=植入 subject=泌尿 target=腹膜 effect=透析通路 duration=即时 contraindication=感染 note=透析
+[ACTION] id=AG1-317

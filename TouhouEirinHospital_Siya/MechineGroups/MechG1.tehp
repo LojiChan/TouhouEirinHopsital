@@ -1,0 +1,284 @@
+# ============================================================
+# 永远亭医疗模拟器 — 器械集 MachG1
+# 格式：[MACHINE] id=... name=... alias=... unlock=... category=... subject=... target=... effect=... duration=... contraindication=... note=...
+# category 取值：监测|影像|治疗|引流|给药|急救|手术|特殊|消融|植入|检验|康复
+# ============================================================
+
+# ── 监测 ──────────────────────────────────────
+[MACHINE] id=MachG1-001 name=心电监护仪 alias=ECG Monitor unlock=easy category=监测 subject=心血管|急诊 target=患者 effect=持续监测心律|ST段|QT duration=持续 contraindication=无 note=基础监护
+[MACHINE] id=MachG1-002 name=多参数监护仪 alias=Multi-Parameter Monitor unlock=normal category=监测 subject=全部 target=患者 effect=监测心律|血压|SpO2|体温|呼吸 duration=持续 contraindication=无 note=重症监护
+[MACHINE] id=MachG1-003 name=血压计 alias=Sphygmomanometer unlock=easy category=监测 subject=全部 target=患者 effect=测量血压 duration=即时 contraindication=无 note=基础
+[MACHINE] id=MachG1-004 name=电子血压计 alias=Electronic BP Monitor unlock=easy category=监测 subject=全部 target=患者 effect=自动测量血压 duration=即时 contraindication=无 note=基础
+[MACHINE] id=MachG1-005 name=血氧仪 alias=Pulse Oximeter unlock=easy category=监测 subject=全部 target=患者 effect=测量SpO2 duration=即时 contraindication=无 note=基础
+[MACHINE] id=MachG1-006 name=体温计 alias=Thermometer unlock=easy category=监测 subject=全部 target=患者 effect=测量体温 duration=即时 contraindication=无 note=基础
+[MACHINE] id=MachG1-007 name=电子体温计 alias=Electronic Thermometer unlock=easy category=监测 subject=全部 target=患者 effect=快速测温 duration=即时 contraindication=无 note=基础
+[MACHINE] id=MachG1-008 name=红外体温计 alias=Infrared Thermometer unlock=easy category=监测 subject=全部 target=患者 effect=非接触测温 duration=即时 contraindication=无 note=基础
+[MACHINE] id=MachG1-009 name=听诊器 alias=Stethoscope unlock=easy category=监测 subject=全部 target=患者 effect=听心音|呼吸音|肠鸣音 duration=即时 contraindication=无 note=基础
+[MACHINE] id=MachG1-010 name=电子听诊器 alias=Electronic Stethoscope unlock=normal category=监测 subject=全部 target=患者 effect=放大听诊 duration=即时 contraindication=无 note=基础
+[MACHINE] id=MachG1-011 name=心电图机 alias=ECG Machine unlock=easy category=监测 subject=心血管|急诊 target=患者 effect=12导联心电图 duration=即时 contraindication=无 note=基础
+[MACHINE] id=MachG1-012 name=动态心电图 alias=Holter Monitor unlock=normal category=监测 subject=心血管 target=患者 effect=24h心律监测 duration=24h contraindication=无 note=长期监测
+[MACHINE] id=MachG1-013 name=动态血压监测 alias=Ambulatory BP Monitor unlock=normal category=监测 subject=心血管 target=患者 effect=24h血压监测 duration=24h contraindication=无 note=长期监测
+[MACHINE] id=MachG1-014 name=脑电图机 alias=EEG Machine unlock=hard category=监测 subject=神经 target=患者 effect=脑电活动 duration=即时 contraindication=无 note=神经
+[MACHINE] id=MachG1-015 name=肌电图机 alias=EMG Machine unlock=hard category=监测 subject=神经 target=患者 effect=肌肉电活动 duration=即时 contraindication=无 note=神经
+[MACHINE] id=MachG1-016 name=诱发电位仪 alias=Evoked Potential Machine unlock=hard category=监测 subject=神经 target=患者 effect=神经传导 duration=即时 contraindication=无 note=神经
+[MACHINE] id=MachG1-017 name=经颅多普勒 alias=TCD unlock=hard category=监测 subject=神经 target=患者 effect=脑血流 duration=即时 contraindication=无 note=神经
+[MACHINE] id=MachG1-018 name=呼吸监测仪 alias=Respiratory Monitor unlock=normal category=监测 subject=呼吸 target=患者 effect=呼吸频率|潮气量 duration=持续 contraindication=无 note=呼吸
+[MACHINE] id=MachG1-019 name=呼气末二氧化碳监测 alias=EtCO2 Monitor unlock=normal category=监测 subject=急诊|麻醉 target=患者 effect=EtCO2 duration=持续 contraindication=无 note=呼吸
+[MACHINE] id=MachG1-020 name=胎心监护仪 alias=Fetal Monitor unlock=normal category=监测 subject=妇产 target=胎儿 effect=胎心|宫缩 duration=持续 contraindication=无 note=产科
+[MACHINE] id=MachG1-021 name=颅内压监测仪 alias=ICP Monitor unlock=hard category=监测 subject=神经 target=患者 effect=颅内压 duration=持续 contraindication=感染 note=神经
+[MACHINE] id=MachG1-022 name=中心静脉压监测 alias=CVP Monitor unlock=hard category=监测 subject=急诊|心血管 target=患者 effect=中心静脉压 duration=持续 contraindication=感染 note=重症
+[MACHINE] id=MachG1-023 name=心输出量监测 alias=Cardiac Output Monitor unlock=hard category=监测 subject=心血管|急诊 target=患者 effect=心输出量 duration=持续 contraindication=感染 note=重症
+[MACHINE] id=MachG1-024 name=肺动脉导管 alias=Pulmonary Artery Catheter unlock=hard category=监测 subject=心血管|急诊 target=患者 effect=肺动脉压|心输出量 duration=持续 contraindication=感染|凝血障碍 note=重症
+[MACHINE] id=MachG1-025 name=血糖仪 alias=Glucometer unlock=easy category=监测 subject=内分泌|急诊 target=患者 effect=血糖 duration=即时 contraindication=无 note=基础
+[MACHINE] id=MachG1-026 name=持续血糖监测 alias=CGM unlock=normal category=监测 subject=内分泌 target=患者 effect=持续血糖 duration=持续 contraindication=无 note=内分泌
+[MACHINE] id=MachG1-027 name=血气分析仪 alias=Blood Gas Analyzer unlock=normal category=监测 subject=急诊|呼吸 target=血液 effect=pH|PaO2|PaCO2|HCO3 duration=即时 contraindication=无 note=呼吸
+[MACHINE] id=MachG1-028 name=凝血分析仪 alias=Coagulation Analyzer unlock=normal category=监测 subject=急诊|外科 target=血液 effect=PT|APTT|INR duration=即时 contraindication=无 note=血液
+[MACHINE] id=MachG1-029 name=血细胞分析仪 alias=Hematology Analyzer unlock=easy category=监测 subject=全部 target=血液 effect=血常规 duration=即时 contraindication=无 note=基础
+[MACHINE] id=MachG1-030 name=生化分析仪 alias=Biochemistry Analyzer unlock=normal category=监测 subject=全部 target=血液 effect=肝肾功能|电解质|血脂 duration=即时 contraindication=无 note=基础
+[MACHINE] id=MachG1-031 name=尿液分析仪 alias=Urine Analyzer unlock=easy category=监测 subject=全部 target=尿液 effect=尿常规 duration=即时 contraindication=无 note=基础
+[MACHINE] id=MachG1-032 name=免疫分析仪 alias=Immunoassay Analyzer unlock=hard category=监测 subject=全部 target=血液 effect=激素|肿瘤标志物|心肌酶 duration=即时 contraindication=无 note=免疫
+[MACHINE] id=MachG1-033 name=微生物培养仪 alias=Microbial Culture System unlock=normal category=监测 subject=全部 target=样本 effect=病原菌|药敏 duration=24-48h contraindication=无 note=微生物
+[MACHINE] id=MachG1-034 name=PCR仪 alias=PCR Machine unlock=normal category=监测 subject=全部 target=样本 effect=病原体核酸 duration=2-6h contraindication=无 note=分子诊断
+[MACHINE] id=MachG1-035 name=基因测序仪 alias=Gene Sequencer unlock=hard category=监测 subject=全部 target=样本 effect=基因序列 duration=24-72h contraindication=无 note=精准医学
+[MACHINE] id=MachG1-036 name=流式细胞仪 alias=Flow Cytometer unlock=hard category=监测 subject=血液|肿瘤 target=样本 effect=细胞分型 duration=即时 contraindication=无 note=血液
+[MACHINE] id=MachG1-037 name=质谱仪 alias=Mass Spectrometer unlock=hard category=监测 subject=全部 target=样本 effect=药物浓度|代谢物 duration=即时 contraindication=无 note=精准医学
+[MACHINE] id=MachG1-038 name=色谱仪 alias=Chromatograph unlock=hard category=监测 subject=全部 target=样本 effect=药物浓度|代谢物 duration=即时 contraindication=无 note=精准医学
+[MACHINE] id=MachG1-039 name=免疫荧光显微镜 alias=Immunofluorescence Microscope unlock=hard category=监测 subject=全部 target=样本 effect=免疫荧光 duration=即时 contraindication=无 note=病理
+[MACHINE] id=MachG1-040 name=电子显微镜 alias=Electron Microscope unlock=hard category=监测 subject=全部 target=样本 effect=超微结构 duration=即时 contraindication=无 note=病理
+
+# ── 影像 ──────────────────────────────────────
+[MACHINE] id=MachG1-041 name=X光机 alias=X-Ray Machine unlock=easy category=影像 subject=全部 target=患者 effect=骨骼|肺部|腹部 duration=即时 contraindication=妊娠 note=基础
+[MACHINE] id=MachG1-042 name=便携X光机 alias=Portable X-Ray unlock=normal category=影像 subject=全部 target=患者 effect=床旁X光 duration=即时 contraindication=妊娠 note=床旁
+[MACHINE] id=MachG1-043 name=数字X光机 alias=Digital X-Ray unlock=normal category=影像 subject=全部 target=患者 effect=数字影像 duration=即时 contraindication=妊娠 note=数字
+[MACHINE] id=MachG1-044 name=CT机 alias=CT Scanner unlock=normal category=影像 subject=全部 target=患者 effect=断层影像 duration=即时 contraindication=妊娠|碘过敏 note=断层
+[MACHINE] id=MachG1-045 name=多层螺旋CT alias=Multi-Slice CT unlock=hard category=影像 subject=全部 target=患者 effect=高分辨率断层 duration=即时 contraindication=妊娠|碘过敏 note=高端
+[MACHINE] id=MachG1-046 name=双源CT alias=Dual-Source CT unlock=hard category=影像 subject=心血管 target=患者 effect=心脏成像 duration=即时 contraindication=妊娠|碘过敏 note=心脏
+[MACHINE] id=MachG1-047 name=MRI机 alias=MRI Scanner unlock=normal category=影像 subject=全部 target=患者 effect=软组织|神经|关节 duration=即时 contraindication=金属植入 note=软组织
+[MACHINE] id=MachG1-048 name=3.0T MRI alias=3.0T MRI unlock=hard category=影像 subject=全部 target=患者 effect=高场强影像 duration=即时 contraindication=金属植入 note=高端
+[MACHINE] id=MachG1-049 name=功能性MRI alias=fMRI unlock=hard category=影像 subject=神经 target=患者 effect=脑功能成像 duration=即时 contraindication=金属植入 note=神经
+[MACHINE] id=MachG1-050 name=超声机 alias=Ultrasound Machine unlock=easy category=影像 subject=全部 target=患者 effect=腹部|心脏|妇产 duration=即时 contraindication=无 note=无创
+[MACHINE] id=MachG1-051 name=便携超声 alias=Portable Ultrasound unlock=easy category=影像 subject=全部 target=患者 effect=床旁超声 duration=即时 contraindication=无 note=床旁
+[MACHINE] id=MachG1-052 name=心脏超声机 alias=Echocardiography Machine unlock=normal category=影像 subject=心血管 target=患者 effect=心脏结构|功能 duration=即时 contraindication=无 note=心脏
+[MACHINE] id=MachG1-053 name=经食道超声探头 alias=TEE Probe unlock=hard category=影像 subject=心血管 target=患者 effect=心房|瓣膜|血栓 duration=即时 contraindication=食管病变 note=心脏细节
+[MACHINE] id=MachG1-054 name=血管超声机 alias=Vascular Ultrasound unlock=normal category=影像 subject=心血管|外科 target=患者 effect=血管狭窄|血栓 duration=即时 contraindication=无 note=血管
+[MACHINE] id=MachG1-055 name=超声造影机 alias=Contrast Ultrasound Machine unlock=hard category=影像 subject=消化|肿瘤 target=患者 effect=血流|肿瘤血供 duration=即时 contraindication=过敏 note=肿瘤
+[MACHINE] id=MachG1-056 name=PET-CT机 alias=PET-CT Scanner unlock=hard category=影像 subject=肿瘤 target=患者 effect=代谢|肿瘤|转移 duration=即时 contraindication=妊娠|糖尿病 note=肿瘤
+[MACHINE] id=MachG1-057 name=SPECT机 alias=SPECT Scanner unlock=hard category=影像 subject=全部 target=患者 effect=功能成像 duration=即时 contraindication=妊娠 note=核医学
+[MACHINE] id=MachG1-058 name=骨密度仪 alias=Bone Densitometer unlock=normal category=影像 subject=骨科|内分泌 target=患者 effect=骨密度 duration=即时 contraindication=无 note=骨科
+[MACHINE] id=MachG1-059 name=乳腺钼靶机 alias=Mammography Machine unlock=normal category=影像 subject=妇产|肿瘤 target=患者 effect=乳腺钙化|肿块 duration=即时 contraindication=妊娠 note=乳腺
+[MACHINE] id=MachG1-060 name=DSA机 alias=DSA Machine unlock=hard category=影像 subject=心血管|神经 target=患者 effect=血管造影 duration=即时 contraindication=碘过敏|肾衰 note=血管
+[MACHINE] id=MachG1-061 name=C臂X光机 alias=C-Arm X-Ray unlock=hard category=影像 subject=外科|骨科 target=患者 effect=术中透视 duration=即时 contraindication=妊娠 note=术中
+[MACHINE] id=MachG1-062 name=O臂导航 alias=O-Arm Navigation unlock=extra category=影像 subject=外科|神经 target=患者 effect=术中3D导航 duration=即时 contraindication=无 note=术中
+[MACHINE] id=MachG1-063 name=术中超声探头 alias=Intraoperative Ultrasound Probe unlock=hard category=影像 subject=外科 target=患者 effect=术中定位 duration=即时 contraindication=无 note=术中
+[MACHINE] id=MachG1-064 name=内窥镜 alias=Endoscope unlock=normal category=影像 subject=消化|呼吸 target=患者 effect=腔内观察 duration=即时 contraindication=穿孔|凝血障碍 note=内镜
+[MACHINE] id=MachG1-065 name=胃镜 alias=Gastroscope unlock=normal category=影像 subject=消化 target=患者 effect=胃腔观察|活检 duration=即时 contraindication=穿孔|凝血障碍 note=内镜
+[MACHINE] id=MachG1-066 name=肠镜 alias=Colonoscope unlock=normal category=影像 subject=消化 target=患者 effect=结肠观察|活检 duration=即时 contraindication=穿孔|凝血障碍 note=内镜
+[MACHINE] id=MachG1-067 name=支气管镜 alias=Bronchoscope unlock=normal category=影像 subject=呼吸 target=患者 effect=气道观察|活检 duration=即时 contraindication=呼吸衰竭 note=内镜
+[MACHINE] id=MachG1-068 name=腹腔镜 alias=Laparoscope unlock=hard category=影像 subject=外科 target=患者 effect=腹腔观察|手术 duration=即时 contraindication=凝血障碍 note=微创
+[MACHINE] id=MachG1-069 name=胸腔镜 alias=Thoracoscope unlock=hard category=影像 subject=外科|呼吸 target=患者 effect=胸腔观察|手术 duration=即时 contraindication=凝血障碍 note=微创
+[MACHINE] id=MachG1-070 name=关节镜 alias=Arthroscope unlock=hard category=影像 subject=骨科 target=患者 effect=关节观察|手术 duration=即时 contraindication=感染 note=微创
+[MACHINE] id=MachG1-071 name=膀胱镜 alias=Cystoscope unlock=normal category=影像 subject=泌尿 target=患者 effect=膀胱观察|活检 duration=即时 contraindication=感染 note=内镜
+[MACHINE] id=MachG1-072 name=输尿管镜 alias=Ureteroscope unlock=hard category=影像 subject=泌尿 target=患者 effect=输尿管观察|碎石 duration=即时 contraindication=感染 note=内镜
+[MACHINE] id=MachG1-073 name=胆道镜 alias=Choledochoscope unlock=hard category=影像 subject=消化 target=患者 effect=胆道观察|取石 duration=即时 contraindication=感染 note=内镜
+[MACHINE] id=MachG1-074 name=宫腔镜 alias=Hysteroscope unlock=hard category=影像 subject=妇产 target=患者 effect=宫腔观察|手术 duration=即时 contraindication=妊娠|感染 note=微创
+[MACHINE] id=MachG1-075 name=阴道镜 alias=Colposcope unlock=normal category=影像 subject=妇产 target=患者 effect=宫颈观察|活检 duration=即时 contraindication=感染 note=妇产
+[MACHINE] id=MachG1-076 name=鼻内镜 alias=Nasal Endoscope unlock=normal category=影像 subject=耳鼻喉 target=患者 effect=鼻腔|鼻窦观察 duration=即时 contraindication=感染 note=耳鼻喉
+[MACHINE] id=MachG1-077 name=喉镜 alias=Laryngoscope unlock=normal category=影像 subject=耳鼻喉|麻醉 target=患者 effect=喉部观察|插管 duration=即时 contraindication=感染 note=耳鼻喉
+[MACHINE] id=MachG1-078 name=眼底镜 alias=Ophthalmoscope unlock=easy category=影像 subject=眼科 target=患者 effect=眼底观察 duration=即时 contraindication=无 note=眼科
+[MACHINE] id=MachG1-079 name=裂隙灯 alias=Slit Lamp unlock=normal category=影像 subject=眼科 target=患者 effect=眼前节观察 duration=即时 contraindication=无 note=眼科
+[MACHINE] id=MachG1-080 name=光学相干断层扫描 alias=OCT unlock=hard category=影像 subject=眼科 target=患者 effect=视网膜断层 duration=即时 contraindication=无 note=眼科
+
+# ── 治疗 ──────────────────────────────────────
+[MACHINE] id=MachG1-081 name=氧气瓶 alias=Oxygen Cylinder unlock=easy category=治疗 subject=全部 target=患者 effect=给氧 duration=持续 contraindication=无 note=基础
+[MACHINE] id=MachG1-082 name=制氧机 alias=Oxygen Concentrator unlock=easy category=治疗 subject=全部 target=患者 effect=持续给氧 duration=持续 contraindication=无 note=基础
+[MACHINE] id=MachG1-083 name=氧气面罩 alias=Oxygen Mask unlock=easy category=治疗 subject=全部 target=患者 effect=给氧 duration=持续 contraindication=无 note=基础
+[MACHINE] id=MachG1-084 name=储氧面罩 alias=NRB Mask unlock=normal category=治疗 subject=急诊|呼吸 target=患者 effect=高浓度给氧 duration=持续 contraindication=无 note=高流量
+[MACHINE] id=MachG1-085 name=高流量氧疗仪 alias=HFNC Machine unlock=hard category=治疗 subject=呼吸|急诊 target=患者 effect=高流量加温加湿给氧 duration=持续 contraindication=无 note=高流量
+[MACHINE] id=MachG1-086 name=无创呼吸机 alias=NIV Ventilator unlock=hard category=治疗 subject=呼吸|急诊 target=患者 effect=无创通气 duration=持续 contraindication=意识障碍|呕吐 note=呼吸支持
+[MACHINE] id=MachG1-087 name=有创呼吸机 alias=Invasive Ventilator unlock=hard category=治疗 subject=急诊|呼吸 target=患者 effect=机械通气 duration=持续 contraindication=无 note=呼吸支持
+[MACHINE] id=MachG1-088 name=高频振荡呼吸机 alias=HFOV Ventilator unlock=extra category=治疗 subject=呼吸|儿科 target=患者 effect=高频振荡通气 duration=持续 contraindication=无 note=高端
+[MACHINE] id=MachG1-089 name=体外膜肺氧合 alias=ECMO unlock=extra category=治疗 subject=急诊|心血管|呼吸 target=患者 effect=体外心肺支持 duration=持续 contraindication=凝血障碍 note=重症
+[MACHINE] id=MachG1-090 name=主动脉内球囊反搏 alias=IABP unlock=extra category=治疗 subject=心血管|急诊 target=患者 effect=心脏辅助 duration=持续 contraindication=主动脉瓣关闭不全 note=重症
+[MACHINE] id=MachG1-091 name=心室辅助装置 alias=VAD unlock=extra category=治疗 subject=心血管 target=患者 effect=心室辅助 duration=持续 contraindication=凝血障碍 note=重症
+[MACHINE] id=MachG1-092 name=除颤器 alias=Defibrillator unlock=normal category=治疗 subject=急诊|心血管 target=患者 effect=电除颤 duration=即时 contraindication=无 note=急救
+[MACHINE] id=MachG1-093 name=自动体外除颤器 alias=AED unlock=easy category=治疗 subject=急诊 target=患者 effect=自动除颤 duration=即时 contraindication=无 note=急救
+[MACHINE] id=MachG1-094 name=植入式除颤器 alias=ICD unlock=hard category=治疗 subject=心血管 target=患者 effect=自动除颤 duration=持续 contraindication=感染 note=植入
+[MACHINE] id=MachG1-095 name=心脏起搏器 alias=Pacemaker unlock=hard category=治疗 subject=心血管 target=患者 effect=心脏起搏 duration=持续 contraindication=感染 note=植入
+[MACHINE] id=MachG1-096 name=体外起搏器 alias=External Pacemaker unlock=hard category=治疗 subject=心血管|急诊 target=患者 effect=临时起搏 duration=持续 contraindication=感染 note=急救
+[MACHINE] id=MachG1-097 name=洗胃机 alias=Gastric Lavage Machine unlock=normal category=治疗 subject=急诊|毒物 target=患者 effect=洗胃 duration=即时 contraindication=腐蚀性中毒|意识障碍 note=中毒
+[MACHINE] id=MachG1-098 name=血液透析机 alias=Hemodialysis Machine unlock=hard category=治疗 subject=泌尿|急诊 target=患者 effect=血液透析 duration=持续 contraindication=血流动力学不稳 note=透析
+[MACHINE] id=MachG1-099 name=腹膜透析机 alias=Peritoneal Dialysis Machine unlock=hard category=治疗 subject=泌尿 target=患者 effect=腹膜透析 duration=持续 contraindication=腹膜感染 note=透析
+[MACHINE] id=MachG1-100 name=CRRT机 alias=CRRT Machine unlock=extra category=治疗 subject=急诊|泌尿 target=患者 effect=持续肾脏替代 duration=持续 contraindication=凝血障碍 note=重症
+[MACHINE] id=MachG1-101 name=血液灌流机 alias=Hemoperfusion Machine unlock=hard category=治疗 subject=急诊|毒物 target=患者 effect=血液灌流 duration=持续 contraindication=凝血障碍 note=中毒
+[MACHINE] id=MachG1-102 name=血浆置换机 alias=Plasmapheresis Machine unlock=hard category=治疗 subject=急诊|风湿 target=患者 effect=血浆置换 duration=持续 contraindication=凝血障碍 note=免疫
+[MACHINE] id=MachG1-103 name=光疗仪 alias=Phototherapy Machine unlock=normal category=治疗 subject=皮肤|儿科 target=患者 effect=光疗 duration=即时 contraindication=光敏 note=皮肤
+[MACHINE] id=MachG1-104 name=紫外线治疗仪 alias=UV Therapy Machine unlock=normal category=治疗 subject=皮肤 target=患者 effect=紫外线治疗 duration=即时 contraindication=光敏 note=皮肤
+[MACHINE] id=MachG1-105 name=激光治疗仪 alias=Laser Therapy Machine unlock=hard category=治疗 subject=皮肤|眼科 target=患者 effect=激光治疗 duration=即时 contraindication=凝血障碍 note=激光
+[MACHINE] id=MachG1-106 name=冲击波治疗仪 alias=Shockwave Therapy Machine unlock=hard category=治疗 subject=骨科|康复 target=患者 effect=冲击波治疗 duration=即时 contraindication=凝血障碍 note=骨科
+[MACHINE] id=MachG1-107 name=超声治疗仪 alias=Ultrasound Therapy Machine unlock=normal category=治疗 subject=康复|骨科 target=患者 effect=超声治疗 duration=即时 contraindication=无 note=康复
+[MACHINE] id=MachG1-108 name=电疗仪 alias=Electrotherapy Machine unlock=normal category=治疗 subject=康复|精神 target=患者 effect=电刺激 duration=即时 contraindication=心脏起搏器 note=康复
+[MACHINE] id=MachG1-109 name=经皮电刺激仪 alias=TENS Unit unlock=easy category=治疗 subject=康复|疼痛 target=患者 effect=镇痛 duration=即时 contraindication=心脏起搏器 note=镇痛
+[MACHINE] id=MachG1-110 name=磁疗仪 alias=Magnetic Therapy Machine unlock=normal category=治疗 subject=康复|骨科 target=患者 effect=磁疗 duration=即时 contraindication=金属植入 note=康复
+[MACHINE] id=MachG1-111 name=热疗仪 alias=Hyperthermia Machine unlock=hard category=治疗 subject=肿瘤 target=患者 effect=热疗 duration=即时 contraindication=凝血障碍 note=肿瘤
+[MACHINE] id=MachG1-112 name=冷疗仪 alias=Cryotherapy Machine unlock=normal category=治疗 subject=皮肤|康复 target=患者 effect=冷疗 duration=即时 contraindication=循环障碍 note=康复
+[MACHINE] id=MachG1-113 name=高压氧舱 alias=Hyperbaric Oxygen Chamber unlock=hard category=治疗 subject=急诊|毒物 target=患者 effect=高压氧治疗 duration=持续 contraindication=气胸|幽闭恐惧 note=中毒|减压病
+[MACHINE] id=MachG1-114 name=雾化器 alias=Nebulizer unlock=easy category=治疗 subject=呼吸 target=患者 effect=雾化给药 duration=即时 contraindication=无 note=呼吸
+[MACHINE] id=MachG1-115 name=超声雾化器 alias=Ultrasonic Nebulizer unlock=easy category=治疗 subject=呼吸 target=患者 effect=雾化给药 duration=即时 contraindication=无 note=呼吸
+[MACHINE] id=MachG1-116 name=压缩雾化器 alias=Compressor Nebulizer unlock=normal category=治疗 subject=呼吸 target=患者 effect=雾化给药 duration=即时 contraindication=无 note=呼吸
+[MACHINE] id=MachG1-117 name=吸痰器 alias=Suction Machine unlock=easy category=治疗 subject=呼吸|急诊 target=患者 effect=吸痰 duration=即时 contraindication=无 note=护理
+[MACHINE] id=MachG1-118 name=胃肠减压器 alias=Gastric Decompression Machine unlock=normal category=治疗 subject=消化|外科 target=患者 effect=胃肠减压 duration=持续 contraindication=食管静脉曲张 note=外科
+[MACHINE] id=MachG1-119 name=输液泵 alias=Infusion Pump unlock=normal category=给药 subject=全部 target=患者 effect=精准输液 duration=持续 contraindication=无 note=护理
+[MACHINE] id=MachG1-120 name=微量泵 alias=Syringe Pump unlock=normal category=给药 subject=全部 target=患者 effect=精准给药 duration=持续 contraindication=无 note=护理
+
+# ── 给药 ──────────────────────────────────────
+[MACHINE] id=MachG1-121 name=注射器 alias=Syringe unlock=easy category=给药 subject=全部 target=患者 effect=注射 duration=即时 contraindication=无 note=基础
+[MACHINE] id=MachG1-122 name=自动注射器 alias=Auto-Injector unlock=normal category=给药 subject=急诊|全部 target=患者 effect=自动注射 duration=即时 contraindication=无 note=急救
+[MACHINE] id=MachG1-123 name=胰岛素笔 alias=Insulin Pen unlock=easy category=给药 subject=内分泌 target=患者 effect=胰岛素注射 duration=即时 contraindication=无 note=内分泌
+[MACHINE] id=MachG1-124 name=胰岛素泵 alias=Insulin Pump unlock=hard category=给药 subject=内分泌 target=患者 effect=持续胰岛素输注 duration=持续 contraindication=感染 note=内分泌
+[MACHINE] id=MachG1-125 name=镇痛泵 alias=PCA Pump unlock=normal category=给药 subject=外科|疼痛 target=患者 effect=患者自控镇痛 duration=持续 contraindication=呼吸抑制 note=镇痛
+[MACHINE] id=MachG1-126 name=化疗泵 alias=Chemotherapy Pump unlock=hard category=给药 subject=肿瘤 target=患者 effect=化疗给药 duration=持续 contraindication=无 note=肿瘤
+[MACHINE] id=MachG1-127 name=静脉留置针 alias=IV Cannula unlock=easy category=给药 subject=全部 target=患者 effect=静脉通路 duration=持续 contraindication=无 note=基础
+[MACHINE] id=MachG1-128 name=中心静脉导管 alias=Central Venous Catheter unlock=hard category=给药 subject=急诊|外科 target=患者 effect=中心静脉通路 duration=持续 contraindication=凝血障碍|感染 note=重症
+[MACHINE] id=MachG1-129 name=PICC导管 alias=PICC Line unlock=hard category=给药 subject=全部 target=患者 effect=中长期静脉通路 duration=持续 contraindication=凝血障碍|感染 note=长期
+[MACHINE] id=MachG1-130 name=输液港 alias=Port-a-Cath unlock=hard category=给药 subject=肿瘤|全部 target=患者 effect=长期静脉通路 duration=持续 contraindication=感染 note=长期
+
+# ── 急救 ──────────────────────────────────────
+[MACHINE] id=MachG1-131 name=担架 alias=Stretcher unlock=easy category=急救 subject=全部 target=患者 effect=转运 duration=即时 contraindication=无 note=基础
+[MACHINE] id=MachG1-132 name=轮椅 alias=Wheelchair unlock=easy category=急救 subject=全部 target=患者 effect=转运 duration=即时 contraindication=无 note=基础
+[MACHINE] id=MachG1-133 name=拐杖 alias=Crutch unlock=easy category=急救 subject=骨科 target=患者 effect=辅助行走 duration=即时 contraindication=无 note=基础
+[MACHINE] id=MachG1-134 name=急救箱 alias=First Aid Kit unlock=easy category=急救 subject=全部 target=患者 effect=基础急救 duration=即时 contraindication=无 note=基础
+[MACHINE] id=MachG1-135 name=急救车 alias=Crash Cart unlock=normal category=急救 subject=急诊 target=患者 effect=急救药物|器械 duration=即时 contraindication=无 note=急救
+[MACHINE] id=MachG1-136 name=负压担架 alias=Negative Pressure Stretcher unlock=hard category=急救 subject=急诊|感染 target=患者 effect=隔离转运 duration=即时 contraindication=无 note=感染控制
+[MACHINE] id=MachG1-137 name=隔离舱 alias=Isolation Pod unlock=hard category=急救 subject=感染 target=患者 effect=隔离转运 duration=即时 contraindication=无 note=感染控制
+[MACHINE] id=MachG1-138 name=呼吸球囊 alias=Bag-Valve-Mask unlock=easy category=急救 subject=急诊 target=患者 effect=手动通气 duration=即时 contraindication=无 note=急救
+[MACHINE] id=MachG1-139 name=喉罩 alias=Laryngeal Mask Airway unlock=normal category=急救 subject=急诊|麻醉 target=患者 effect=气道管理 duration=即时 contraindication=无 note=急救
+[MACHINE] id=MachG1-140 name=气管插管套件 alias=Intubation Kit unlock=normal category=急救 subject=急诊|麻醉 target=患者 effect=气管插管 duration=即时 contraindication=无 note=急救
+[MACHINE] id=MachG1-141 name=环甲膜穿刺套件 alias=Cricothyrotomy Kit unlock=hard category=急救 subject=急诊 target=患者 effect=紧急气道 duration=即时 contraindication=无 note=急救
+[MACHINE] id=MachG1-142 name=胸腔穿刺套件 alias=Thoracentesis Kit unlock=normal category=急救 subject=呼吸|急诊 target=患者 effect=胸腔穿刺 duration=即时 contraindication=凝血障碍 note=急救
+[MACHINE] id=MachG1-143 name=腹腔穿刺套件 alias=Paracentesis Kit unlock=normal category=急救 subject=消化|急诊 target=患者 effect=腹腔穿刺 duration=即时 contraindication=凝血障碍 note=急救
+[MACHINE] id=MachG1-144 name=骨髓穿刺套件 alias=Intraosseous Kit unlock=hard category=急救 subject=急诊 target=患者 effect=骨髓通路 duration=即时 contraindication=骨折|感染 note=急救
+[MACHINE] id=MachG1-145 name=止血带 alias=Tourniquet unlock=easy category=急救 subject=外科|急诊 target=患者 effect=止血 duration=即时 contraindication=无 note=急救
+[MACHINE] id=MachG1-146 name=加压包扎套件 alias=Pressure Dressing Kit unlock=easy category=急救 subject=外科|急诊 target=患者 effect=加压止血 duration=即时 contraindication=无 note=急救
+[MACHINE] id=MachG1-147 name=夹板 alias=Splint unlock=easy category=急救 subject=骨科|急诊 target=患者 effect=固定骨折 duration=即时 contraindication=无 note=急救
+[MACHINE] id=MachG1-148 name=颈托 alias=Cervical Collar unlock=easy category=急救 subject=骨科|急诊 target=患者 effect=颈椎固定 duration=即时 contraindication=无 note=急救
+[MACHINE] id=MachG1-149 name=脊柱板 alias=Spinal Board unlock=normal category=急救 subject=骨科|急诊 target=患者 effect=脊柱固定 duration=即时 contraindication=无 note=急救
+[MACHINE] id=MachG1-150 name=抗休克裤 alias=MAST unlock=normal category=急救 subject=急诊 target=患者 effect=抗休克 duration=即时 contraindication=心衰 note=急救
+
+# ── 手术 ──────────────────────────────────────
+[MACHINE] id=MachG1-151 name=手术刀 alias=Scalpel unlock=easy category=手术 subject=外科 target=患者 effect=切开 duration=即时 contraindication=无 note=基础
+[MACHINE] id=MachG1-152 name=电刀 alias=Electrocautery unlock=normal category=手术 subject=外科 target=患者 effect=切割|止血 duration=即时 contraindication=心脏起搏器 note=手术
+[MACHINE] id=MachG1-153 name=超声刀 alias=Ultrasonic Scalpel unlock=hard category=手术 subject=外科 target=患者 effect=切割|止血 duration=即时 contraindication=无 note=手术
+[MACHINE] id=MachG1-154 name=激光刀 alias=Laser Scalpel unlock=hard category=手术 subject=外科|眼科 target=患者 effect=精准切割 duration=即时 contraindication=无 note=手术
+[MACHINE] id=MachG1-155 name=水刀 alias=Water Jet Scalpel unlock=extra category=手术 subject=外科 target=患者 effect=精准切割 duration=即时 contraindication=无 note=手术
+[MACHINE] id=MachG1-156 name=氩气刀 alias=Argon Beam Coagulator unlock=hard category=手术 subject=外科 target=患者 effect=凝血|消融 duration=即时 contraindication=无 note=手术
+[MACHINE] id=MachG1-157 name=结扎线 alias=Ligature unlock=easy category=手术 subject=外科 target=患者 effect=结扎血管 duration=即时 contraindication=无 note=基础
+[MACHINE] id=MachG1-158 name=缝合线 alias=Suture unlock=easy category=手术 subject=外科 target=患者 effect=缝合 duration=即时 contraindication=无 note=基础
+[MACHINE] id=MachG1-159 name=吻合器 alias=Stapler unlock=normal category=手术 subject=外科|消化 target=患者 effect=吻合 duration=即时 contraindication=无 note=手术
+[MACHINE] id=MachG1-160 name=手术显微镜 alias=Surgical Microscope unlock=hard category=手术 subject=神经|眼科|骨科 target=患者 effect=显微手术 duration=即时 contraindication=无 note=手术
+[MACHINE] id=MachG1-161 name=神经导航系统 alias=Neuronavigation unlock=extra category=手术 subject=神经 target=患者 effect=术中导航 duration=即时 contraindication=无 note=手术
+[MACHINE] id=MachG1-162 name=手术机器人 alias=Surgical Robot unlock=extra category=手术 subject=外科|泌尿|妇产 target=患者 effect=微创手术 duration=即时 contraindication=无 note=高端
+[MACHINE] id=MachG1-163 name=麻醉机 alias=Anesthesia Machine unlock=hard category=手术 subject=麻醉 target=患者 effect=全身麻醉 duration=即时 contraindication=无 note=麻醉
+[MACHINE] id=MachG1-164 name=麻醉监护仪 alias=Anesthesia Monitor unlock=hard category=手术 subject=麻醉 target=患者 effect=麻醉深度监测 duration=持续 contraindication=无 note=麻醉
+[MACHINE] id=MachG1-165 name=体外循环机 alias=Cardiopulmonary Bypass unlock=extra category=手术 subject=心血管 target=患者 effect=体外循环 duration=即时 contraindication=凝血障碍 note=心脏手术
+[MACHINE] id=MachG1-166 name=自体血回收机 alias=Cell Saver unlock=hard category=手术 subject=外科 target=患者 effect=自体血回收 duration=即时 contraindication=感染 note=手术
+[MACHINE] id=MachG1-167 name=手术床 alias=Operating Table unlock=normal category=手术 subject=外科 target=患者 effect=手术体位 duration=即时 contraindication=无 note=基础
+[MACHINE] id=MachG1-168 name=手术灯 alias=Surgical Light unlock=easy category=手术 subject=外科 target=患者 effect=照明 duration=即时 contraindication=无 note=基础
+[MACHINE] id=MachG1-169 name=吸引器 alias=Surgical Suction unlock=easy category=手术 subject=外科 target=患者 effect=吸引 duration=即时 contraindication=无 note=基础
+[MACHINE] id=MachG1-170 name=冲洗器 alias=Irrigation Device unlock=easy category=手术 subject=外科 target=患者 effect=冲洗 duration=即时 contraindication=无 note=基础
+[MACHINE] id=MachG1-171 name=保温毯 alias=Warming Blanket unlock=normal category=手术 subject=外科|急诊 target=患者 effect=保温 duration=持续 contraindication=无 note=基础
+[MACHINE] id=MachG1-172 name=降温毯 alias=Cooling Blanket unlock=normal category=手术 subject=急诊|神经 target=患者 effect=降温 duration=持续 contraindication=无 note=亚低温
+[MACHINE] id=MachG1-173 name=体位垫 alias=Positioning Pad unlock=easy category=手术 subject=外科 target=患者 effect=体位固定 duration=即时 contraindication=无 note=基础
+[MACHINE] id=MachG1-174 name=牵引架 alias=Traction Frame unlock=normal category=手术 subject=骨科 target=患者 effect=牵引 duration=即时 contraindication=无 note=骨科
+[MACHINE] id=MachG1-175 name=石膏锯 alias=Cast Saw unlock=easy category=手术 subject=骨科 target=患者 effect=拆除石膏 duration=即时 contraindication=无 note=骨科
+
+# ── 引流 ──────────────────────────────────────
+[MACHINE] id=MachG1-176 name=胸腔引流管 alias=Chest Tube unlock=normal category=引流 subject=呼吸|急诊 target=患者 effect=胸腔引流 duration=持续 contraindication=凝血障碍 note=气胸|胸水
+[MACHINE] id=MachG1-177 name=胸腔引流瓶 alias=Chest Drainage Bottle unlock=normal category=引流 subject=呼吸|急诊 target=患者 effect=胸腔引流 duration=持续 contraindication=无 note=引流
+[MACHINE] id=MachG1-178 name=水封瓶 alias=Water Seal Bottle unlock=normal category=引流 subject=呼吸|急诊 target=患者 effect=胸腔引流 duration=持续 contraindication=无 note=引流
+[MACHINE] id=MachG1-179 name=负压引流器 alias=Negative Pressure Drain unlock=normal category=引流 subject=外科|急诊 target=患者 effect=负压引流 duration=持续 contraindication=无 note=引流
+[MACHINE] id=MachG1-180 name=腹腔引流管 alias=Abdominal Drain unlock=normal category=引流 subject=消化|外科 target=患者 effect=腹腔引流 duration=持续 contraindication=凝血障碍 note=腹水|脓肿
+[MACHINE] id=MachG1-181 name=心包引流管 alias=Pericardial Drain unlock=hard category=引流 subject=心血管|急诊 target=患者 effect=心包引流 duration=持续 contraindication=凝血障碍 note=心包积液
+[MACHINE] id=MachG1-182 name=脑室引流管 alias=Ventricular Drain unlock=hard category=引流 subject=神经 target=患者 effect=脑室引流 duration=持续 contraindication=感染 note=脑积水
+[MACHINE] id=MachG1-183 name=胆道引流管 alias=Biliary Drain unlock=hard category=引流 subject=消化 target=患者 effect=胆道引流 duration=持续 contraindication=凝血障碍 note=胆道梗阻
+[MACHINE] id=MachG1-184 name=PTCD套件 alias=PTCD Kit unlock=hard category=引流 subject=消化 target=患者 effect=经皮肝穿刺胆道引流 duration=即时 contraindication=凝血障碍|腹水 note=胆道梗阻
+[MACHINE] id=MachG1-185 name=肾造瘘管 alias=Nephrostomy Tube unlock=hard category=引流 subject=泌尿 target=患者 effect=肾造瘘 duration=持续 contraindication=凝血障碍 note=尿路梗阻
+[MACHINE] id=MachG1-186 name=膀胱造瘘管 alias=Cystostomy Tube unlock=hard category=引流 subject=泌尿 target=患者 effect=膀胱造瘘 duration=持续 contraindication=凝血障碍 note=尿路梗阻
+[MACHINE] id=MachG1-187 name=导尿管 alias=Urinary Catheter unlock=easy category=引流 subject=全部 target=患者 effect=导尿 duration=持续 contraindication=尿道损伤 note=基础
+[MACHINE] id=MachG1-188 name=双腔导尿管 alias=Foley Catheter unlock=easy category=引流 subject=全部 target=患者 effect=留置导尿 duration=持续 contraindication=尿道损伤 note=基础
+[MACHINE] id=MachG1-189 name=鼻胃管 alias=Nasogastric Tube unlock=easy category=引流 subject=全部 target=患者 effect=胃肠减压|鼻饲 duration=持续 contraindication=食管静脉曲张 note=基础
+[MACHINE] id=MachG1-190 name=鼻肠管 alias=Nasointestinal Tube unlock=normal category=引流 subject=全部 target=患者 effect=肠内营养 duration=持续 contraindication=肠梗阻 note=营养
+[MACHINE] id=MachG1-191 name=胃造瘘管 alias=Gastrostomy Tube unlock=hard category=引流 subject=消化|神经 target=患者 effect=长期营养 duration=持续 contraindication=感染 note=营养
+[MACHINE] id=MachG1-192 name=空肠造瘘管 alias=Jejunostomy Tube unlock=hard category=引流 subject=外科 target=患者 effect=肠内营养 duration=持续 contraindication=感染 note=营养
+[MACHINE] id=MachG1-193 name=腹腔透析管 alias=Peritoneal Dialysis Catheter unlock=hard category=引流 subject=泌尿 target=患者 effect=腹膜透析 duration=持续 contraindication=感染 note=透析
+[MACHINE] id=MachG1-194 name=血液透析导管 alias=Hemodialysis Catheter unlock=hard category=引流 subject=泌尿|急诊 target=患者 effect=血液透析通路 duration=持续 contraindication=感染 note=透析
+[MACHINE] id=MachG1-195 name=引流袋 alias=Drainage Bag unlock=easy category=引流 subject=全部 target=患者 effect=收集引流液 duration=持续 contraindication=无 note=基础
+
+# ── 特殊/妖力 ──────────────────────────────────────
+[MACHINE] id=MachG1-196 name=博丽御币 alias=Hakurei Gohei unlock=hard category=特殊 subject=全部 target=患者 effect=妖力净化 duration=即时 contraindication=无 note=灵梦
+[MACHINE] id=MachG1-197 name=博丽结界符 alias=Hakurei Barrier Talisman unlock=hard category=特殊 subject=全部 target=患者 effect=结界防护 duration=即时 contraindication=无 note=灵梦
+[MACHINE] id=MachG1-198 name=八云紫境界扇 alias=Yukari Boundary Fan unlock=extra category=特殊 subject=全部 target=患者 effect=境界操作 duration=即时 contraindication=无 note=紫
+[MACHINE] id=MachG1-199 name=月都科技箱 alias=Lunar Tech Box unlock=extra category=特殊 subject=全部 target=患者 effect=月都科技 duration=即时 contraindication=无 note=月都
+[MACHINE] id=MachG1-200 name=永远亭秘药箱 alias=Eientei Secret Medicine Box unlock=extra category=特殊 subject=全部 target=患者 effect=秘药 duration=即时 contraindication=无 note=永琳
+[MACHINE] id=MachG1-201 name=蓬莱之药瓶 alias=Horai Elixir Bottle unlock=extra category=特殊 subject=全部 target=患者 effect=不死药 duration=即时 contraindication=无 note=辉夜
+[MACHINE] id=MachG1-202 name=铃仙幻视波眼镜 alias=Reisen Vision Glasses unlock=hard category=特殊 subject=全部 target=患者 effect=幻视诊断 duration=即时 contraindication=无 note=铃仙
+[MACHINE] id=MachG1-203 name=因幡幸运符 alias=Tewi Luck Charm unlock=extra category=特殊 subject=全部 target=患者 effect=幸运干预 duration=即时 contraindication=无 note=帝
+[MACHINE] id=MachG1-204 name=妖怪细胞培养箱 alias=Youkai Cell Culture Incubator unlock=extra category=特殊 subject=全部 target=患者 effect=细胞培养 duration=持续 contraindication=无 note=永远亭
+[MACHINE] id=MachG1-205 name=妖力中和器 alias=Youkai Neutralizer Device unlock=hard category=特殊 subject=全部 target=患者 effect=中和妖力 duration=即时 contraindication=无 note=永远亭
+[MACHINE] id=MachG1-206 name=灵界沟通器 alias=Spirit Communication Device unlock=extra category=特殊 subject=精神|神经 target=患者 effect=灵界沟通 duration=即时 contraindication=无 note=永远亭
+[MACHINE] id=MachG1-207 name=魔法蘑菇鉴定仪 alias=Magic Mushroom Identifier unlock=normal category=特殊 subject=中毒 target=样本 effect=鉴定蘑菇 duration=即时 contraindication=无 note=永远亭
+[MACHINE] id=MachG1-208 name=时间停止怀表 alias=Time Stop Pocket Watch unlock=extra category=特殊 subject=全部 target=患者 effect=暂停时间 duration=即时 contraindication=无 note=咲夜
+[MACHINE] id=MachG1-209 name=亡灵沟通镜 alias=Ghost Communication Mirror unlock=extra category=特殊 subject=精神 target=患者 effect=亡灵沟通 duration=即时 contraindication=无 note=幽幽子
+[MACHINE] id=MachG1-210 name=吸血鬼能力评估仪 alias=Vampire Ability Assessor unlock=hard category=特殊 subject=全部 target=患者 effect=评估能力 duration=即时 contraindication=无 note=永远亭
+[MACHINE] id=MachG1-211 name=半灵协调器 alias=Half-Spirit Coordinator unlock=hard category=特殊 subject=全部 target=患者 effect=协调半灵 duration=即时 contraindication=无 note=妖梦
+[MACHINE] id=MachG1-212 name=月兔抗体提取仪 alias=Lunar Rabbit Antibody Extractor unlock=extra category=特殊 subject=全部 target=患者 effect=提取抗体 duration=即时 contraindication=无 note=铃仙
+[MACHINE] id=MachG1-213 name=永远亭特制药炉 alias=Eientei Special Furnace unlock=extra category=特殊 subject=全部 target=患者 effect=炼药 duration=即时 contraindication=无 note=永琳
+[MACHINE] id=MachG1-214 name=月都科技诊断仪 alias=Lunar Tech Diagnostic Device unlock=extra category=特殊 subject=全部 target=患者 effect=月都诊断 duration=即时 contraindication=无 note=月都
+[MACHINE] id=MachG1-215 name=蓬莱人血清提取仪 alias=Horai Serum Extractor unlock=extra category=特殊 subject=全部 target=患者 effect=提取血清 duration=即时 contraindication=无 note=辉夜
+
+# ── 消融 ──────────────────────────────────────
+[MACHINE] id=MachG1-216 name=氦氩刀 alias=Argon-Helium Cryoablation Device unlock=hard category=消融 subject=肿瘤|皮肤 target=患者 effect=冷冻消融 duration=即时 contraindication=凝血障碍 note=冷冻
+[MACHINE] id=MachG1-217 name=射频消融仪 alias=Radiofrequency Ablation Device unlock=hard category=消融 subject=心血管|肿瘤 target=患者 effect=热消融 duration=即时 contraindication=凝血障碍 note=消融
+[MACHINE] id=MachG1-218 name=微波消融仪 alias=Microwave Ablation Device unlock=hard category=消融 subject=肿瘤 target=患者 effect=热消融 duration=即时 contraindication=凝血障碍 note=消融
+[MACHINE] id=MachG1-219 name=激光消融仪 alias=Laser Ablation Device unlock=hard category=消融 subject=眼科|皮肤|肿瘤 target=患者 effect=光消融 duration=即时 contraindication=凝血障碍 note=消融
+[MACHINE] id=MachG1-220 name=HIFU治疗仪 alias=HIFU Device unlock=extra category=消融 subject=肿瘤|妇产 target=患者 effect=无创消融 duration=即时 contraindication=凝血障碍 note=无创
+[MACHINE] id=MachG1-221 name=冷冻消融仪 alias=Cryoablation Device unlock=hard category=消融 subject=肿瘤|皮肤 target=患者 effect=冷冻消融 duration=即时 contraindication=凝血障碍 note=消融
+[MACHINE] id=MachG1-222 name=化学消融套件 alias=Chemical Ablation Kit unlock=hard category=消融 subject=肿瘤 target=患者 effect=化学消融 duration=即时 contraindication=凝血障碍 note=消融
+[MACHINE] id=MachG1-223 name=酒精消融套件 alias=Alcohol Ablation Kit unlock=hard category=消融 subject=肿瘤|心血管 target=患者 effect=酒精消融 duration=即时 contraindication=凝血障碍 note=消融
+[MACHINE] id=MachG1-224 name=电灼仪 alias=Electrocautery Device unlock=normal category=消融 subject=皮肤|外科 target=患者 effect=电灼 duration=即时 contraindication=凝血障碍 note=消融
+[MACHINE] id=MachG1-225 name=冷冻治疗仪 alias=Cryotherapy Device unlock=normal category=消融 subject=皮肤 target=患者 effect=冷冻 duration=即时 contraindication=凝血障碍 note=皮肤
+
+# ── 植入 ──────────────────────────────────────
+[MACHINE] id=MachG1-226 name=心脏起搏器 alias=Pacemaker unlock=hard category=植入 subject=心血管 target=患者 effect=起搏 duration=持续 contraindication=感染 note=植入
+[MACHINE] id=MachG1-227 name=植入式除颤器 alias=ICD unlock=hard category=植入 subject=心血管 target=患者 effect=除颤 duration=持续 contraindication=感染 note=植入
+[MACHINE] id=MachG1-228 name=冠脉支架 alias=Coronary Stent unlock=hard category=植入 subject=心血管 target=患者 effect=支架 duration=持续 contraindication=凝血障碍 note=植入
+[MACHINE] id=MachG1-229 name=人工关节 alias=Joint Prosthesis unlock=hard category=植入 subject=骨科 target=患者 effect=人工关节 duration=持续 contraindication=感染 note=植入
+[MACHINE] id=MachG1-230 name=人工晶体 alias=Intraocular Lens unlock=normal category=植入 subject=眼科 target=患者 effect=人工晶体 duration=持续 contraindication=感染 note=植入
+[MACHINE] id=MachG1-231 name=人工耳蜗 alias=Cochlear Implant unlock=hard category=植入 subject=耳鼻喉 target=患者 effect=人工耳蜗 duration=持续 contraindication=感染 note=植入
+[MACHINE] id=MachG1-232 name=脑深部电刺激器 alias=DBS Device unlock=extra category=植入 subject=神经 target=患者 effect=电刺激 duration=持续 contraindication=感染 note=植入
+[MACHINE] id=MachG1-233 name=脊髓电刺激器 alias=Spinal Cord Stimulator unlock=extra category=植入 subject=神经 target=患者 effect=电刺激 duration=持续 contraindication=感染 note=植入
+[MACHINE] id=MachG1-234 name=胰岛素泵 alias=Insulin Pump unlock=hard category=植入 subject=内分泌 target=患者 effect=胰岛素输注 duration=持续 contraindication=感染 note=植入
+[MACHINE] id=MachG1-235 name=透析导管 alias=Dialysis Catheter unlock=hard category=植入 subject=泌尿 target=患者 effect=透析通路 duration=持续 contraindication=感染 note=植入
+
+# ── 检验 ──────────────────────────────────────
+[MACHINE] id=MachG1-236 name=显微镜 alias=Microscope unlock=easy category=检验 subject=全部 target=样本 effect=细胞|细菌观察 duration=即时 contraindication=无 note=基础
+[MACHINE] id=MachG1-237 name=离心机 alias=Centrifuge unlock=easy category=检验 subject=全部 target=样本 effect=分离血清|血浆 duration=即时 contraindication=无 note=基础
+[MACHINE] id=MachG1-238 name=培养箱 alias=Incubator unlock=normal category=检验 subject=全部 target=样本 effect=细菌|细胞培养 duration=持续 contraindication=无 note=微生物
+[MACHINE] id=MachG1-239 name=生物安全柜 alias=Biosafety Cabinet unlock=hard category=检验 subject=全部 target=样本 effect=无菌操作 duration=即时 contraindication=无 note=微生物
+[MACHINE] id=MachG1-240 name=超低温冰箱 alias=Ultra-Low Temperature Freezer unlock=hard category=检验 subject=全部 target=样本 effect=样本保存 duration=持续 contraindication=无 note=样本
+[MACHINE] id=MachG1-241 name=液氮罐 alias=Liquid Nitrogen Tank unlock=hard category=检验 subject=全部 target=样本 effect=冷冻保存 duration=持续 contraindication=无 note=样本
+[MACHINE] id=MachG1-242 name=石蜡切片机 alias=Paraffin Microtome unlock=hard category=检验 subject=全部 target=样本 effect=组织切片 duration=即时 contraindication=无 note=病理
+[MACHINE] id=MachG1-243 name=冰冻切片机 alias=Cryostat unlock=hard category=检验 subject=全部 target=样本 effect=快速切片 duration=即时 contraindication=无 note=病理
+[MACHINE] id=MachG1-244 name=染色机 alias=Staining Machine unlock=normal category=检验 subject=全部 target=样本 effect=染色 duration=即时 contraindication=无 note=病理
+[MACHINE] id=MachG1-245 name=免疫组化仪 alias=Immunohistochemistry Machine unlock=hard category=检验 subject=全部 target=样本 effect=免疫组化 duration=即时 contraindication=无 note=病理
+
+# ── 康复 ──────────────────────────────────────
+[MACHINE] id=MachG1-246 name=康复训练器 alias=Rehabilitation Trainer unlock=normal category=康复 subject=康复|骨科 target=患者 effect=功能训练 duration=即时 contraindication=无 note=康复
+[MACHINE] id=MachG1-247 name=平衡训练仪 alias=Balance Trainer unlock=normal category=康复 subject=康复|神经 target=患者 effect=平衡训练 duration=即时 contraindication=无 note=康复
+[MACHINE] id=MachG1-248 name=步态训练器 alias=Gait Trainer unlock=hard category=康复 subject=康复|神经 target=患者 effect=步态训练 duration=即时 contraindication=无 note=康复
+[MACHINE] id=MachG1-249 name=上下肢康复机 alias=Upper Lower Limb Rehab Machine unlock=normal category=康复 subject=康复 target=患者 effect=肢体训练 duration=即时 contraindication=无 note=康复
+[MACHINE] id=MachG1-250 name=吞咽治疗仪 alias=Dysphagia Therapy Device unlock=hard category=康复 subject=康复|神经 target=患者 effect=吞咽训练 duration=即时 contraindication=无 note=康复
+[MACHINE] id=MachG1-251 name=言语治疗仪 alias=Speech Therapy Device unlock=hard category=康复 subject=康复|神经 target=患者 effect=言语训练 duration=即时 contraindication=无 note=康复
+[MACHINE] id=MachG1-252 name=认知训练仪 alias=Cognitive Trainer unlock=hard category=康复 subject=康复|神经 target=患者 effect=认知训练 duration=即时 contraindication=无 note=康复
+[MACHINE] id=MachG1-253 name=作业治疗器 alias=Occupational Therapy Device unlock=normal category=康复 subject=康复 target=患者 effect=作业训练 duration=即时 contraindication=无 note=康复
+[MACHINE] id=MachG1-254 name=压力治疗仪 alias=Compression Therapy Device unlock=normal category=康复 subject=康复|血管 target=患者 effect=压力治疗 duration=即时 contraindication=深静脉血栓 note=康复
+[MACHINE] id=MachG1-255 name=牵引治疗仪 alias=Traction Therapy Device unlock=normal category=康复 subject=康复|骨科 target=患者 effect=牵引治疗 duration=即时 contraindication=骨折未固定 note=康复

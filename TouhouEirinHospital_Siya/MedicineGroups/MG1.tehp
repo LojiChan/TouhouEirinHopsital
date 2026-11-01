@@ -1,0 +1,636 @@
+# ============================================================
+# 永远亭医疗模拟器 — 药典 MG1 (重度细化版)
+# 格式：[ITEM] id=... name=... alias=... dose_form=... unlock=... category=... subject=... indication=... contraindication=... interaction=... note=...
+# category 已细化为：抗血小板药|抗凝血药|溶栓药|抗心律失常药|β受体阻滞剂|钙通道阻滞剂|降压药|调脂药|抗心绞痛药|强心药|利尿剂|升压药|支气管扩张剂|糖皮质激素|化痰药|镇咳药|喹诺酮类|头孢菌素类|青霉素类|大环内酯类|氨基糖苷类|碳青霉烯类|抗厌氧菌药|抗病毒药|抗真菌药|抗结核药|抗寄生虫药|抗肿瘤药|免疫抑制剂|生物制剂|镇静催眠药|抗癫痫药|抗抑郁药|抗精神病药|抗帕金森药|阿片类镇痛药|非阿片类镇痛药|静脉麻醉药|肌松药|质子泵抑制剂(PPI)|H2受体拮抗剂|促胃动力药|止吐药|止泻/通便药|肝胆用药|降糖药|甲状腺激素|抗甲状腺药|骨代谢药|性激素|止血药|抗贫血药|电解质/营养液|特异性解毒剂|实验性疗法|安慰剂
+# ============================================================
+
+# ── 心血管 ──────────────────────────────────────
+[ITEM] id=MG1-001 name=阿司匹林 alias=Aspirin dose_form=100mg锭|300mg嚼锭 unlock=easy category=抗血小板药|非甾体抗炎药 subject=心血管|急诊|内科 indication=STEMI|抗血小板|解热镇痛 contraindication=活动性出血|过敏|胃溃疡 interaction=与肝素并用增加出血风险|与NSAIDs并用增加出血 note=STEMI嚼服300mg
+[ITEM] id=MG1-002 name=氯吡格雷 alias=Clopidogrel dose_form=75mg锭 unlock=normal category=抗血小板药 subject=心血管|急诊 indication=支架后|ACS contraindication=活动性出血 interaction=与奥美拉唑并用降低疗效 note=支架后标准
+[ITEM] id=MG1-003 name=替格瑞洛 alias=Ticagrelor dose_form=90mg锭 unlock=hard category=抗血小板药 subject=心血管|急诊 indication=ACS|支架后 contraindication=颅内出血|严重肝损 interaction=与CYP3A4抑制剂并用增加出血 note=强效抗血小板
+[ITEM] id=MG1-004 name=普拉格雷 alias=Prasugrel dose_form=10mg锭 unlock=hard category=抗血小板药 subject=心血管 indication=ACS|PCI contraindication=中风史|活动性出血 interaction=与阿司匹林并用增加出血 note=PCI术前负荷
+[ITEM] id=MG1-005 name=肝素 alias=Heparin dose_form=5000U/mL针 unlock=normal category=抗凝血药 subject=心血管|急诊|外科 indication=溶栓|PCI|DVT预防 contraindication=活动性出血|HIT interaction=与阿司匹林并用增加出血 note=60U/kg bolus
+[ITEM] id=MG1-006 name=低分子肝素 alias=LMWH dose_form=4000IU/0.4mL针 unlock=normal category=抗凝血药 subject=心血管|外科 indication=DVT预防|ACS contraindication=活动性出血|肾衰 interaction=与NSAIDs并用增加出血 note=依诺肝素
+[ITEM] id=MG1-007 name=华法林 alias=Warfarin dose_form=2.5mg|5mg锭 unlock=hard category=抗凝血药 subject=心血管|内科 indication=房颤|DVT|PE contraindication=妊娠|活动性出血 interaction=与多种药物交互|需监测INR note=需监测INR
+[ITEM] id=MG1-008 name=利伐沙班 alias=Rivaroxaban dose_form=10mg|20mg锭 unlock=hard category=抗凝血药 subject=心血管|内科 indication=DVT|PE|房颤 contraindication=活动性出血|严重肾损 interaction=与CYP3A4抑制剂并用增加出血 note=新型口服抗凝
+[ITEM] id=MG1-009 name=阿哌沙班 alias=Apixaban dose_form=2.5mg|5mg锭 unlock=hard category=抗凝血药 subject=心血管 indication=房颤|DVT contraindication=活动性出血 interaction=与强CYP3A4抑制剂并用增加出血 note=新型口服抗凝
+[ITEM] id=MG1-010 name=达比加群 alias=Dabigatran dose_form=110mg|150mg胶囊 unlock=hard category=抗凝血药 subject=心血管 indication=房颤|DVT contraindication=机械瓣|严重肾损 interaction=与P-gp抑制剂并用增加出血 note=新型口服抗凝
+[ITEM] id=MG1-011 name=替奈普酶 alias=Tenecteplase dose_form=50mg针 unlock=hard category=溶栓药 subject=心血管|急诊 indication=STEMI溶栓 contraindication=近期手术|出血性中风 interaction=与肝素并用需调整剂量 note=0.5mg/kg IV bolus
+[ITEM] id=MG1-012 name=阿替普酶 alias=Alteplase dose_form=50mg|100mg针 unlock=hard category=溶栓药 subject=心血管|急诊|神经 indication=STEMI|缺血性中风|PE contraindication=活动性出血|近期手术 interaction=与肝素并用需调整剂量 note=溶栓金标准
+[ITEM] id=MG1-013 name=瑞替普酶 alias=Reteplase dose_form=10U针 unlock=hard category=溶栓药 subject=心血管 indication=STEMI contraindication=活动性出血 interaction=与肝素并用增加出血 note=两次bolus
+[ITEM] id=MG1-014 name=尿激酶 alias=Urokinase dose_form=10万U针 unlock=normal category=溶栓药 subject=心血管|急诊 indication=溶栓|导管冲洗 contraindication=活动性出血 interaction=与肝素并用增加出血 note=廉价溶栓
+[ITEM] id=MG1-015 name=链激酶 alias=Streptokinase dose_form=150万U针 unlock=normal category=溶栓药 subject=心血管 indication=STEMI contraindication=过敏|近期链球菌感染 interaction=与肝素并用增加出血 note=过敏风险
+[ITEM] id=MG1-016 name=美托洛尔 alias=Metoprolol dose_form=25mg|50mg锭|5mg/5mL针 unlock=easy category=β受体阻滞剂|抗心律失常药 subject=心血管|急诊 indication=高血压|心衰|STEMI后|心律不整 contraindication=心因性休克|严重心动过缓 interaction=与维拉帕米并用加重心衰 note=STEMI后首选
+[ITEM] id=MG1-017 name=比索洛尔 alias=Bisoprolol dose_form=2.5mg|5mg锭 unlock=normal category=β受体阻滞剂 subject=心血管 indication=高血压|心衰 contraindication=严重心动过缓 interaction=与地尔硫卓并用加重心衰 note=高选择性β1
+[ITEM] id=MG1-018 name=卡维地洛 alias=Carvedilol dose_form=6.25mg|12.5mg锭 unlock=normal category=β受体阻滞剂 subject=心血管 indication=心衰|高血压 contraindication=严重肝损|哮喘 interaction=与CYP2D6抑制剂并用增加浓度 note=α+β阻断
+[ITEM] id=MG1-019 name=阿替洛尔 alias=Atenolol dose_form=25mg|50mg锭 unlock=easy category=β受体阻滞剂 subject=心血管 indication=高血压|心绞痛 contraindication=严重心动过缓 interaction=与NSAIDs并用降低疗效 note=水溶性
+[ITEM] id=MG1-020 name=普萘洛尔 alias=Propranolol dose_form=10mg|40mg锭 unlock=easy category=β受体阻滞剂 subject=心血管|精神 indication=心律失常|甲亢|偏头痛预防 contraindication=哮喘|严重心衰 interaction=与利血平并用加重心动过缓 note=非选择性
+[ITEM] id=MG1-021 name=阿托伐他汀 alias=Atorvastatin dose_form=10mg|20mg|40mg|80mg锭 unlock=easy category=调脂药 subject=心血管|内科 indication=高血脂|STEMI后|斑块稳定 contraindication=活动性肝病|妊娠 interaction=与CYP3A4抑制剂并用增加肌病风险 note=STEMI用80mg
+[ITEM] id=MG1-022 name=瑞舒伐他汀 alias=Rosuvastatin dose_form=5mg|10mg|20mg锭 unlock=normal category=调脂药 subject=心血管|内科 indication=高血脂|斑块稳定 contraindication=活动性肝病|妊娠 interaction=与环孢素并用增加肌病风险 note=强效他汀
+[ITEM] id=MG1-023 name=辛伐他汀 alias=Simvastatin dose_form=20mg|40mg锭 unlock=easy category=调脂药 subject=心血管|内科 indication=高血脂 contraindication=活动性肝病|妊娠 interaction=与CYP3A4抑制剂并用增加肌病风险 note=经典他汀
+[ITEM] id=MG1-024 name=普伐他汀 alias=Pravastatin dose_form=20mg|40mg锭 unlock=easy category=调脂药 subject=心血管|内科 indication=高血脂 contraindication=活动性肝病|妊娠 interaction=与考来烯胺并用降低吸收 note=水溶性
+[ITEM] id=MG1-025 name=氟伐他汀 alias=Fluvastatin dose_form=20mg|40mg锭 unlock=normal category=调脂药 subject=心血管|内科 indication=高血脂 contraindication=活动性肝病|妊娠 interaction=与CYP2C9抑制剂并用增加浓度 note=CYP2C9代谢
+[ITEM] id=MG1-026 name=硝酸甘油 alias=Nitroglycerin dose_form=0.4mg舌下锭|5mg/mL针 unlock=easy category=抗心绞痛药|血管扩张药 subject=心血管|急诊 indication=心绞痛|肺水肿 contraindication=右室梗塞|低血压 interaction=与PDE5抑制剂并用严重低血压 note=注意右室梗塞
+[ITEM] id=MG1-027 name=硝酸异山梨酯 alias=Isosorbide Dinitrate dose_form=5mg|10mg锭 unlock=easy category=抗心绞痛药 subject=心血管 indication=心绞痛预防|心衰 contraindication=右室梗塞|低血压 interaction=与PDE5抑制剂并用严重低血压 note=长效
+[ITEM] id=MG1-028 name=单硝酸异山梨酯 alias=Isosorbide Mononitrate dose_form=20mg|40mg锭 unlock=normal category=抗心绞痛药 subject=心血管 indication=心绞痛预防 contraindication=右室梗塞|低血压 interaction=与PDE5抑制剂并用严重低血压 note=长效
+[ITEM] id=MG1-029 name=硝普钠 alias=Sodium Nitroprusside dose_form=50mg针 unlock=hard category=血管扩张药 subject=心血管|急诊 indication=高血压危象|急性心衰 contraindication=严重肝损|氰化物中毒 interaction=与β阻断剂并用增加低血压 note=需避光|监测氰化物
+[ITEM] id=MG1-030 name=胺碘酮 alias=Amiodarone dose_form=150mg/3mL针|200mg锭 unlock=hard category=抗心律失常药 subject=心血管|急诊 indication=VT|VF|房颤 contraindication=严重窦缓|甲亢 interaction=与华法林并用增加INR note=VT/VF首选用药
+[ITEM] id=MG1-031 name=利多卡因 alias=Lidocaine dose_form=100mg/5mL针 unlock=normal category=抗心律失常药|局部麻醉药 subject=心血管|急诊 indication=室性心律不整 contraindication=严重肝损|II-III度AVB interaction=与CYP3A4抑制剂并用增加浓度 note=室性心律不整
+[ITEM] id=MG1-032 name=普罗帕酮 alias=Propafenone dose_form=150mg锭|70mg/20mL针 unlock=hard category=抗心律失常药 subject=心血管 indication=房颤|室上速 contraindication=严重心衰|心源性休克 interaction=与β阻断剂并用加重心衰 note=广谱抗心律不整
+[ITEM] id=MG1-033 name=美西律 alias=Mexiletine dose_form=100mg|200mg锭 unlock=hard category=抗心律失常药 subject=心血管 indication=室性心律不整 contraindication=严重心衰 interaction=与CYP2D6抑制剂并用增加浓度 note=口服室性心律不整
+[ITEM] id=MG1-034 name=地高辛 alias=Digoxin dose_form=0.25mg锭|0.5mg/2mL针 unlock=normal category=强心药 subject=心血管 indication=心衰|房颤 contraindication=肥厚型心肌病|室颤 interaction=与胺碘酮并用增加浓度 note=窄治疗窗
+[ITEM] id=MG1-035 name=西地兰 alias=Cedilanid dose_form=0.4mg/2mL针 unlock=normal category=强心药 subject=心血管|急诊 indication=急性心衰|房颤 contraindication=室颤|肥厚型心肌病 interaction=与钙剂并用增加毒性 note=快速起效
+[ITEM] id=MG1-036 name=呋塞米 alias=Furosemide dose_form=20mg/2mL针|40mg锭 unlock=normal category=利尿剂 subject=心血管|急诊|内科 indication=肺水肿|心衰|水肿 contraindication=严重电解质紊乱|无尿 interaction=与氨基糖苷并用增加耳毒性 note=袢利尿剂
+[ITEM] id=MG1-037 name=螺内酯 alias=Spironolactone dose_form=20mg锭 unlock=normal category=利尿剂 subject=心血管|内科 indication=心衰|肝硬化腹水 contraindication=高钾|肾衰 interaction=与ACEI并用增加高钾风险 note=保钾利尿
+[ITEM] id=MG1-038 name=氢氯噻嗪 alias=Hydrochlorothiazide dose_form=25mg锭 unlock=easy category=利尿剂 subject=心血管|内科 indication=高血压|水肿 contraindication=痛风|低钾 interaction=与锂盐并用增加锂中毒 note=噻嗪类
+[ITEM] id=MG1-039 name=依那普利 alias=Enalapril dose_form=5mg|10mg锭 unlock=normal category=降压药(ACEI) subject=心血管|内科 indication=高血压|心衰 contraindication=妊娠|血管性水肿 interaction=与保钾利尿并用增加高钾 note=ACEI
+[ITEM] id=MG1-040 name=卡托普利 alias=Captopril dose_form=12.5mg|25mg锭 unlock=easy category=降压药(ACEI) subject=心血管|内科 indication=高血压|心衰 contraindication=妊娠|血管性水肿 interaction=与保钾利尿并用增加高钾 note=短效ACEI
+[ITEM] id=MG1-041 name=贝那普利 alias=Benazepril dose_form=5mg|10mg锭 unlock=normal category=降压药(ACEI) subject=心血管|内科 indication=高血压|心衰 contraindication=妊娠|血管性水肿 interaction=与保钾利尿并用增加高钾 note=长效ACEI
+[ITEM] id=MG1-042 name=培哚普利 alias=Perindopril dose_form=4mg|8mg锭 unlock=normal category=降压药(ACEI) subject=心血管|内科 indication=高血压|心衰 contraindication=妊娠|血管性水肿 interaction=与保钾利尿并用增加高钾 note=长效ACEI
+[ITEM] id=MG1-043 name=缬沙坦 alias=Valsartan dose_form=80mg|160mg锭 unlock=normal category=降压药(ARB) subject=心血管|内科 indication=高血压|心衰 contraindication=妊娠|双侧肾动脉狭窄 interaction=与保钾利尿并用增加高钾 note=ARB
+[ITEM] id=MG1-044 name=氯沙坦 alias=Losartan dose_form=50mg|100mg锭 unlock=normal category=降压药(ARB) subject=心血管|内科 indication=高血压|糖尿病肾病 contraindication=妊娠 interaction=与保钾利尿并用增加高钾 note=ARB
+[ITEM] id=MG1-045 name=厄贝沙坦 alias=Irbesartan dose_form=150mg|300mg锭 unlock=normal category=降压药(ARB) subject=心血管|内科 indication=高血压|糖尿病肾病 contraindication=妊娠 interaction=与保钾利尿并用增加高钾 note=ARB
+[ITEM] id=MG1-046 name=替米沙坦 alias=Telmisartan dose_form=40mg|80mg锭 unlock=normal category=降压药(ARB) subject=心血管|内科 indication=高血压 contraindication=妊娠|胆道梗阻 interaction=与地高辛并用增加浓度 note=ARB
+[ITEM] id=MG1-047 name=氨氯地平 alias=Amlodipine dose_form=5mg|10mg锭 unlock=easy category=钙通道阻滞剂 subject=心血管|内科 indication=高血压|心绞痛 contraindication=严重低血压 interaction=与CYP3A4抑制剂并用增加浓度 note=钙拮抗剂
+[ITEM] id=MG1-048 name=硝苯地平 alias=Nifedipine dose_form=10mg|30mg锭 unlock=easy category=钙通道阻滞剂 subject=心血管|内科 indication=高血压|心绞痛 contraindication=心源性休克 interaction=与CYP3A4抑制剂并用增加浓度 note=钙拮抗剂
+[ITEM] id=MG1-049 name=地尔硫卓 alias=Diltiazem dose_form=30mg|90mg锭 unlock=normal category=钙通道阻滞剂|抗心律失常药 subject=心血管 indication=房颤|心绞痛|高血压 contraindication=严重心衰|II-III度AVB interaction=与β阻断剂并用加重心衰 note=钙拮抗剂
+[ITEM] id=MG1-050 name=维拉帕米 alias=Verapamil dose_form=40mg|80mg锭|5mg/2mL针 unlock=normal category=钙通道阻滞剂|抗心律失常药 subject=心血管 indication=室上速|高血压|心绞痛 contraindication=严重心衰|II-III度AVB interaction=与β阻断剂并用加重心衰 note=钙拮抗剂
+[ITEM] id=MG1-051 name=可乐定 alias=Clonidine dose_form=0.1mg锭|0.15mg/1mL针 unlock=normal category=降压药(中枢性) subject=心血管 indication=高血压|戒断综合征 contraindication=严重抑郁 interaction=与三环类抗抑郁并用降低疗效 note=中枢性降压
+[ITEM] id=MG1-052 name=甲基多巴 alias=Methyldopa dose_form=250mg锭 unlock=normal category=降压药(中枢性) subject=心血管|妇产 indication=妊娠高血压 contraindication=活动性肝病 interaction=与MAO抑制剂并用增加高血压 note=妊娠首选
+[ITEM] id=MG1-053 name=肼屈嗪 alias=Hydralazine dose_form=10mg|25mg锭 unlock=normal category=血管扩张药 subject=心血管|妇产 indication=妊娠高血压|心衰 contraindication=系统性红斑狼疮 interaction=与MAO抑制剂并用增加低血压 note=直接扩血管
+[ITEM] id=MG1-054 name=米诺地尔 alias=Minoxidil dose_form=2.5mg|10mg锭|5%酊 unlock=hard category=血管扩张药 subject=心血管|皮肤 indication=难治性高血压|脱发 contraindication=嗜铬细胞瘤 interaction=与β阻断剂并用预防反射性心动过速 note=钾通道开放
+[ITEM] id=MG1-055 name=多巴胺 alias=Dopamine dose_form=200mg/5mL针 unlock=normal category=升压药 subject=急诊|心血管 indication=休克|低血压|心衰 contraindication=嗜铬细胞瘤|快速心律不整 interaction=与MAO抑制剂并用增加升压 note=剂量依赖效应
+[ITEM] id=MG1-056 name=多巴酚丁胺 alias=Dobutamine dose_form=250mg/20mL针 unlock=hard category=强心药 subject=急诊|心血管 indication=心衰|心源性休克 contraindication=肥厚型心肌病 interaction=与β阻断剂并用降低疗效 note=正性肌力
+[ITEM] id=MG1-057 name=去甲肾上腺素 alias=Norepinephrine dose_form=1mg/mL针 unlock=hard category=升压药 subject=急诊|心血管 indication=休克|低血压 contraindication=低血容量未纠正 interaction=与MAO抑制剂并用增加升压 note=α1激动
+[ITEM] id=MG1-058 name=肾上腺素 alias=Epinephrine dose_form=1mg/mL针 unlock=normal category=升压药|急救药 subject=急诊|心血管|呼吸 indication=过敏性休克|CPR|哮喘 contraindication=无绝对禁忌 interaction=与β阻断剂并用增加高血压 note=救命药
+[ITEM] id=MG1-059 name=异丙肾上腺素 alias=Isoproterenol dose_form=1mg/2mL针 unlock=hard category=升压药 subject=急诊|心血管 indication=严重心动过缓|支气管痉挛 contraindication=冠心病|甲亢 interaction=与β阻断剂并用拮抗 note=β激动
+[ITEM] id=MG1-060 name=米力农 alias=Milrinone dose_form=10mg/10mL针 unlock=hard category=强心药 subject=心血管 indication=急性心衰 contraindication=严重低血压 interaction=与利尿剂并用增加低血压 note=磷酸二酯酶抑制剂
+[ITEM] id=MG1-061 name=左西孟旦 alias=Levosimendan dose_form=12.5mg/5mL针 unlock=hard category=强心药 subject=心血管 indication=急性心衰 contraindication=严重低血压 interaction=与硝酸酯并用增加低血压 note=钙增敏剂
+[ITEM] id=MG1-062 name=伊伐布雷定 alias=Ivabradine dose_form=5mg|7.5mg锭 unlock=hard category=抗心衰药 subject=心血管 indication=心衰|窦性心动过速 contraindication=严重心动过缓|房颤 interaction=与CYP3A4抑制剂并用增加浓度 note=If通道抑制剂
+[ITEM] id=MG1-063 name=腺苷 alias=Adenosine dose_form=6mg/2mL针 unlock=normal category=抗心律失常药 subject=急诊|心血管 indication=室上速诊断与治疗 contraindication=II-III度AVB|哮喘 interaction=与双嘧达莫并用增加作用 note=快速推注
+[ITEM] id=MG1-064 name=阿托品 alias=Atropine dose_form=0.5mg/mL针|1mg/mL针 unlock=normal category=抗胆碱药|解毒剂 subject=急诊|心血管|毒物 indication=有机磷中毒|严重心动过缓|术前给药 contraindication=青光眼|前列腺肥大 interaction=与抗组胺药并用增加抗胆碱 note=注意剂量
+[ITEM] id=MG1-065 name=去氧肾上腺素 alias=Phenylephrine dose_form=10mg/mL针 unlock=normal category=升压药 subject=急诊|心血管 indication=低血压|鼻塞 contraindication=严重高血压|甲亢 interaction=与MAO抑制剂并用增加升压 note=α1激动
+
+# ── 呼吸 ──────────────────────────────────────
+[ITEM] id=MG1-066 name=沙丁胺醇 alias=Salbutamol dose_form=100μg喷|5mg/mL雾化 unlock=easy category=支气管扩张剂 subject=呼吸|急诊 indication=哮喘|COPD contraindication=严重心脏病|甲亢 interaction=与β阻断剂并用拮抗 note=短效β2
+[ITEM] id=MG1-067 name=特布他林 alias=Terbutaline dose_form=2.5mg锭|0.25mg针|5mg/mL雾化 unlock=easy category=支气管扩张剂 subject=呼吸|妇产 indication=哮喘|早产抑制宫缩 contraindication=严重心脏病 interaction=与β阻断剂并用拮抗 note=短效β2
+[ITEM] id=MG1-068 name=异丙托溴铵 alias=Ipratropium dose_form=20μg喷|0.5mg/2mL雾化 unlock=normal category=支气管扩张剂 subject=呼吸 indication=COPD|哮喘 contraindication=青光眼|前列腺肥大 interaction=与β2激动并用协同 note=短效抗胆碱
+[ITEM] id=MG1-069 name=噻托溴铵 alias=Tiotropium dose_form=18μg吸入胶囊 unlock=normal category=支气管扩张剂 subject=呼吸 indication=COPD维持 contraindication=青光眼|前列腺肥大 interaction=与β2激动并用协同 note=长效抗胆碱
+[ITEM] id=MG1-070 name=布地奈德 alias=Budesonide dose_form=200μg喷|0.5mg/2mL雾化 unlock=normal category=糖皮质激素 subject=呼吸|儿科 indication=哮喘|COPD contraindication=活动性肺结核 interaction=与酮康唑并用增加浓度 note=吸入激素
+[ITEM] id=MG1-071 name=倍氯米松 alias=Beclomethasone dose_form=250μg喷 unlock=normal category=糖皮质激素 subject=呼吸 indication=哮喘 contraindication=活动性肺结核 interaction=与CYP3A4抑制剂并用增加浓度 note=吸入激素
+[ITEM] id=MG1-072 name=氟替卡松 alias=Fluticasone dose_form=125μg喷 unlock=normal category=糖皮质激素 subject=呼吸 indication=哮喘|过敏性鼻炎 contraindication=活动性肺结核 interaction=与利托那韦并用增加浓度 note=吸入激素
+[ITEM] id=MG1-073 name=孟鲁司特 alias=Montelukast dose_form=10mg锭|4mg咀嚼 unlock=normal category=平喘药(白三烯拮抗) subject=呼吸|儿科 indication=哮喘|过敏性鼻炎 contraindication=过敏 interaction=与CYP3A4诱导剂并用降低浓度 note=白三烯受体拮抗
+[ITEM] id=MG1-074 name=氨茶碱 alias=Aminophylline dose_form=0.25g/2mL针|100mg锭 unlock=normal category=支气管扩张剂 subject=呼吸|急诊 indication=哮喘|COPD contraindication=快速心律不整|甲亢 interaction=与喹诺酮并用增加浓度 note=窄治疗窗
+[ITEM] id=MG1-075 name=茶碱 alias=Theophylline dose_form=100mg|200mg锭 unlock=normal category=支气管扩张剂 subject=呼吸 indication=哮喘|COPD contraindication=快速心律不整 interaction=与CYP1A2抑制剂并用增加浓度 note=窄治疗窗
+[ITEM] id=MG1-076 name=乙酰半胱氨酸 alias=Acetylcysteine dose_form=200mg|600mg泡腾|200mg/mL雾化 unlock=normal category=化痰药|解毒剂 subject=呼吸|急诊|毒物 indication=化痰|对乙酰氨基酚中毒 contraindication=哮喘|活动性溃疡 interaction=与活性炭并用降低疗效 note=解毒+化痰
+[ITEM] id=MG1-077 name=氨溴索 alias=Ambroxol dose_form=30mg锭|15mg/2mL针|0.75%雾化 unlock=easy category=化痰药 subject=呼吸 indication=化痰 contraindication=过敏 interaction=与镇咳药并用降低疗效 note=促排痰
+[ITEM] id=MG1-078 name=溴己新 alias=Bromhexine dose_form=8mg锭 unlock=easy category=化痰药 subject=呼吸 indication=化痰 contraindication=活动性溃疡 interaction=与镇咳药并用降低疗效 note=促排痰
+[ITEM] id=MG1-079 name=右美沙芬 alias=Dextromethorphan dose_form=15mg锭|30mg糖浆 unlock=easy category=镇咳药 subject=呼吸 indication=干咳 contraindication=痰多|MAO抑制剂 interaction=与MAO抑制剂并用增加血清素 note=中枢镇咳
+[ITEM] id=MG1-080 name=可待因 alias=Codeine dose_form=15mg|30mg锭 unlock=hard category=镇咳药|阿片类镇痛药 subject=呼吸 indication=剧烈干咳|疼痛 contraindication=呼吸抑制|12岁以下 interaction=与CYP2D6抑制剂并用降低疗效 note=阿片类镇咳
+[ITEM] id=MG1-081 name=左氧氟沙星 alias=Levofloxacin dose_form=500mg锭|750mg锭|500mg/100mL针 unlock=normal category=喹诺酮类抗菌药 subject=呼吸|急诊|内科 indication=肺炎|尿路感染|腹腔感染 contraindication=18岁以下|妊娠|癫痫 interaction=与含铝镁制剂并用降低吸收 note=广谱喹诺酮
+[ITEM] id=MG1-082 name=莫西沙星 alias=Moxifloxacin dose_form=400mg锭|400mg/250mL针 unlock=hard category=喹诺酮类抗菌药 subject=呼吸 indication=肺炎|鼻窦炎 contraindication=QT延长|18岁以下 interaction=与胺碘酮并用增加QT延长 note=呼吸喹诺酮
+[ITEM] id=MG1-083 name=环丙沙星 alias=Ciprofloxacin dose_form=250mg|500mg锭|200mg/100mL针 unlock=normal category=喹诺酮类抗菌药 subject=呼吸|急诊|内科 indication=尿路感染|腹腔感染|假单胞菌 contraindication=18岁以下|癫痫 interaction=与含铝镁制剂并用降低吸收 note=抗假单胞菌
+[ITEM] id=MG1-084 name=阿莫西林 alias=Amoxicillin dose_form=250mg|500mg胶囊|1g针 unlock=easy category=青霉素类抗菌药 subject=呼吸|内科|儿科 indication=肺炎|中耳炎|尿路感染 contraindication=青霉素过敏 interaction=与别嘌醇并用增加皮疹 note=青霉素类
+[ITEM] id=MG1-085 name=阿莫西林克拉维酸钾 alias=Amoxicillin-Clavulanate dose_form=625mg锭|1.2g针 unlock=normal category=青霉素类抗菌药 subject=呼吸|内科|外科|儿科 indication=社区肺炎|鼻窦炎|腹腔感染 contraindication=青霉素过敏|肝损 interaction=与华法林并用增加INR note=含β内酰胺酶抑制剂
+[ITEM] id=MG1-086 name=头孢曲松 alias=Ceftriaxone dose_form=1g|2g针 unlock=normal category=头孢菌素类抗菌药 subject=呼吸|急诊|内科|儿科 indication=肺炎|脑膜炎|淋病 contraindication=头孢过敏|新生儿高胆红素 interaction=与钙剂并用沉淀 note=三代头孢
+[ITEM] id=MG1-087 name=头孢呋辛 alias=Cefuroxime dose_form=250mg|500mg锭|750mg针 unlock=normal category=头孢菌素类抗菌药 subject=呼吸|内科|外科 indication=肺炎|尿路感染|手术预防 contraindication=头孢过敏 interaction=与华法林并用增加INR note=二代头孢
+[ITEM] id=MG1-088 name=头孢克肟 alias=Cefixime dose_form=100mg|200mg锭 unlock=easy category=头孢菌素类抗菌药 subject=呼吸|儿科 indication=肺炎|尿路感染 contraindication=头孢过敏 interaction=与华法林并用增加INR note=三代口服
+[ITEM] id=MG1-089 name=头孢他啶 alias=Ceftazidime dose_form=1g|2g针 unlock=normal category=头孢菌素类抗菌药 subject=呼吸|急诊|内科 indication=假单胞菌感染|肺炎 contraindication=头孢过敏 interaction=与氨基糖苷并用增加肾毒 note=抗假单胞菌
+[ITEM] id=MG1-090 name=头孢哌酮舒巴坦 alias=Cefoperazone-Sulbactam dose_form=1.5g|3g针 unlock=normal category=头孢菌素类抗菌药 subject=呼吸|急诊|外科 indication=重症肺炎|腹腔感染 contraindication=头孢过敏|严重肝损 interaction=与华法林并用增加出血 note=含酶抑制剂
+[ITEM] id=MG1-091 name=阿奇霉素 alias=Azithromycin dose_form=250mg|500mg锭|500mg针 unlock=easy category=大环内酯类抗菌药 subject=呼吸|儿科 indication=肺炎|支原体|衣原体 contraindication=严重肝损|QT延长 interaction=与胺碘酮并用增加QT延长 note=大环内酯
+[ITEM] id=MG1-092 name=克拉霉素 alias=Clarithromycin dose_form=250mg|500mg锭 unlock=normal category=大环内酯类抗菌药 subject=呼吸|消化 indication=肺炎|幽门螺杆菌 contraindication=QT延长|严重肝损 interaction=与CYP3A4底物并用增加浓度 note=大环内酯
+[ITEM] id=MG1-093 name=红霉素 alias=Erythromycin dose_form=125mg|250mg锭|0.25g针 unlock=easy category=大环内酯类抗菌药 subject=呼吸|儿科|消化 indication=肺炎|百日咳|胃肠动力 contraindication=严重肝损 interaction=与CYP3A4底物并用增加浓度 note=大环内酯
+[ITEM] id=MG1-094 name=多西环素 alias=Doxycycline dose_form=100mg锭 unlock=normal category=四环素类抗菌药 subject=呼吸|内科|皮肤 indication=肺炎|衣原体|痤疮|莱姆病 contraindication=妊娠|8岁以下 interaction=与抗酸药并用降低吸收 note=四环素类
+[ITEM] id=MG1-095 name=米诺环素 alias=Minocycline dose_form=50mg|100mg锭 unlock=normal category=四环素类抗菌药 subject=皮肤|内科 indication=痤疮|莱姆病 contraindication=妊娠|8岁以下 interaction=与抗酸药并用降低吸收 note=四环素类
+[ITEM] id=MG1-096 name=万古霉素 alias=Vancomycin dose_form=500mg|1g针 unlock=hard category=糖肽类抗菌药 subject=急诊|内科|外科 indication=MRSA|严重革兰阳性感染 contraindication=严重肾损|耳聋 interaction=与氨基糖苷并用增加肾毒 note=需监测血药浓度
+[ITEM] id=MG1-097 name=替考拉宁 alias=Teicoplanin dose_form=200mg|400mg针 unlock=hard category=糖肽类抗菌药 subject=急诊|内科 indication=MRSA|革兰阳性感染 contraindication=严重肾损 interaction=与氨基糖苷并用增加肾毒 note=糖肽类
+[ITEM] id=MG1-098 name=利奈唑胺 alias=Linezolid dose_form=600mg锭|600mg/300mL针 unlock=hard category=恶唑烷酮类抗菌药 subject=急诊|内科 indication=MRSA|VRE contraindication=MAO抑制剂|严重骨髓抑制 interaction=与SSRI并用增加血清素 note=恶唑烷酮
+[ITEM] id=MG1-099 name=甲硝唑 alias=Metronidazole dose_form=200mg|500mg锭|500mg/100mL针 unlock=easy category=抗厌氧菌药|抗寄生虫药 subject=消化|急诊|外科|妇产 indication=厌氧菌|阿米巴|滴虫 contraindication=妊娠早期|酒精 interaction=与酒精并用双硫仑反应 note=厌氧菌首选
+[ITEM] id=MG1-100 name=替硝唑 alias=Tinidazole dose_form=500mg锭 unlock=normal category=抗厌氧菌药|抗寄生虫药 subject=消化|妇产 indication=厌氧菌|阿米巴|滴虫 contraindication=妊娠早期|酒精 interaction=与酒精并用双硫仑反应 note=长效
+[ITEM] id=MG1-101 name=奥司他韦 alias=Oseltamivir dose_form=75mg胶囊 unlock=normal category=抗病毒药 subject=呼吸|急诊|儿科 indication=流感A/B contraindication=严重肾损 interaction=与丙磺舒并用增加浓度 note=48小时内最佳
+[ITEM] id=MG1-102 name=扎那米韦 alias=Zanamivir dose_form=5mg吸入 unlock=hard category=抗病毒药 subject=呼吸 indication=流感A/B contraindication=哮喘|COPD interaction=与吸入激素并用增加支气管痉挛 note=吸入给药
+[ITEM] id=MG1-103 name=帕拉米韦 alias=Peramivir dose_form=150mg/15mL针 unlock=hard category=抗病毒药 subject=呼吸|急诊 indication=流感A/B contraindication=严重肾损 interaction=与丙磺舒并用增加浓度 note=静脉给药
+[ITEM] id=MG1-104 name=法匹拉韦 alias=Favipiravir dose_form=200mg锭 unlock=hard category=抗病毒药 subject=呼吸|急诊 indication=流感|实验性抗病毒 contraindication=妊娠|痛风 interaction=与茶碱并用增加浓度 note=实验性
+[ITEM] id=MG1-105 name=瑞德西韦 alias=Remdesivir dose_form=100mg针 unlock=hard category=抗病毒药 subject=呼吸|急诊 indication=重症病毒感染 contraindication=严重肝损 interaction=与氯喹并用拮抗 note=实验性抗病毒
+[ITEM] id=MG1-106 name=利巴韦林 alias=Ribavirin dose_form=100mg|200mg锭|100mg/mL针 unlock=normal category=抗病毒药 subject=呼吸|儿科 indication=RSV|丙肝|拉沙热 contraindication=妊娠|严重贫血 interaction=与干扰素并用协同 note=广谱抗病毒
+[ITEM] id=MG1-107 name=阿昔洛韦 alias=Acyclovir dose_form=200mg|400mg锭|250mg针 unlock=normal category=抗病毒药 subject=皮肤|内科|儿科 indication=单纯疱疹|带状疱疹 contraindication=严重肾损 interaction=与丙磺舒并用增加浓度 note=抗疱疹
+[ITEM] id=MG1-108 name=伐昔洛韦 alias=Valacyclovir dose_form=500mg锭 unlock=normal category=抗病毒药 subject=皮肤|内科 indication=单纯疱疹|带状疱疹 contraindication=严重肾损 interaction=与丙磺舒并用增加浓度 note=阿昔洛韦前药
+[ITEM] id=MG1-109 name=更昔洛韦 alias=Ganciclovir dose_form=250mg|500mg针 unlock=hard category=抗病毒药 subject=内科|眼科 indication=CMV感染 contraindication=严重骨髓抑制 interaction=与齐多夫定并用增加骨髓抑制 note=抗CMV
+[ITEM] id=MG1-110 name=膦甲酸钠 alias=Foscarnet dose_form=6g/250mL针 unlock=hard category=抗病毒药 subject=内科|眼科 indication=CMV|阿昔洛韦耐药 contraindication=严重肾损 interaction=与喷他脒并用增加肾毒 note=抗CMV
+
+# ── 急诊/重症 ──────────────────────────────────────
+[ITEM] id=MG1-111 name=纳洛酮 alias=Naloxone dose_form=0.4mg/mL针 unlock=normal category=特异性解毒剂 subject=急诊|毒物 indication=阿片类中毒 contraindication=无绝对禁忌 interaction=与阿片类并用拮抗 note=阿片类拮抗
+[ITEM] id=MG1-112 name=氟马西尼 alias=Flumazenil dose_form=0.5mg/5mL针 unlock=hard category=特异性解毒剂 subject=急诊|毒物 indication=苯二氮䓬类中毒 contraindication=三环类抗抑郁|癫痫 interaction=与苯二氮䓬并用拮抗 note=苯二氮䓬拮抗
+[ITEM] id=MG1-113 name=活性炭 alias=Activated Charcoal dose_form=50g粉 unlock=normal category=通用解毒剂 subject=急诊|毒物 indication=中毒吸附 contraindication=肠梗阻|意识障碍未插管 interaction=与口服药并用降低吸收 note=中毒1小时内最佳
+[ITEM] id=MG1-114 name=山梨醇 alias=Sorbitol dose_form=250mL溶液 unlock=normal category=止泻/通便药 subject=急诊|毒物 indication=导泻 contraindication=肠梗阻|脱水 interaction=与活性炭并用促进排出 note=导泻
+[ITEM] id=MG1-115 name=甘露醇 alias=Mannitol dose_form=20% 250mL针 unlock=normal category=利尿剂|脱水药 subject=急诊|神经|眼科 indication=脑水肿|青光眼|利尿 contraindication=无尿|严重心衰 interaction=与肾毒药物并用增加肾损 note=渗透性利尿
+[ITEM] id=MG1-116 name=高锰酸钾 alias=Potassium Permanganate dose_form=1:10000溶液 unlock=normal category=消毒防腐药 subject=急诊|毒物 indication=洗胃|皮肤消毒 contraindication=浓度过高|肠梗阻 interaction=与还原剂并用拮抗 note=慎用
+[ITEM] id=MG1-117 name=地西泮 alias=Diazepam dose_form=10mg/2mL针|5mg锭 unlock=normal category=镇静催眠药 subject=急诊|神经|精神 indication=癫痫|焦虑|酒精戒断 contraindication=重症肌无力|严重肝损 interaction=与阿片类并用增加呼吸抑制 note=癫痫首选
+[ITEM] id=MG1-118 name=咪达唑仑 alias=Midazolam dose_form=5mg/mL针|15mg锭 unlock=hard category=镇静催眠药 subject=急诊|麻醉 indication=镇静|麻醉诱导|癫痫 contraindication=重症肌无力|严重肝损 interaction=与阿片类并用增加呼吸抑制 note=短效
+[ITEM] id=MG1-119 name=劳拉西泮 alias=Lorazepam dose_form=1mg|2mg锭|2mg/mL针 unlock=normal category=镇静催眠药 subject=精神|急诊 indication=焦虑|癫痫|酒精戒断 contraindication=重症肌无力|严重肝损 interaction=与阿片类并用增加呼吸抑制 note=中效
+[ITEM] id=MG1-120 name=丙泊酚 alias=Propofol dose_form=200mg/20mL针 unlock=hard category=静脉麻醉药 subject=麻醉|急诊 indication=麻醉诱导|镇静 contraindication=严重低血压|过敏 interaction=与阿片类并用增加呼吸抑制 note=麻醉诱导
+[ITEM] id=MG1-121 name=依托咪酯 alias=Etomidate dose_form=20mg/10mL针 unlock=hard category=静脉麻醉药 subject=麻醉|急诊 indication=麻醉诱导 contraindication=肾上腺皮质功能不全 interaction=与阿片类并用增加呼吸抑制 note=血流动力学稳定
+[ITEM] id=MG1-122 name=氯胺酮 alias=Ketamine dose_form=100mg/2mL针|50mg/mL针 unlock=hard category=静脉麻醉药|镇痛药 subject=麻醉|急诊|精神 indication=麻醉|镇痛|抑郁 contraindication=严重高血压|精神分裂 interaction=与阿片类并用增加呼吸抑制 note=分离麻醉
+[ITEM] id=MG1-123 name=琥珀胆碱 alias=Succinylcholine dose_form=100mg/2mL针 unlock=hard category=肌松药(去极化) subject=麻醉|急诊 indication=插管|肌松 contraindication=高钾|恶性高热|烧伤 interaction=与胆碱酯酶抑制剂并用拮抗 note=去极化肌松
+[ITEM] id=MG1-124 name=罗库溴铵 alias=Rocuronium dose_form=50mg/5mL针 unlock=hard category=肌松药(非去极化) subject=麻醉|急诊 indication=插管|肌松 contraindication=过敏 interaction=与氨基糖苷并用增加肌松 note=非去极化肌松
+[ITEM] id=MG1-125 name=维库溴铵 alias=Vecuronium dose_form=4mg针 unlock=hard category=肌松药(非去极化) subject=麻醉|急诊 indication=插管|肌松 contraindication=过敏 interaction=与氨基糖苷并用增加肌松 note=非去极化肌松
+[ITEM] id=MG1-126 name=吗啡 alias=Morphine dose_form=10mg/mL针|30mg锭 unlock=hard category=阿片类镇痛药 subject=急诊|外科|肿瘤 indication=剧痛|心衰|肺水肿 contraindication=呼吸抑制|肠梗阻|急腹症慎用 interaction=与镇静剂并用增加呼吸抑制 note=急腹症慎用
+[ITEM] id=MG1-127 name=芬太尼 alias=Fentanyl dose_form=50μg/mL针|25μg/h贴 unlock=hard category=阿片类镇痛药 subject=麻醉|急诊|肿瘤 indication=麻醉|剧痛|癌痛 contraindication=呼吸抑制 interaction=与CYP3A4抑制剂并用增加浓度 note=强效阿片
+[ITEM] id=MG1-128 name=瑞芬太尼 alias=Remifentanil dose_form=1mg针 unlock=hard category=阿片类镇痛药 subject=麻醉 indication=麻醉|镇痛 contraindication=呼吸抑制 interaction=与镇静剂并用增加呼吸抑制 note=超短效
+[ITEM] id=MG1-129 name=舒芬太尼 alias=Sufentanil dose_form=50μg/mL针 unlock=hard category=阿片类镇痛药 subject=麻醉 indication=麻醉|镇痛 contraindication=呼吸抑制 interaction=与镇静剂并用增加呼吸抑制 note=强效
+[ITEM] id=MG1-130 name=哌替啶 alias=Pethidine dose_form=50mg/mL针|50mg锭 unlock=normal category=阿片类镇痛药 subject=急诊|外科 indication=剧痛|分娩镇痛 contraindication=MAO抑制剂|呼吸抑制 interaction=与MAO抑制剂并用增加血清素 note=不推荐长期
+[ITEM] id=MG1-131 name=曲马多 alias=Tramadol dose_form=50mg胶囊|100mg/mL针 unlock=normal category=非阿片类镇痛药 subject=急诊|外科 indication=中度疼痛 contraindication=癫痫|MAO抑制剂 interaction=与SSRI并用增加血清素 note=弱阿片
+[ITEM] id=MG1-132 name=对乙酰氨基酚 alias=Paracetamol dose_form=500mg锭|1g针|120mg/5mL糖浆 unlock=easy category=非甾体抗炎药(解热镇痛) subject=全部 indication=发热|疼痛 contraindication=严重肝损 interaction=与酒精并用增加肝毒 note=过量肝毒
+[ITEM] id=MG1-133 name=布洛芬 alias=Ibuprofen dose_form=200mg|400mg锭|100mg/5mL糖浆 unlock=easy category=非甾体抗炎药(解热镇痛) subject=全部 indication=发热|疼痛|炎症 contraindication=胃溃疡|严重肾损|妊娠晚期 interaction=与抗凝血药并用增加出血 note=常见OTC
+[ITEM] id=MG1-134 name=双氯芬酸 alias=Diclofenac dose_form=25mg|50mg锭|75mg/3mL针|1%凝胶 unlock=easy category=非甾体抗炎药(解热镇痛) subject=外科|骨科|内科 indication=疼痛|炎症 contraindication=胃溃疡|严重心衰 interaction=与抗凝血药并用增加出血 note=NSAIDs
+[ITEM] id=MG1-135 name=吲哚美辛 alias=Indomethacin dose_form=25mg|50mg锭|100mg栓 unlock=normal category=非甾体抗炎药(解热镇痛) subject=内科|骨科 indication=痛风|关节炎|动脉导管未闭 contraindication=胃溃疡|严重肾损 interaction=与抗凝血药并用增加出血 note=强效NSAIDs
+[ITEM] id=MG1-136 name=塞来昔布 alias=Celecoxib dose_form=100mg|200mg胶囊 unlock=normal category=非甾体抗炎药(解热镇痛) subject=骨科|内科 indication=关节炎|疼痛 contraindication=磺胺过敏|严重心衰 interaction=与抗凝血药并用增加出血 note=COX-2选择性
+[ITEM] id=MG1-137 name=氯诺昔康 alias=Lornoxicam dose_form=4mg|8mg锭|8mg针 unlock=normal category=非甾体抗炎药(解热镇痛) subject=外科|骨科 indication=术后疼痛 contraindication=胃溃疡|严重肾损 interaction=与抗凝血药并用增加出血 note=NSAIDs
+[ITEM] id=MG1-138 name=地塞米松 alias=Dexamethasone dose_form=0.75mg锭|5mg/mL针 unlock=normal category=糖皮质激素 subject=全部 indication=抗炎|过敏|脑水肿|COVID contraindication=活动性感染|消化道溃疡 interaction=与NSAIDs并用增加溃疡 note=长效激素
+[ITEM] id=MG1-139 name=甲泼尼龙 alias=Methylprednisolone dose_form=4mg锭|40mg|125mg针 unlock=normal category=糖皮质激素 subject=全部 indication=抗炎|过敏|哮喘|休克 contraindication=活动性感染|消化道溃疡 interaction=与NSAIDs并用增加溃疡 note=中效激素
+[ITEM] id=MG1-140 name=氢化可的松 alias=Hydrocortisone dose_form=10mg|20mg锭|100mg针 unlock=normal category=糖皮质激素 subject=全部 indication=肾上腺危象|过敏|抗炎 contraindication=活动性感染|消化道溃疡 interaction=与NSAIDs并用增加溃疡 note=短效激素
+[ITEM] id=MG1-141 name=泼尼松 alias=Prednisone dose_form=5mg|20mg锭 unlock=normal category=糖皮质激素 subject=全部 indication=抗炎|免疫抑制|过敏 contraindication=活动性感染|消化道溃疡 interaction=与NSAIDs并用增加溃疡 note=中效激素
+[ITEM] id=MG1-142 name=葡萄糖酸钙 alias=Calcium Gluconate dose_form=10% 10mL针 unlock=normal category=电解质/营养液 subject=急诊|内科 indication=低钙|高钾|镁中毒 contraindication=高钙|洋地黄中毒 interaction=与头孢曲松并用沉淀 note=补钙
+[ITEM] id=MG1-143 name=氯化钾 alias=Potassium Chloride dose_form=10% 10mL针|0.5g锭|缓释锭 unlock=easy category=电解质/营养液 subject=全部 indication=低钾 contraindication=高钾|无尿 interaction=与保钾利尿并用增加高钾 note=需稀释
+[ITEM] id=MG1-144 name=氯化钠 alias=Sodium Chloride dose_form=0.9% 500mL|10% 10mL unlock=easy category=电解质/营养液 subject=全部 indication=补液|低钠 contraindication=高钠|心衰 interaction=与保钾利尿并用增加高钠 note=等渗液
+[ITEM] id=MG1-145 name=碳酸氢钠 alias=Sodium Bicarbonate dose_form=5% 250mL|8.4% 10mL unlock=normal category=电解质/营养液|抗酸药 subject=急诊|内科 indication=代酸|高钾|水杨酸中毒 contraindication=代碱|低钾 interaction=与钙剂并用沉淀 note=纠酸
+[ITEM] id=MG1-146 name=硫酸镁 alias=Magnesium Sulfate dose_form=25% 10mL针 unlock=normal category=电解质/营养液 subject=急诊|妇产|心血管 indication=低镁|子痫|心律不整|哮喘 contraindication=严重肾损|心脏传导阻滞 interaction=与钙剂并用拮抗 note=子痫首选
+[ITEM] id=MG1-147 name=葡萄糖 alias=Glucose dose_form=5% 500mL|50% 20mL unlock=easy category=电解质/营养液 subject=全部 indication=补液|低血糖 contraindication=高血糖|颅脑损伤 interaction=与胰岛素并用降低血糖 note=能量补充
+[ITEM] id=MG1-148 name=乳酸钠林格液 alias=Lactated Ringer's dose_form=500mL unlock=easy category=电解质/营养液 subject=全部 indication=补液|休克 contraindication=高钾|乳酸酸中毒 interaction=与头孢曲松并用沉淀 note=平衡液
+[ITEM] id=MG1-149 name=羟乙基淀粉 alias=Hydroxyethyl Starch dose_form=6% 500mL unlock=normal category=血浆代用品 subject=急诊|外科 indication=扩容 contraindication=严重肾损|凝血障碍 interaction=与肾毒药物并用增加肾损 note=人工胶体
+[ITEM] id=MG1-150 name=白蛋白 alias=Albumin dose_form=20% 50mL unlock=hard category=血液制品 subject=急诊|内科|外科 indication=低蛋白|休克|腹水 contraindication=严重心衰|过敏 interaction=与ACEI并用增加低血压 note=血制品
+
+# ── 消化 ──────────────────────────────────────
+[ITEM] id=MG1-151 name=奥美拉唑 alias=Omeprazole dose_form=20mg锭|40mg针 unlock=easy category=质子泵抑制剂(PPI) subject=消化|急诊|内科 indication=消化道溃疡|GERD|应激性溃疡 contraindication=过敏 interaction=与氯吡格雷并用降低疗效 note=PPI
+[ITEM] id=MG1-152 name=泮托拉唑 alias=Pantoprazole dose_form=40mg锭|40mg针 unlock=easy category=质子泵抑制剂(PPI) subject=消化|内科 indication=消化道溃疡|GERD contraindication=过敏 interaction=与氯吡格雷并用降低疗效 note=PPI
+[ITEM] id=MG1-153 name=兰索拉唑 alias=Lansoprazole dose_form=30mg胶囊 unlock=easy category=质子泵抑制剂(PPI) subject=消化 indication=消化道溃疡|GERD contraindication=过敏 interaction=与氯吡格雷并用降低疗效 note=PPI
+[ITEM] id=MG1-154 name=雷贝拉唑 alias=Rabeprazole dose_form=10mg|20mg锭 unlock=normal category=质子泵抑制剂(PPI) subject=消化 indication=消化道溃疡|GERD contraindication=过敏 interaction=与氯吡格雷并用降低疗效 note=PPI
+[ITEM] id=MG1-155 name=埃索美拉唑 alias=Esomeprazole dose_form=20mg|40mg锭|40mg针 unlock=normal category=质子泵抑制剂(PPI) subject=消化 indication=消化道溃疡|GERD contraindication=过敏 interaction=与氯吡格雷并用降低疗效 note=PPI
+[ITEM] id=MG1-156 name=法莫替丁 alias=Famotidine dose_form=20mg锭|20mg针 unlock=easy category=H2受体拮抗剂 subject=消化 indication=消化道溃疡|GERD contraindication=过敏 interaction=与抗酸药并用降低吸收 note=H2受体拮抗
+[ITEM] id=MG1-157 name=雷尼替丁 alias=Ranitidine dose_form=150mg锭|50mg针 unlock=easy category=H2受体拮抗剂 subject=消化 indication=消化道溃疡|GERD contraindication=过敏 interaction=与抗酸药并用降低吸收 note=H2受体拮抗
+[ITEM] id=MG1-158 name=铝碳酸镁 alias=Hydrotalcite dose_form=500mg咀嚼 unlock=easy category=抗酸药|胃黏膜保护剂 subject=消化 indication=抗酸|胃痛 contraindication=严重肾损 interaction=与喹诺酮并用降低吸收 note=抗酸剂
+[ITEM] id=MG1-159 name=硫糖铝 alias=Sucralfate dose_form=1g锭 unlock=easy category=胃黏膜保护剂 subject=消化 indication=消化道溃疡 contraindication=严重肾损 interaction=与喹诺酮并用降低吸收 note=胃黏膜保护
+[ITEM] id=MG1-160 name=多潘立酮 alias=Domperidone dose_form=10mg锭 unlock=easy category=促胃动力药 subject=消化 indication=胃动力|恶心呕吐 contraindication=QT延长|胃肠道出血 interaction=与酮康唑并用增加QT延长 note=促胃动力
+[ITEM] id=MG1-161 name=甲氧氯普胺 alias=Metoclopramide dose_form=5mg|10mg锭|10mg/2mL针 unlock=easy category=促胃动力药|止吐药 subject=消化|急诊 indication=恶心呕吐|胃动力 contraindication=肠梗阻|帕金森 interaction=与抗精神病药并用增加锥体外系 note=促胃动力
+[ITEM] id=MG1-162 name=莫沙必利 alias=Mosapride dose_form=5mg锭 unlock=normal category=促胃动力药 subject=消化 indication=胃动力 contraindication=胃肠道出血|肠梗阻 interaction=与抗胆碱药并用拮抗 note=促胃动力
+[ITEM] id=MG1-163 name=昂丹司琼 alias=Ondansetron dose_form=4mg|8mg锭|8mg/4mL针 unlock=normal category=止吐药 subject=消化|急诊|肿瘤 indication=恶心呕吐|化疗止吐 contraindication=QT延长 interaction=与胺碘酮并用增加QT延长 note=5-HT3拮抗
+[ITEM] id=MG1-164 name=格拉司琼 alias=Granisetron dose_form=1mg锭|3mg/3mL针 unlock=normal category=止吐药 subject=消化|肿瘤 indication=化疗止吐 contraindication=QT延长 interaction=与胺碘酮并用增加QT延长 note=5-HT3拮抗
+[ITEM] id=MG1-165 name=洛哌丁胺 alias=Loperamide dose_form=2mg胶囊 unlock=easy category=止泻药 subject=消化 indication=腹泻 contraindication=细菌性痢疾|肠梗阻 interaction=与CYP3A4抑制剂并用增加浓度 note=止泻
+[ITEM] id=MG1-166 name=蒙脱石散 alias=Montmorillonite dose_form=3g粉 unlock=easy category=止泻药 subject=消化|儿科 indication=腹泻 contraindication=肠梗阻 interaction=与口服药并用降低吸收 note=止泻
+[ITEM] id=MG1-167 name=双歧杆菌 alias=Bifidobacterium dose_form=活菌胶囊 unlock=easy category=微生态制剂 subject=消化|儿科 indication=腹泻|菌群失调 contraindication=过敏 interaction=与抗生素并用降低疗效 note=益生菌
+[ITEM] id=MG1-168 name=乳果糖 alias=Lactulose dose_form=10g/15mL溶液 unlock=easy category=止泻/通便药|肝胆用药 subject=消化|肝病 indication=便秘|肝性脑病 contraindication=肠梗阻|半乳糖血症 interaction=与抗酸药并用降低疗效 note=渗透性泻药
+[ITEM] id=MG1-169 name=聚乙二醇 alias=Polyethylene Glycol dose_form=10g粉|4000mL溶液 unlock=easy category=止泻/通便药 subject=消化 indication=便秘|肠道准备 contraindication=肠梗阻|肠穿孔 interaction=与口服药并用降低吸收 note=渗透性泻药
+[ITEM] id=MG1-170 name=开塞露 alias=Glycerin Enema dose_form=20mL支 unlock=easy category=止泻/通便药 subject=消化 indication=便秘 contraindication=肠梗阻|肛门损伤 interaction=无 note=局部泻药
+[ITEM] id=MG1-171 name=熊去氧胆酸 alias=Ursodeoxycholic Acid dose_form=250mg锭 unlock=normal category=肝胆用药 subject=消化|肝病 indication=胆汁淤积|胆结石 contraindication=急性胆囊炎|胆道梗阻 interaction=与考来烯胺并用降低吸收 note=利胆
+[ITEM] id=MG1-172 name=腺苷蛋氨酸 alias=Ademetionine dose_form=500mg锭|500mg针 unlock=normal category=肝胆用药 subject=消化|肝病 indication=胆汁淤积|肝内 cholestasis contraindication=过敏 interaction=与三环类抗抑郁并用增加血清素 note=利胆
+[ITEM] id=MG1-173 name=生长抑素 alias=Somatostatin dose_form=3mg针 unlock=hard category=止血药(内脏) subject=消化|急诊 indication=食管静脉曲张出血|胰瘘 contraindication=过敏 interaction=与胰岛素并用降低血糖 note=出血
+[ITEM] id=MG1-174 name=奥曲肽 alias=Octreotide dose_form=0.1mg/mL针|20mg微球 unlock=hard category=止血药(内脏)|内分泌用药 subject=消化|急诊|内分泌 indication=食管静脉曲张出血|肢端肥大症 contraindication=胆结石|过敏 interaction=与胰岛素并用降低血糖 note=生长抑素类似物
+[ITEM] id=MG1-175 name=特利加压素 alias=Terlipressin dose_form=1mg针 unlock=hard category=止血药(内脏) subject=消化|急诊 indication=食管静脉曲张出血|肝肾综合征 contraindication=严重心血管病 interaction=与β阻断剂并用增加心率下降 note=血管加压素类似物
+
+# ── 内分泌 ──────────────────────────────────────
+[ITEM] id=MG1-176 name=胰岛素 alias=Insulin dose_form=短效|中效|长效|预混 针 unlock=normal category=降糖药(胰岛素) subject=内分泌|急诊|内科 indication=糖尿病|DKA|高钾 contraindication=低血糖 interaction=与β阻断剂并用掩盖低血糖 note=降糖
+[ITEM] id=MG1-177 name=二甲双胍 alias=Metformin dose_form=500mg|850mg锭 unlock=easy category=降糖药(双胍类) subject=内分泌|内科 indication=2型糖尿病 contraindication=严重肾损|乳酸酸中毒|造影前后 interaction=与造影剂并用增加乳酸酸中毒 note=一线降糖
+[ITEM] id=MG1-178 name=格列本脲 alias=Glibenclamide dose_form=2.5mg锭 unlock=easy category=降糖药(磺脲类) subject=内分泌 indication=2型糖尿病 contraindication=1型糖尿病|严重肝损 interaction=与β阻断剂并用掩盖低血糖 note=磺脲类
+[ITEM] id=MG1-179 name=格列美脲 alias=Glimepiride dose_form=1mg|2mg锭 unlock=easy category=降糖药(磺脲类) subject=内分泌 indication=2型糖尿病 contraindication=1型糖尿病|严重肝损 interaction=与β阻断剂并用掩盖低血糖 note=磺脲类
+[ITEM] id=MG1-180 name=格列齐特 alias=Gliclazide dose_form=30mg|80mg锭 unlock=easy category=降糖药(磺脲类) subject=内分泌 indication=2型糖尿病 contraindication=1型糖尿病|严重肝损 interaction=与β阻断剂并用掩盖低血糖 note=磺脲类
+[ITEM] id=MG1-181 name=阿卡波糖 alias=Acarbose dose_form=50mg|100mg锭 unlock=normal category=降糖药(α糖苷酶抑制剂) subject=内分泌 indication=2型糖尿病 contraindication=肠梗阻|严重肝损 interaction=与胰岛素并用增加低血糖 note=α糖苷酶抑制剂
+[ITEM] id=MG1-182 name=吡格列酮 alias=Pioglitazone dose_form=15mg|30mg锭 unlock=normal category=降糖药(胰岛素增敏剂) subject=内分泌 indication=2型糖尿病 contraindication=心衰|肝损 interaction=与胰岛素并用增加水肿 note=胰岛素增敏
+[ITEM] id=MG1-183 name=西格列汀 alias=Sitagliptin dose_form=100mg锭 unlock=normal category=降糖药(DPP-4抑制剂) subject=内分泌 indication=2型糖尿病 contraindication=严重肾损|胰腺炎 interaction=与磺脲类并用增加低血糖 note=DPP-4抑制剂
+[ITEM] id=MG1-184 name=达格列净 alias=Dapagliflozin dose_form=10mg锭 unlock=hard category=降糖药(SGLT2抑制剂) subject=内分泌|心血管 indication=2型糖尿病|心衰|肾病 contraindication=严重肾损|DKA interaction=与利尿剂并用增加脱水 note=SGLT2抑制剂
+[ITEM] id=MG1-185 name=恩格列净 alias=Empagliflozin dose_form=10mg|25mg锭 unlock=hard category=降糖药(SGLT2抑制剂) subject=内分泌|心血管 indication=2型糖尿病|心衰 contraindication=严重肾损|DKA interaction=与利尿剂并用增加脱水 note=SGLT2抑制剂
+[ITEM] id=MG1-186 name=利拉鲁肽 alias=Liraglutide dose_form=6mg/mL笔 unlock=hard category=降糖药(GLP-1激动剂) subject=内分泌 indication=2型糖尿病|肥胖 contraindication=甲状腺髓样癌|胰腺炎 interaction=与胰岛素并用增加低血糖 note=GLP-1激动
+[ITEM] id=MG1-187 name=左甲状腺素 alias=Levothyroxine dose_form=50μg|100μg锭 unlock=normal category=甲状腺激素 subject=内分泌 indication=甲减 contraindication=未治疗甲亢|心梗急性期 interaction=与钙剂并用降低吸收 note=甲状腺激素
+[ITEM] id=MG1-188 name=甲巯咪唑 alias=Methimazole dose_form=5mg|10mg锭 unlock=normal category=抗甲状腺药 subject=内分泌 indication=甲亢 contraindication=严重肝损|粒细胞缺乏 interaction=与华法林并用增加INR note=抗甲状腺
+[ITEM] id=MG1-189 name=丙硫氧嘧啶 alias=Propylthiouracil dose_form=50mg|100mg锭 unlock=normal category=抗甲状腺药 subject=内分泌 indication=甲亢|甲状腺危象 contraindication=严重肝损 interaction=与华法林并用增加INR note=抗甲状腺
+[ITEM] id=MG1-190 name=泼尼松龙 alias=Prednisolone dose_form=5mg锭 unlock=normal category=糖皮质激素 subject=全部 indication=抗炎|免疫抑制 contraindication=活动性感染 interaction=与NSAIDs并用增加溃疡 note=中效激素
+[ITEM] id=MG1-191 name=别嘌醇 alias=Allopurinol dose_form=100mg|300mg锭 unlock=normal category=抗痛风药 subject=内分泌|内科 indication=痛风|高尿酸 contraindication=过敏|严重肝损 interaction=与硫唑嘌呤并用增加毒性 note=黄嘌呤氧化酶抑制
+[ITEM] id=MG1-192 name=非布司他 alias=Febuxostat dose_form=40mg|80mg锭 unlock=normal category=抗痛风药 subject=内分泌|内科 indication=痛风|高尿酸 contraindication=心血管病 interaction=与硫唑嘌呤并用增加毒性 note=黄嘌呤氧化酶抑制
+[ITEM] id=MG1-193 name=秋水仙碱 alias=Colchicine dose_form=0.5mg|1mg锭 unlock=normal category=抗痛风药 subject=内分泌|内科 indication=痛风急性发作 contraindication=严重肝损|骨髓抑制 interaction=与CYP3A4抑制剂并用增加毒性 note=痛风急性期
+[ITEM] id=MG1-194 name=苯溴马隆 alias=Benzbromarone dose_form=50mg锭 unlock=normal category=抗痛风药 subject=内分泌 indication=痛风|高尿酸 contraindication=严重肝损|肾结石 interaction=与水杨酸并用拮抗 note=促尿酸排泄
+[ITEM] id=MG1-195 name=骨化三醇 alias=Calcitriol dose_form=0.25μg|0.5μg胶囊 unlock=normal category=骨代谢药 subject=内分泌|骨科 indication=骨质疏松|低钙 contraindication=高钙 interaction=与噻嗪类并用增加高钙 note=活性维生素D
+[ITEM] id=MG1-196 name=阿仑膦酸钠 alias=Alendronate dose_form=70mg锭 unlock=normal category=骨代谢药 subject=内分泌|骨科 indication=骨质疏松 contraindication=食管狭窄|不能站立 interaction=与钙剂并用降低吸收 note=双膦酸盐
+[ITEM] id=MG1-197 name=降钙素 alias=Calcitonin dose_form=50IU针|200IU鼻喷 unlock=normal category=骨代谢药 subject=内分泌|骨科 indication=骨质疏松|高钙危象 contraindication=过敏 interaction=与锂盐并用降低疗效 note=钙调节
+[ITEM] id=MG1-198 name=雌激素 alias=Estrogen dose_form=0.625mg锭|1mg锭 unlock=normal category=性激素 subject=妇产|内分泌 indication=更年期|骨质疏松|激素替代 contraindication=乳腺癌|血栓史 interaction=与华法林并用增加INR note=激素替代
+[ITEM] id=MG1-199 name=孕激素 alias=Progesterone dose_form=100mg胶囊|200mg栓 unlock=normal category=性激素 subject=妇产|内分泌 indication=黄体不足|激素替代 contraindication=乳腺癌|血栓史 interaction=与利福平并用降低疗效 note=激素替代
+[ITEM] id=MG1-200 name=睾酮 alias=Testosterone dose_form=50mg锭|250mg/mL针|凝胶 unlock=hard category=性激素 subject=内分泌 indication=性腺功能减退 contraindication=前列腺癌|乳腺癌 interaction=与华法林并用增加INR note=雄激素
+
+# ── 神经/精神 ──────────────────────────────────────
+[ITEM] id=MG1-201 name=卡马西平 alias=Carbamazepine dose_form=100mg|200mg锭 unlock=normal category=抗癫痫药 subject=神经|精神 indication=癫痫|三叉神经痛|双相障碍 contraindication=骨髓抑制|MAO抑制剂 interaction=与CYP3A4诱导剂并用降低浓度 note=需监测血药浓度
+[ITEM] id=MG1-202 name=丙戊酸钠 alias=Sodium Valproate dose_form=200mg|500mg锭|400mg/4mL针 unlock=normal category=抗癫痫药 subject=神经|精神 indication=癫痫|双相障碍|偏头痛预防 contraindication=肝病|妊娠 interaction=与拉莫三嗪并用增加皮疹 note=广谱抗癫痫
+[ITEM] id=MG1-203 name=苯妥英钠 alias=Phenytoin dose_form=100mg锭|250mg/5mL针 unlock=normal category=抗癫痫药 subject=神经 indication=癫痫|心律不整 contraindication=窦缓|II-III度AVB interaction=与多种药物交互 note=需监测血药浓度
+[ITEM] id=MG1-204 name=拉莫三嗪 alias=Lamotrigine dose_form=25mg|50mg|100mg锭 unlock=normal category=抗癫痫药 subject=神经|精神 indication=癫痫|双相障碍维持 contraindication=过敏 interaction=与丙戊酸并用增加皮疹 note=需缓慢加量
+[ITEM] id=MG1-205 name=左乙拉西坦 alias=Levetiracetam dose_form=250mg|500mg锭|500mg/5mL针 unlock=normal category=抗癫痫药 subject=神经|急诊 indication=癫痫|癫痫持续状态 contraindication=严重肾损 interaction=与卡马西平并用降低浓度 note=新型抗癫痫
+[ITEM] id=MG1-206 name=托吡酯 alias=Topiramate dose_form=25mg|50mg|100mg锭 unlock=normal category=抗癫痫药 subject=神经 indication=癫痫|偏头痛预防 contraindication=肾结石|青光眼 interaction=与碳酸酐酶抑制剂并用增加肾结石 note=广谱
+[ITEM] id=MG1-207 name=加巴喷丁 alias=Gabapentin dose_form=100mg|300mg胶囊 unlock=normal category=抗癫痫药|神经痛药 subject=神经 indication=神经痛|癫痫|焦虑 contraindication=严重肾损 interaction=与阿片类并用增加呼吸抑制 note=神经痛
+[ITEM] id=MG1-208 name=普瑞巴林 alias=Pregabalin dose_form=25mg|75mg|150mg胶囊 unlock=normal category=抗癫痫药|神经痛药 subject=神经|精神 indication=神经痛|癫痫|焦虑 contraindication=严重肾损|血管性水肿 interaction=与阿片类并用增加呼吸抑制 note=神经痛
+[ITEM] id=MG1-209 name=氟西汀 alias=Fluoxetine dose_form=20mg胶囊 unlock=normal category=抗抑郁药(SSRI) subject=精神 indication=抑郁|强迫症|贪食症 contraindication=MAO抑制剂 interaction=与MAO抑制剂并用增加血清素 note=SSRI
+[ITEM] id=MG1-210 name=帕罗西汀 alias=Paroxetine dose_form=20mg锭 unlock=normal category=抗抑郁药(SSRI) subject=精神 indication=抑郁|焦虑|强迫症 contraindication=MAO抑制剂 interaction=与MAO抑制剂并用增加血清素 note=SSRI
+[ITEM] id=MG1-211 name=舍曲林 alias=Sertraline dose_form=50mg|100mg锭 unlock=normal category=抗抑郁药(SSRI) subject=精神 indication=抑郁|焦虑|强迫症|PTSD contraindication=MAO抑制剂 interaction=与MAO抑制剂并用增加血清素 note=SSRI
+[ITEM] id=MG1-212 name=西酞普兰 alias=Citalopram dose_form=20mg|40mg锭 unlock=normal category=抗抑郁药(SSRI) subject=精神 indication=抑郁|焦虑 contraindication=MAO抑制剂|QT延长 interaction=与MAO抑制剂并用增加血清素 note=SSRI
+[ITEM] id=MG1-213 name=文拉法辛 alias=Venlafaxine dose_form=75mg|150mg胶囊 unlock=normal category=抗抑郁药(SNRI) subject=精神 indication=抑郁|焦虑|神经痛 contraindication=MAO抑制剂|未控制高血压 interaction=与MAO抑制剂并用增加血清素 note=SNRI
+[ITEM] id=MG1-214 name=度洛西汀 alias=Duloxetine dose_form=30mg|60mg胶囊 unlock=normal category=抗抑郁药(SNRI) subject=精神|神经 indication=抑郁|神经痛|纤维肌痛 contraindication=MAO抑制剂|未控制高血压 interaction=与MAO抑制剂并用增加血清素 note=SNRI
+[ITEM] id=MG1-215 name=米氮平 alias=Mirtazapine dose_form=15mg|30mg锭 unlock=normal category=抗抑郁药(NaSSA) subject=精神 indication=抑郁|失眠 contraindication=MAO抑制剂 interaction=与MAO抑制剂并用增加血清素 note=NaSSA
+[ITEM] id=MG1-216 name=阿米替林 alias=Amitriptyline dose_form=10mg|25mg锭 unlock=normal category=抗抑郁药(三环类) subject=精神|神经 indication=抑郁|神经痛|偏头痛预防 contraindication=MAO抑制剂|青光眼|前列腺肥大 interaction=与MAO抑制剂并用增加血清素 note=三环类
+[ITEM] id=MG1-217 name=氯丙嗪 alias=Chlorpromazine dose_form=25mg|50mg锭|25mg/mL针 unlock=normal category=抗精神病药(典型) subject=精神 indication=精神分裂|躁狂|恶心呕吐 contraindication=骨髓抑制|帕金森 interaction=与抗胆碱药并用增加抗胆碱 note=典型抗精神病
+[ITEM] id=MG1-218 name=氟哌啶醇 alias=Haloperidol dose_form=2mg|5mg锭|5mg/mL针 unlock=normal category=抗精神病药(典型) subject=精神|急诊 indication=精神分裂|躁狂|谵妄 contraindication=帕金森|QT延长 interaction=与胺碘酮并用增加QT延长 note=典型抗精神病
+[ITEM] id=MG1-219 name=奥氮平 alias=Olanzapine dose_form=5mg|10mg锭|10mg针 unlock=normal category=抗精神病药(非典型) subject=精神 indication=精神分裂|双相|躁狂 contraindication=骨髓抑制|青光眼 interaction=与CYP1A2抑制剂并用增加浓度 note=非典型抗精神病
+[ITEM] id=MG1-220 name=利培酮 alias=Risperidone dose_form=1mg|2mg锭|25mg微球 unlock=normal category=抗精神病药(非典型) subject=精神 indication=精神分裂|双相|自闭症易怒 contraindication=过敏 interaction=与CYP2D6抑制剂并用增加浓度 note=非典型抗精神病
+[ITEM] id=MG1-221 name=喹硫平 alias=Quetiapine dose_form=25mg|100mg|200mg锭 unlock=normal category=抗精神病药(非典型) subject=精神 indication=精神分裂|双相|抑郁辅助 contraindication=过敏|QT延长 interaction=与CYP3A4抑制剂并用增加浓度 note=非典型抗精神病
+[ITEM] id=MG1-222 name=阿立哌唑 alias=Aripiprazole dose_form=5mg|10mg锭|400mg微球 unlock=normal category=抗精神病药(非典型) subject=精神 indication=精神分裂|双相|抑郁辅助 contraindication=过敏 interaction=与CYP2D6抑制剂并用增加浓度 note=非典型抗精神病
+[ITEM] id=MG1-223 name=齐拉西酮 alias=Ziprasidone dose_form=20mg|40mg胶囊|20mg针 unlock=hard category=抗精神病药(非典型) subject=精神 indication=精神分裂|双相 contraindication=QT延长|心梗急性期 interaction=与胺碘酮并用增加QT延长 note=非典型抗精神病
+[ITEM] id=MG1-224 name=锂盐 alias=Lithium dose_form=250mg|300mg锭 unlock=hard category=心境稳定剂 subject=精神 indication=双相障碍 contraindication=严重肾损|心衰 interaction=与NSAIDs并用增加锂中毒 note=需监测血药浓度
+[ITEM] id=MG1-225 name=佐匹克隆 alias=Zopiclone dose_form=7.5mg锭 unlock=normal category=镇静催眠药 subject=精神 indication=失眠 contraindication=重症肌无力|呼吸衰竭 interaction=与酒精并用增加呼吸抑制 note=非苯二氮䓬
+[ITEM] id=MG1-226 name=唑吡坦 alias=Zolpidem dose_form=10mg锭 unlock=normal category=镇静催眠药 subject=精神 indication=失眠 contraindication=重症肌无力|呼吸衰竭 interaction=与酒精并用增加呼吸抑制 note=非苯二氮䓬
+[ITEM] id=MG1-227 name=艾司唑仑 alias=Estazolam dose_form=1mg|2mg锭 unlock=normal category=镇静催眠药 subject=精神|急诊 indication=失眠|焦虑|癫痫 contraindication=重症肌无力|呼吸衰竭 interaction=与酒精并用增加呼吸抑制 note=中效
+[ITEM] id=MG1-228 name=阿普唑仑 alias=Alprazolam dose_form=0.4mg锭 unlock=normal category=镇静催眠药 subject=精神 indication=焦虑|惊恐障碍 contraindication=重症肌无力|呼吸衰竭 interaction=与酒精并用增加呼吸抑制 note=短效
+[ITEM] id=MG1-229 name=氯硝西泮 alias=Clonazepam dose_form=0.5mg|2mg锭 unlock=normal category=镇静催眠药|抗癫痫药 subject=精神|神经 indication=癫痫|焦虑|惊恐障碍 contraindication=重症肌无力|呼吸衰竭 interaction=与酒精并用增加呼吸抑制 note=长效
+[ITEM] id=MG1-230 name=多奈哌齐 alias=Donepezil dose_form=5mg|10mg锭 unlock=normal category=抗痴呆药 subject=神经|精神 indication=阿尔茨海默病 contraindication=严重肝损 interaction=与抗胆碱药并用拮抗 note=胆碱酯酶抑制
+[ITEM] id=MG1-231 name=美金刚 alias=Memantine dose_form=10mg锭 unlock=normal category=抗痴呆药 subject=神经 indication=阿尔茨海默病 contraindication=严重肾损 interaction=与金刚烷胺并用增加神经毒 note=NMDA拮抗
+[ITEM] id=MG1-232 name=左旋多巴 alias=Levodopa dose_form=250mg锭|100mg/10mL针 unlock=normal category=抗帕金森药 subject=神经 indication=帕金森 contraindication=闭角型青光眼|精神病 interaction=与MAO抑制剂并用增加高血压 note=帕金森首选
+[ITEM] id=MG1-233 name=普拉克索 alias=Pramipexole dose_form=0.25mg|1mg锭 unlock=normal category=抗帕金森药 subject=神经 indication=帕金森|不宁腿 contraindication=严重肾损 interaction=与左旋多巴并用增加运动障碍 note=多巴胺激动
+[ITEM] id=MG1-234 name=司来吉兰 alias=Selegiline dose_form=5mg锭 unlock=normal category=抗帕金森药 subject=神经 indication=帕金森 contraindication=MAO抑制剂 interaction=与SSRI并用增加血清素 note=MAO-B抑制
+[ITEM] id=MG1-235 name=苯海索 alias=Trihexyphenidyl dose_form=2mg锭 unlock=easy category=抗帕金森药|抗胆碱药 subject=神经|精神 indication=帕金森|药物性锥体外系 contraindication=青光眼|前列腺肥大 interaction=与抗胆碱药并用增加抗胆碱 note=抗胆碱
+
+# ── 抗菌（补充） ──────────────────────────────────────
+[ITEM] id=MG1-236 name=青霉素G alias=Penicillin G dose_form=80万U|160万U针 unlock=easy category=青霉素类抗菌药 subject=急诊|内科|外科 indication=链球菌|梅毒|气性坏疽 contraindication=青霉素过敏 interaction=与丙磺舒并用增加浓度 note=经典青霉素
+[ITEM] id=MG1-237 name=青霉素V alias=Penicillin V dose_form=250mg|500mg锭 unlock=easy category=青霉素类抗菌药 subject=呼吸|儿科|口腔 indication=链球菌咽炎|肺炎 contraindication=青霉素过敏 interaction=与丙磺舒并用增加浓度 note=口服青霉素
+[ITEM] id=MG1-238 name=氨苄西林 alias=Ampicillin dose_form=250mg|500mg胶囊|1g针 unlock=normal category=青霉素类抗菌药 subject=内科|急诊|儿科 indication=肺炎|脑膜炎|尿路感染 contraindication=青霉素过敏 interaction=与别嘌醇并用增加皮疹 note=广谱青霉素
+[ITEM] id=MG1-239 name=哌拉西林 alias=Piperacillin dose_form=2g|4g针 unlock=normal category=青霉素类抗菌药 subject=急诊|内科 indication=假单胞菌|重症感染 contraindication=青霉素过敏 interaction=与氨基糖苷并用协同 note=抗假单胞菌
+[ITEM] id=MG1-240 name=哌拉西林他唑巴坦 alias=Piperacillin-Tazobactam dose_form=4.5g针 unlock=hard category=青霉素类抗菌药 subject=急诊|内科|外科 indication=重症感染|腹腔感染|肺炎 contraindication=青霉素过敏 interaction=与氨基糖苷并用协同 note=含酶抑制剂
+[ITEM] id=MG1-241 name=美洛西林 alias=Mezlocillin dose_form=1g|2g针 unlock=normal category=青霉素类抗菌药 subject=急诊|内科 indication=假单胞菌|重症感染 contraindication=青霉素过敏 interaction=与氨基糖苷并用协同 note=抗假单胞菌
+[ITEM] id=MG1-242 name=头孢氨苄 alias=Cephalexin dose_form=250mg|500mg胶囊 unlock=easy category=头孢菌素类抗菌药 subject=呼吸|皮肤|儿科 indication=尿路感染|皮肤感染 contraindication=头孢过敏 interaction=与华法林并用增加INR note=一代口服
+[ITEM] id=MG1-243 name=头孢拉定 alias=Cephradine dose_form=250mg|500mg胶囊 unlock=easy category=头孢菌素类抗菌药 subject=呼吸|儿科 indication=尿路感染|皮肤感染 contraindication=头孢过敏 interaction=与华法林并用增加INR note=一代口服
+[ITEM] id=MG1-244 name=头孢唑林 alias=Cefazolin dose_form=0.5g|1g针 unlock=normal category=头孢菌素类抗菌药 subject=外科|急诊 indication=手术预防|皮肤感染 contraindication=头孢过敏 interaction=与华法林并用增加INR note=一代针剂
+[ITEM] id=MG1-245 name=头孢克洛 alias=Cefaclor dose_form=250mg胶囊 unlock=easy category=头孢菌素类抗菌药 subject=呼吸|儿科 indication=肺炎|中耳炎 contraindication=头孢过敏 interaction=与华法林并用增加INR note=二代口服
+[ITEM] id=MG1-246 name=头孢丙烯 alias=Cefprozil dose_form=250mg|500mg锭 unlock=easy category=头孢菌素类抗菌药 subject=呼吸|儿科 indication=肺炎|中耳炎 contraindication=头孢过敏 interaction=与华法林并用增加INR note=二代口服
+[ITEM] id=MG1-247 name=头孢地尼 alias=Cefdinir dose_form=100mg胶囊 unlock=easy category=头孢菌素类抗菌药 subject=呼吸|儿科 indication=肺炎|中耳炎 contraindication=头孢过敏 interaction=与铁剂并用降低吸收 note=三代口服
+[ITEM] id=MG1-248 name=头孢泊肟 alias=Cefpodoxime dose_form=100mg|200mg锭 unlock=easy category=头孢菌素类抗菌药 subject=呼吸|儿科 indication=肺炎|尿路感染 contraindication=头孢过敏 interaction=与抗酸药并用降低吸收 note=三代口服
+[ITEM] id=MG1-249 name=头孢吡肟 alias=Cefepime dose_form=1g|2g针 unlock=hard category=头孢菌素类抗菌药 subject=急诊|内科 indication=重症感染|假单胞菌 contraindication=头孢过敏 interaction=与氨基糖苷并用增加肾毒 note=四代头孢
+[ITEM] id=MG1-250 name=头孢西丁 alias=Cefoxitin dose_form=1g|2g针 unlock=normal category=头孢菌素类抗菌药 subject=外科|妇产 indication=腹腔感染|手术预防 contraindication=头孢过敏 interaction=与华法林并用增加INR note=头霉素
+[ITEM] id=MG1-251 name=头孢美唑 alias=Cefmetazole dose_form=1g|2g针 unlock=normal category=头孢菌素类抗菌药 subject=外科|内科 indication=腹腔感染 contraindication=头孢过敏 interaction=与华法林并用增加INR note=头霉素
+[ITEM] id=MG1-252 name=拉氧头孢 alias=Latamoxef dose_form=1g|2g针 unlock=normal category=头孢菌素类抗菌药 subject=急诊|内科 indication=重症感染|脑膜炎 contraindication=头孢过敏 interaction=与华法林并用增加出血 note=氧头孢烯
+[ITEM] id=MG1-253 name=亚胺培南 alias=Imipenem dose_form=0.5g|1g针 unlock=hard category=碳青霉烯类抗菌药 subject=急诊|内科 indication=重症感染|混合感染 contraindication=青霉素过敏|癫痫 interaction=与丙戊酸并用降低浓度 note=碳青霉烯
+[ITEM] id=MG1-254 name=美罗培南 alias=Meropenem dose_form=0.5g|1g针 unlock=hard category=碳青霉烯类抗菌药 subject=急诊|内科 indication=重症感染|脑膜炎 contraindication=青霉素过敏 interaction=与丙戊酸并用降低浓度 note=碳青霉烯
+[ITEM] id=MG1-255 name=厄他培南 alias=Ertapenem dose_form=1g针 unlock=hard category=碳青霉烯类抗菌药 subject=内科|外科 indication=腹腔感染|尿路感染 contraindication=青霉素过敏 interaction=与丙戊酸并用降低浓度 note=碳青霉烯
+[ITEM] id=MG1-256 name=氨曲南 alias=Aztreonam dose_form=0.5g|1g针 unlock=normal category=单环β内酰胺类抗菌药 subject=急诊|内科 indication=革兰阴性|青霉素过敏替代 contraindication=头孢过敏 interaction=与氨基糖苷并用协同 note=单环β内酰胺
+[ITEM] id=MG1-257 name=庆大霉素 alias=Gentamicin dose_form=40mg|80mg针 unlock=normal category=氨基糖苷类抗菌药 subject=急诊|内科 indication=革兰阴性|心内膜炎 contraindication=严重肾损|耳聋 interaction=与万古霉素并用增加肾毒 note=需监测血药浓度
+[ITEM] id=MG1-258 name=阿米卡星 alias=Amikacin dose_form=100mg|200mg针 unlock=normal category=氨基糖苷类抗菌药 subject=急诊|内科 indication=革兰阴性|耐药菌 contraindication=严重肾损|耳聋 interaction=与万古霉素并用增加肾毒 note=需监测血药浓度
+[ITEM] id=MG1-259 name=妥布霉素 alias=Tobramycin dose_form=40mg|80mg针|0.3%滴眼 unlock=normal category=氨基糖苷类抗菌药 subject=急诊|眼科 indication=假单胞菌|眼部感染 contraindication=严重肾损|耳聋 interaction=与万古霉素并用增加肾毒 note=抗假单胞菌
+[ITEM] id=MG1-260 name=奈替米星 alias=Netilmicin dose_form=100mg针 unlock=normal category=氨基糖苷类抗菌药 subject=急诊|内科 indication=革兰阴性 contraindication=严重肾损|耳聋 interaction=与万古霉素并用增加肾毒 note=氨基糖苷
+[ITEM] id=MG1-261 name=依替米星 alias=Etimicin dose_form=100mg针 unlock=normal category=氨基糖苷类抗菌药 subject=急诊|内科 indication=革兰阴性 contraindication=严重肾损|耳聋 interaction=与万古霉素并用增加肾毒 note=国产氨基糖苷
+[ITEM] id=MG1-262 name=四环素 alias=Tetracycline dose_form=250mg锭 unlock=normal category=四环素类抗菌药 subject=皮肤|内科 indication=痤疮|衣原体|立克次体 contraindication=妊娠|8岁以下 interaction=与抗酸药并用降低吸收 note=经典四环素
+[ITEM] id=MG1-263 name=替加环素 alias=Tigecycline dose_form=50mg针 unlock=hard category=甘氨酰环素类抗菌药 subject=急诊|内科 indication=复杂感染|MRSA|VRE contraindication=妊娠|8岁以下 interaction=与华法林并用增加INR note=甘氨酰环素
+[ITEM] id=MG1-264 name=氯霉素 alias=Chloramphenicol dose_form=250mg胶囊|0.25g针|滴眼液 unlock=normal category=酰胺醇类抗菌药 subject=急诊|眼科 indication=伤寒|脑膜炎|眼部感染 contraindication=骨髓抑制|妊娠 interaction=与华法林并用增加INR note=骨髓抑制
+[ITEM] id=MG1-265 name=克林霉素 alias=Clindamycin dose_form=150mg|300mg胶囊|0.6g针 unlock=normal category=抗厌氧菌药 subject=皮肤|口腔|骨科 indication=厌氧菌|皮肤软组织|骨髓炎 contraindication=严重肝损|溃疡性结肠炎 interaction=与神经肌肉阻滞剂并用增加肌松 note=厌氧菌
+[ITEM] id=MG1-266 name=林可霉素 alias=Lincomycin dose_form=0.6g针|0.5g胶囊 unlock=normal category=抗厌氧菌药 subject=皮肤|口腔|骨科 indication=厌氧菌|骨髓炎 contraindication=严重肝损 interaction=与神经肌肉阻滞剂并用增加肌松 note=厌氧菌
+[ITEM] id=MG1-267 name=磷霉素 alias=Fosfomycin dose_form=3g粉|2g针 unlock=normal category=其他抗菌药 subject=急诊|内科 indication=尿路感染|耐药菌联合 contraindication=严重肾损 interaction=与甲硝唑并用协同 note=广谱
+[ITEM] id=MG1-268 name=呋喃妥因 alias=Nitrofurantoin dose_form=50mg|100mg胶囊 unlock=normal category=其他抗菌药 subject=内科 indication=尿路感染 contraindication=严重肾损|G6PD缺乏 interaction=与喹诺酮并用拮抗 note=尿路专用
+[ITEM] id=MG1-269 name=复方磺胺甲恶唑 alias=Cotrimoxazole dose_form=480mg|960mg锭 unlock=easy category=磺胺类抗菌药 subject=呼吸|内科|皮肤 indication=尿路感染|肺孢子菌肺炎 contraindication=磺胺过敏|妊娠晚期 interaction=与华法林并用增加INR note=磺胺类
+[ITEM] id=MG1-270 name=磺胺嘧啶 alias=Sulfadiazine dose_form=0.5g锭|1g针 unlock=normal category=磺胺类抗菌药 subject=内科|神经 indication=弓形虫|脑膜炎 contraindication=磺胺过敏|妊娠晚期 interaction=与华法林并用增加INR note=磺胺类
+[ITEM] id=MG1-271 name=夫西地酸 alias=Fusidic Acid dose_form=250mg锭|2%软膏|0.5g针 unlock=normal category=其他抗菌药 subject=皮肤|骨科 indication=革兰阳性|骨髓炎 contraindication=严重肝损 interaction=与华法林并用增加INR note=抗葡萄球菌
+[ITEM] id=MG1-272 name=莫匹罗星 alias=Mupirocin dose_form=2%软膏 unlock=easy category=其他抗菌药 subject=皮肤 indication=皮肤感染|鼻腔去定植 contraindication=过敏 interaction=无 note=局部抗生素
+[ITEM] id=MG1-273 name=多黏菌素B alias=Polymyxin B dose_form=50万U针 unlock=hard category=多肽类抗菌药 subject=急诊|内科 indication=多重耐药革兰阴性 contraindication=严重肾损 interaction=与氨基糖苷并用增加肾毒 note=最后防线
+[ITEM] id=MG1-274 name=多黏菌素E alias=Colistin dose_form=100万U针|150mg粉 unlock=hard category=多肽类抗菌药 subject=急诊|内科 indication=多重耐药革兰阴性 contraindication=严重肾损 interaction=与氨基糖苷并用增加肾毒 note=最后防线
+[ITEM] id=MG1-275 name=达托霉素 alias=Daptomycin dose_form=350mg|500mg针 unlock=hard category=环脂肽类抗菌药 subject=急诊|内科 indication=MRSA|VRE contraindication=肺炎 interaction=与HMG-CoA还原酶抑制剂并用增加肌病 note=环脂肽
+[ITEM] id=MG1-276 name=头孢洛林 alias=Ceftaroline dose_form=600mg针 unlock=hard category=头孢菌素类抗菌药 subject=急诊|内科 indication=MRSA|社区肺炎 contraindication=头孢过敏 interaction=与华法林并用增加INR note=五代头孢
+[ITEM] id=MG1-277 name=头孢他洛林 alias=Ceftolozane dose_form=1g针 unlock=hard category=头孢菌素类抗菌药 subject=急诊|内科 indication=多重耐药假单胞菌 contraindication=头孢过敏 interaction=与华法林并用增加INR note=新型头孢
+[ITEM] id=MG1-278 name=头孢地尔 alias=Cefiderocol dose_form=1g针 unlock=hard category=头孢菌素类抗菌药 subject=急诊|内科 indication=多重耐药革兰阴性 contraindication=头孢过敏 interaction=与华法林并用增加INR note=铁载体头孢
+
+# ── 抗病毒（补充） ──────────────────────────────────────
+[ITEM] id=MG1-279 name=拉米夫定 alias=Lamivudine dose_form=100mg|150mg锭 unlock=normal category=抗病毒药 subject=内科|消化 indication=乙肝|HIV contraindication=严重肾损 interaction=与齐多夫定并用协同 note=核苷类似物
+[ITEM] id=MG1-280 name=恩替卡韦 alias=Entecavir dose_form=0.5mg锭 unlock=normal category=抗病毒药 subject=消化 indication=乙肝 contraindication=严重肾损 interaction=与拉米夫定并用交叉耐药 note=核苷类似物
+[ITEM] id=MG1-281 name=替诺福韦 alias=Tenofovir dose_form=300mg锭 unlock=normal category=抗病毒药 subject=内科|消化 indication=乙肝|HIV contraindication=严重肾损 interaction=与NSAIDs并用增加肾毒 note=核苷类似物
+[ITEM] id=MG1-282 name=阿德福韦 alias=Adefovir dose_form=10mg锭 unlock=normal category=抗病毒药 subject=消化 indication=乙肝 contraindication=严重肾损 interaction=与NSAIDs并用增加肾毒 note=核苷类似物
+[ITEM] id=MG1-283 name=索磷布韦 alias=Sofosbuvir dose_form=400mg锭 unlock=hard category=抗病毒药 subject=消化 indication=丙肝 contraindication=严重肾损 interaction=与胺碘酮并用增加心动过缓 note=丙肝DAA
+[ITEM] id=MG1-284 name=达拉他韦 alias=Daclatasvir dose_form=60mg锭 unlock=hard category=抗病毒药 subject=消化 indication=丙肝 contraindication=严重肝损 interaction=与CYP3A4抑制剂并用增加浓度 note=丙肝DAA
+[ITEM] id=MG1-285 name=奈韦拉平 alias=Nevirapine dose_form=200mg锭 unlock=hard category=抗病毒药 subject=内科 indication=HIV contraindication=严重肝损 interaction=与CYP3A4底物并用降低浓度 note=NNRTI
+[ITEM] id=MG1-286 name=依非韦伦 alias=Efavirenz dose_form=600mg锭 unlock=hard category=抗病毒药 subject=内科 indication=HIV contraindication=妊娠早期|严重肝损 interaction=与CYP3A4底物并用降低浓度 note=NNRTI
+[ITEM] id=MG1-287 name=洛匹那韦 alias=Lopinavir dose_form=200mg/50mg锭 unlock=hard category=抗病毒药 subject=内科 indication=HIV contraindication=严重肝损 interaction=与CYP3A4底物并用增加浓度 note=PI
+[ITEM] id=MG1-288 name=利托那韦 alias=Ritonavir dose_form=100mg锭 unlock=hard category=抗病毒药 subject=内科 indication=HIV|增强剂 contraindication=严重肝损 interaction=与CYP3A4底物并用增加浓度 note=PI增强剂
+[ITEM] id=MG1-289 name=多替拉韦 alias=Dolutegravir dose_form=50mg锭 unlock=hard category=抗病毒药 subject=内科 indication=HIV contraindication=过敏 interaction=与抗酸药并用降低吸收 note=INSTI
+[ITEM] id=MG1-290 name=拉替拉韦 alias=Raltegravir dose_form=400mg锭 unlock=hard category=抗病毒药 subject=内科 indication=HIV contraindication=过敏 interaction=与抗酸药并用降低吸收 note=INSTI
+[ITEM] id=MG1-291 name=马拉韦罗 alias=Maraviroc dose_form=150mg|300mg锭 unlock=hard category=抗病毒药 subject=内科 indication=HIV contraindication=严重肝损 interaction=与CYP3A4抑制剂并用增加浓度 note=CCR5拮抗
+[ITEM] id=MG1-292 name=恩夫韦肽 alias=Enfuvirtide dose_form=90mg针 unlock=hard category=抗病毒药 subject=内科 indication=HIV contraindication=过敏 interaction=无 note=融合抑制
+[ITEM] id=MG1-293 name=齐多夫定 alias=Zidovudine dose_form=100mg|300mg胶囊|200mg针 unlock=hard category=抗病毒药 subject=内科|妇产 indication=HIV|母婴阻断 contraindication=严重骨髓抑制 interaction=与丙戊酸并用增加浓度 note=NRTI
+[ITEM] id=MG1-294 name=司他夫定 alias=Stavudine dose_form=15mg|20mg胶囊 unlock=hard category=抗病毒药 subject=内科 indication=HIV contraindication=周围神经病 interaction=与齐多夫定并用拮抗 note=NRTI
+[ITEM] id=MG1-295 name=去羟肌苷 alias=Didanosine dose_form=125mg|200mg锭 unlock=hard category=抗病毒药 subject=内科 indication=HIV contraindication=胰腺炎 interaction=与别嘌醇并用增加浓度 note=NRTI
+[ITEM] id=MG1-296 name=阿巴卡韦 alias=Abacavir dose_form=300mg锭 unlock=hard category=抗病毒药 subject=内科 indication=HIV contraindication=HLA-B*5701阳性 interaction=无 note=需基因检测
+
+# ── 抗真菌 ──────────────────────────────────────
+[ITEM] id=MG1-297 name=氟康唑 alias=Fluconazole dose_form=50mg|150mg胶囊|200mg/100mL针 unlock=normal category=抗真菌药 subject=内科|妇产|皮肤 indication=念珠菌|隐球菌 contraindication=QT延长|严重肝损 interaction=与华法林并用增加INR note=三唑类
+[ITEM] id=MG1-298 name=伊曲康唑 alias=Itraconazole dose_form=100mg胶囊|200mg/20mL针 unlock=normal category=抗真菌药 subject=皮肤|内科 indication=曲霉|念珠菌|甲癣 contraindication=严重心衰|QT延长 interaction=与CYP3A4底物并用增加浓度 note=三唑类
+[ITEM] id=MG1-299 name=伏立康唑 alias=Voriconazole dose_form=50mg|200mg锭|200mg针 unlock=hard category=抗真菌药 subject=内科|急诊 indication=侵袭性曲霉|念珠菌 contraindication=严重肝损|QT延长 interaction=与CYP3A4底物并用增加浓度 note=三唑类
+[ITEM] id=MG1-300 name=泊沙康唑 alias=Posaconazole dose_form=100mg缓释锭|40mg/mL口服液|300mg针 unlock=hard category=抗真菌药 subject=内科 indication=侵袭性真菌|预防 contraindication=QT延长 interaction=与CYP3A4底物并用增加浓度 note=三唑类
+[ITEM] id=MG1-301 name=两性霉素B alias=Amphotericin B dose_form=50mg针 unlock=hard category=抗真菌药 subject=急诊|内科 indication=侵袭性真菌|隐球菌脑膜炎 contraindication=严重肾损 interaction=与氨基糖苷并用增加肾毒 note=多烯类
+[ITEM] id=MG1-302 name=卡泊芬净 alias=Caspofungin dose_form=50mg|70mg针 unlock=hard category=抗真菌药 subject=内科|急诊 indication=侵袭性念珠菌|曲霉 contraindication=严重肝损 interaction=与环孢素并用增加肝毒 note=棘白菌素
+[ITEM] id=MG1-303 name=米卡芬净 alias=Micafungin dose_form=50mg|100mg针 unlock=hard category=抗真菌药 subject=内科 indication=侵袭性念珠菌|曲霉 contraindication=严重肝损 interaction=与西罗莫司并用增加浓度 note=棘白菌素
+[ITEM] id=MG1-304 name=阿尼芬净 alias=Anidulafungin dose_form=100mg针 unlock=hard category=抗真菌药 subject=内科 indication=侵袭性念珠菌 contraindication=过敏 interaction=无 note=棘白菌素
+[ITEM] id=MG1-305 name=特比萘芬 alias=Terbinafine dose_form=250mg锭|1%软膏 unlock=normal category=抗真菌药 subject=皮肤 indication=甲癣|皮肤癣 contraindication=严重肝损 interaction=与CYP2D6底物并用增加浓度 note=丙烯胺
+[ITEM] id=MG1-306 name=克霉唑 alias=Clotrimazole dose_form=1%软膏|500mg阴道片|10mg锭 unlock=easy category=抗真菌药 subject=皮肤|妇产 indication=皮肤癣|阴道念珠菌|口腔念珠菌 contraindication=过敏 interaction=无 note=咪唑类
+[ITEM] id=MG1-307 name=酮康唑 alias=Ketoconazole dose_form=200mg锭|2%洗剂 unlock=normal category=抗真菌药 subject=皮肤 indication=皮肤癣|花斑癣 contraindication=严重肝损 interaction=与CYP3A4底物并用增加浓度 note=咪唑类
+[ITEM] id=MG1-308 name=制霉菌素 alias=Nystatin dose_form=50万U|100万U锭|10万U/mL混悬 unlock=easy category=抗真菌药 subject=消化|儿科 indication=口腔|消化道念珠菌 contraindication=过敏 interaction=无 note=多烯类
+[ITEM] id=MG1-309 name=灰黄霉素 alias=Griseofulvin dose_form=125mg|250mg锭 unlock=normal category=抗真菌药 subject=皮肤 indication=皮肤癣|甲癣 contraindication=严重肝损|卟啉病 interaction=与华法林并用降低INR note=抗皮肤癣
+
+# ── 抗结核/抗寄生虫 ──────────────────────────────────────
+[ITEM] id=MG1-310 name=异烟肼 alias=Isoniazid dose_form=100mg|300mg锭|100mg/2mL针 unlock=normal category=抗结核药 subject=呼吸|内科 indication=结核 contraindication=严重肝损|癫痫 interaction=与利福平并用增加肝毒 note=一线抗结核
+[ITEM] id=MG1-311 name=利福平 alias=Rifampicin dose_form=150mg|300mg胶囊|0.45g针 unlock=normal category=抗结核药 subject=呼吸|内科 indication=结核|MRSA|脑膜炎预防 contraindication=严重肝损|黄疸 interaction=与多种药物交互|酶诱导 note=一线抗结核
+[ITEM] id=MG1-312 name=乙胺丁醇 alias=Ethambutol dose_form=250mg|500mg锭 unlock=normal category=抗结核药 subject=呼吸|内科 indication=结核 contraindication=视神经炎|严重肾损 interaction=与异烟肼并用协同 note=一线抗结核
+[ITEM] id=MG1-313 name=吡嗪酰胺 alias=Pyrazinamide dose_form=250mg|500mg锭 unlock=normal category=抗结核药 subject=呼吸|内科 indication=结核 contraindication=严重肝损|痛风 interaction=与利福平并用增加肝毒 note=一线抗结核
+[ITEM] id=MG1-314 name=链霉素 alias=Streptomycin dose_form=0.75g|1g针 unlock=normal category=抗结核药|氨基糖苷类抗菌药 subject=呼吸|内科 indication=结核|鼠疫 contraindication=严重肾损|耳聋 interaction=与氨基糖苷并用增加耳毒 note=二线抗结核
+[ITEM] id=MG1-315 name=利福喷丁 alias=Rifapentine dose_form=150mg锭 unlock=normal category=抗结核药 subject=呼吸 indication=结核 contraindication=严重肝损 interaction=与多种药物交互|酶诱导 note=长效抗结核
+[ITEM] id=MG1-316 name=利福布汀 alias=Rifabutin dose_form=150mg胶囊 unlock=normal category=抗结核药 subject=呼吸|内科 indication=结核|MAC预防 contraindication=严重肝损 interaction=与CYP3A4底物并用增加浓度 note=抗结核
+[ITEM] id=MG1-317 name=贝达喹啉 alias=Bedaquiline dose_form=100mg锭 unlock=hard category=抗结核药 subject=呼吸 indication=耐多药结核 contraindication=QT延长|严重肝损 interaction=与CYP3A4抑制剂并用增加浓度 note=新药
+[ITEM] id=MG1-318 name=德拉马尼 alias=Delamanid dose_form=50mg锭 unlock=hard category=抗结核药 subject=呼吸 indication=耐多药结核 contraindication=QT延长|严重肝损 interaction=与CYP3A4抑制剂并用增加浓度 note=新药
+[ITEM] id=MG1-319 name=环丝氨酸 alias=Cycloserine dose_form=250mg胶囊 unlock=hard category=抗结核药 subject=呼吸 indication=耐多药结核 contraindication=癫痫|抑郁 interaction=与异烟肼并用增加神经毒 note=二线抗结核
+[ITEM] id=MG1-320 name=对氨基水杨酸 alias=PAS dose_form=4g粉|500mg锭 unlock=hard category=抗结核药 subject=呼吸 indication=耐多药结核 contraindication=严重肾损 interaction=与利福平并用降低吸收 note=二线抗结核
+[ITEM] id=MG1-321 name=丙硫异烟胺 alias=Prothionamide dose_form=100mg|250mg锭 unlock=hard category=抗结核药 subject=呼吸 indication=耐多药结核 contraindication=严重肝损 interaction=与异烟肼并用增加神经毒 note=二线抗结核
+[ITEM] id=MG1-322 name=阿苯达唑 alias=Albendazole dose_form=200mg|400mg锭 unlock=easy category=抗寄生虫药 subject=消化|儿科 indication=蛔虫|蛲虫|钩虫|绦虫 contraindication=妊娠|2岁以下 interaction=与地塞米松并用增加浓度 note=广谱驱虫
+[ITEM] id=MG1-323 name=甲苯达唑 alias=Mebendazole dose_form=100mg锭 unlock=easy category=抗寄生虫药 subject=消化|儿科 indication=蛔虫|蛲虫|钩虫 contraindication=妊娠|2岁以下 interaction=与西咪替丁并用增加浓度 note=广谱驱虫
+[ITEM] id=MG1-324 name=吡喹酮 alias=Praziquantel dose_form=200mg|600mg锭 unlock=normal category=抗寄生虫药 subject=消化|内科 indication=血吸虫|绦虫|华支睾吸虫 contraindication=囊虫病眼症 interaction=与地塞米松并用降低浓度 note=广谱抗吸虫
+[ITEM] id=MG1-325 name=氯喹 alias=Chloroquine dose_form=250mg锭|50mg/mL针 unlock=normal category=抗寄生虫药 subject=内科|急诊 indication=疟疾|风湿病 contraindication=视网膜病变|G6PD缺乏 interaction=与金制剂并用增加皮炎 note=抗疟
+[ITEM] id=MG1-326 name=羟氯喹 alias=Hydroxychloroquine dose_form=200mg锭 unlock=normal category=抗寄生虫药|免疫抑制剂 subject=内科|皮肤 indication=疟疾|SLE|RA contraindication=视网膜病变|G6PD缺乏 interaction=与地高辛并用增加浓度 note=抗疟|风湿
+[ITEM] id=MG1-327 name=青蒿琥酯 alias=Artesunate dose_form=60mg针|50mg锭 unlock=normal category=抗寄生虫药 subject=急诊|内科 indication=重症疟疾 contraindication=妊娠早期 interaction=与QT延长药物并用增加QT延长 note=抗疟一线
+[ITEM] id=MG1-328 name=蒿甲醚 alias=Artemether dose_form=80mg/mL针|20mg胶囊 unlock=normal category=抗寄生虫药 subject=急诊|内科 indication=疟疾 contraindication=妊娠早期 interaction=与QT延长药物并用增加QT延长 note=抗疟
+[ITEM] id=MG1-329 name=奎宁 alias=Quinine dose_form=300mg锭|600mg/2mL针 unlock=normal category=抗寄生虫药 subject=内科 indication=疟疾 contraindication=G6PD缺乏|QT延长 interaction=与地高辛并用增加浓度 note=抗疟
+[ITEM] id=MG1-330 name=伯氨喹 alias=Primaquine dose_form=13.2mg锭 unlock=normal category=抗寄生虫药 subject=内科 indication=疟疾根治 contraindication=G6PD缺乏|妊娠 interaction=与氯喹并用协同 note=抗疟
+[ITEM] id=MG1-331 name=乙胺嘧啶 alias=Pyrimethamine dose_form=25mg锭 unlock=normal category=抗寄生虫药 subject=内科 indication=弓形虫|疟疾 contraindication=叶酸缺乏|妊娠早期 interaction=与磺胺并用协同 note=抗寄生虫
+[ITEM] id=MG1-332 name=伊维菌素 alias=Ivermectin dose_form=3mg锭|1%软膏 unlock=normal category=抗寄生虫药 subject=皮肤|内科 indication=疥疮|蟠尾丝虫 contraindication=严重肝损 interaction=与CYP3A4抑制剂并用增加浓度 note=广谱抗寄生虫
+[ITEM] id=MG1-333 name=左旋咪唑 alias=Levamisole dose_form=25mg|50mg锭 unlock=normal category=抗寄生虫药 subject=消化|儿科 indication=蛔虫|钩虫 contraindication=严重肝损 interaction=与酒精并用双硫仑反应 note=驱虫
+
+# ── 抗肿瘤 ──────────────────────────────────────
+[ITEM] id=MG1-334 name=环磷酰胺 alias=Cyclophosphamide dose_form=200mg|500mg|1g针 unlock=hard category=烷化剂类抗肿瘤药 subject=肿瘤|风湿 indication=淋巴瘤|乳腺癌|SLE|狼疮肾炎 contraindication=严重骨髓抑制|妊娠 interaction=与别嘌醇并用增加骨髓抑制 note=烷化剂
+[ITEM] id=MG1-335 name=异环磷酰胺 alias=Ifosfamide dose_form=1g|2g针 unlock=hard category=烷化剂类抗肿瘤药 subject=肿瘤 indication=肉瘤|淋巴瘤 contraindication=严重骨髓抑制|妊娠 interaction=与顺铂并用增加肾毒 note=烷化剂
+[ITEM] id=MG1-336 name=顺铂 alias=Cisplatin dose_form=10mg|50mg针 unlock=hard category=铂类抗肿瘤药 subject=肿瘤 indication=睾丸癌|肺癌|卵巢癌 contraindication=严重肾损|耳聋|妊娠 interaction=与氨基糖苷并用增加肾毒 note=铂类
+[ITEM] id=MG1-337 name=卡铂 alias=Carboplatin dose_form=50mg|150mg针 unlock=hard category=铂类抗肿瘤药 subject=肿瘤 indication=卵巢癌|肺癌 contraindication=严重骨髓抑制|妊娠 interaction=与氨基糖苷并用增加肾毒 note=铂类
+[ITEM] id=MG1-338 name=奥沙利铂 alias=Oxaliplatin dose_form=50mg|100mg针 unlock=hard category=铂类抗肿瘤药 subject=肿瘤 indication=结直肠癌 contraindication=严重骨髓抑制|妊娠 interaction=与氟尿嘧啶并用协同 note=铂类
+[ITEM] id=MG1-339 name=氟尿嘧啶 alias=Fluorouracil dose_form=250mg/10mL针|50mg软膏 unlock=hard category=抗代谢类抗肿瘤药 subject=肿瘤|皮肤 indication=消化道癌|乳腺癌|皮肤癌 contraindication=严重骨髓抑制|妊娠 interaction=与亚叶酸钙并用协同 note=抗代谢
+[ITEM] id=MG1-340 name=卡培他滨 alias=Capecitabine dose_form=500mg锭 unlock=hard category=抗代谢类抗肿瘤药 subject=肿瘤 indication=结直肠癌|乳腺癌 contraindication=严重肾损|妊娠 interaction=与华法林并用增加INR note=氟尿嘧啶前药
+[ITEM] id=MG1-341 name=吉西他滨 alias=Gemcitabine dose_form=200mg|1g针 unlock=hard category=抗代谢类抗肿瘤药 subject=肿瘤 indication=胰腺癌|肺癌|膀胱癌 contraindication=严重骨髓抑制|妊娠 interaction=与顺铂并用协同 note=抗代谢
+[ITEM] id=MG1-342 name=阿糖胞苷 alias=Cytarabine dose_form=50mg|100mg|500mg针 unlock=hard category=抗代谢类抗肿瘤药 subject=肿瘤|血液 indication=白血病|淋巴瘤 contraindication=严重骨髓抑制|妊娠 interaction=与柔红霉素并用协同 note=抗代谢
+[ITEM] id=MG1-343 name=甲氨蝶呤 alias=Methotrexate dose_form=2.5mg锭|50mg|1g针 unlock=hard category=抗代谢类抗肿瘤药|免疫抑制剂 subject=肿瘤|风湿|妇产 indication=白血病|RA|异位妊娠 contraindication=妊娠|严重肝损 interaction=与NSAIDs并用增加毒性 note=抗代谢
+[ITEM] id=MG1-344 name=培美曲塞 alias=Pemetrexed dose_form=500mg针 unlock=hard category=抗代谢类抗肿瘤药 subject=肿瘤 indication=间皮瘤|肺癌 contraindication=严重肾损|妊娠 interaction=与NSAIDs并用增加毒性 note=抗代谢
+[ITEM] id=MG1-345 name=多柔比星 alias=Doxorubicin dose_form=10mg|50mg针 unlock=hard category=蒽环类抗肿瘤药 subject=肿瘤 indication=乳腺癌|淋巴瘤|肉瘤 contraindication=严重心衰|妊娠 interaction=与曲妥珠单抗并用增加心脏毒性 note=蒽环类
+[ITEM] id=MG1-346 name=表柔比星 alias=Epirubicin dose_form=10mg|50mg针 unlock=hard category=蒽环类抗肿瘤药 subject=肿瘤 indication=乳腺癌|胃癌 contraindication=严重心衰|妊娠 interaction=与曲妥珠单抗并用增加心脏毒性 note=蒽环类
+[ITEM] id=MG1-347 name=吡柔比星 alias=Pirarubicin dose_form=10mg|20mg针 unlock=hard category=蒽环类抗肿瘤药 subject=肿瘤 indication=乳腺癌|膀胱癌 contraindication=严重心衰|妊娠 interaction=与曲妥珠单抗并用增加心脏毒性 note=蒽环类
+[ITEM] id=MG1-348 name=米托蒽醌 alias=Mitoxantrone dose_form=2mg|10mg针 unlock=hard category=蒽环类抗肿瘤药 subject=肿瘤|神经 indication=白血病|MS contraindication=严重骨髓抑制|妊娠 interaction=与曲妥珠单抗并用增加心脏毒性 note=蒽环类
+[ITEM] id=MG1-349 name=博来霉素 alias=Bleomycin dose_form=15mg|30mg针 unlock=hard category=抗肿瘤抗生素 subject=肿瘤 indication=淋巴瘤|睾丸癌 contraindication=严重肺病|妊娠 interaction=与顺铂并用协同 note=抗肿瘤抗生素
+[ITEM] id=MG1-350 name=丝裂霉素 alias=Mitomycin dose_form=2mg|10mg针 unlock=hard category=抗肿瘤抗生素 subject=肿瘤 indication=胃癌|膀胱癌 contraindication=严重骨髓抑制|妊娠 interaction=与多柔比星并用增加心脏毒 note=抗肿瘤抗生素
+[ITEM] id=MG1-351 name=长春新碱 alias=Vincristine dose_form=1mg针 unlock=hard category=植物来源抗肿瘤药 subject=肿瘤|血液 indication=白血病|淋巴瘤 contraindication=严重神经病|妊娠 interaction=与CYP3A4抑制剂并用增加神经毒 note=长春碱类
+[ITEM] id=MG1-352 name=长春瑞滨 alias=Vinorelbine dose_form=10mg|50mg针 unlock=hard category=植物来源抗肿瘤药 subject=肿瘤 indication=肺癌|乳腺癌 contraindication=严重骨髓抑制|妊娠 interaction=与CYP3A4抑制剂并用增加神经毒 note=长春碱类
+[ITEM] id=MG1-353 name=紫杉醇 alias=Paclitaxel dose_form=30mg|100mg|300mg针 unlock=hard category=植物来源抗肿瘤药 subject=肿瘤 indication=卵巢癌|乳腺癌|肺癌 contraindication=严重骨髓抑制|妊娠 interaction=与CYP3A4抑制剂并用增加浓度 note=紫杉烷
+[ITEM] id=MG1-354 name=多西他赛 alias=Docetaxel dose_form=20mg|80mg针 unlock=hard category=植物来源抗肿瘤药 subject=肿瘤 indication=乳腺癌|肺癌|前列腺癌 contraindication=严重骨髓抑制|妊娠 interaction=与CYP3A4抑制剂并用增加浓度 note=紫杉烷
+[ITEM] id=MG1-355 name=依托泊苷 alias=Etoposide dose_form=50mg|100mg针|50mg胶囊 unlock=hard category=拓扑异构酶抑制剂 subject=肿瘤 indication=肺癌|睾丸癌|淋巴瘤 contraindication=严重骨髓抑制|妊娠 interaction=与顺铂并用协同 note=拓扑异构酶II抑制
+[ITEM] id=MG1-356 name=替尼泊苷 alias=Teniposide dose_form=50mg针 unlock=hard category=拓扑异构酶抑制剂 subject=肿瘤 indication=白血病|脑瘤 contraindication=严重骨髓抑制|妊娠 interaction=与CYP3A4抑制剂并用增加浓度 note=拓扑异构酶II抑制
+[ITEM] id=MG1-357 name=伊立替康 alias=Irinotecan dose_form=40mg|100mg针 unlock=hard category=拓扑异构酶抑制剂 subject=肿瘤 indication=结直肠癌|肺癌 contraindication=严重骨髓抑制|妊娠 interaction=与CYP3A4抑制剂并用增加浓度 note=拓扑异构酶I抑制
+[ITEM] id=MG1-358 name=拓扑替康 alias=Topotecan dose_form=2mg|4mg针 unlock=hard category=拓扑异构酶抑制剂 subject=肿瘤 indication=卵巢癌|肺癌 contraindication=严重骨髓抑制|妊娠 interaction=与CYP3A4抑制剂并用增加浓度 note=拓扑异构酶I抑制
+[ITEM] id=MG1-359 name=他莫昔芬 alias=Tamoxifen dose_form=10mg锭 unlock=hard category=内分泌治疗抗肿瘤药 subject=肿瘤|妇产 indication=乳腺癌|卵巢癌 contraindication=妊娠|血栓史 interaction=与CYP2D6抑制剂并用降低疗效 note=雌激素受体调节
+[ITEM] id=MG1-360 name=来曲唑 alias=Letrozole dose_form=2.5mg锭 unlock=hard category=内分泌治疗抗肿瘤药 subject=肿瘤|妇产 indication=乳腺癌|促排卵 contraindication=妊娠|严重肝损 interaction=与CYP3A4抑制剂并用增加浓度 note=芳香化酶抑制
+[ITEM] id=MG1-361 name=阿那曲唑 alias=Anastrozole dose_form=1mg锭 unlock=hard category=内分泌治疗抗肿瘤药 subject=肿瘤 indication=乳腺癌 contraindication=妊娠|严重肝损 interaction=与CYP3A4抑制剂并用增加浓度 note=芳香化酶抑制
+[ITEM] id=MG1-362 name=依西美坦 alias=Exemestane dose_form=25mg锭 unlock=hard category=内分泌治疗抗肿瘤药 subject=肿瘤 indication=乳腺癌 contraindication=妊娠 interaction=与CYP3A4诱导剂并用降低浓度 note=芳香化酶抑制
+[ITEM] id=MG1-363 name=氟他胺 alias=Flutamide dose_form=250mg锭 unlock=hard category=内分泌治疗抗肿瘤药 subject=肿瘤 indication=前列腺癌 contraindication=严重肝损 interaction=与华法林并用增加INR note=抗雄激素
+[ITEM] id=MG1-364 name=比卡鲁胺 alias=Bicalutamide dose_form=50mg锭 unlock=hard category=内分泌治疗抗肿瘤药 subject=肿瘤 indication=前列腺癌 contraindication=严重肝损 interaction=与华法林并用增加INR note=抗雄激素
+[ITEM] id=MG1-365 name=利妥昔单抗 alias=Rituximab dose_form=100mg|500mg针 unlock=hard category=靶向抗肿瘤药|生物制剂 subject=肿瘤|风湿 indication=淋巴瘤|RA contraindication=严重感染|心衰 interaction=与甲氨蝶呤并用协同 note=抗CD20
+[ITEM] id=MG1-366 name=曲妥珠单抗 alias=Trastuzumab dose_form=150mg|440mg针 unlock=hard category=靶向抗肿瘤药|生物制剂 subject=肿瘤 indication=HER2+乳腺癌|胃癌 contraindication=严重心衰 interaction=与蒽环类并用增加心脏毒性 note=抗HER2
+[ITEM] id=MG1-367 name=贝伐珠单抗 alias=Bevacizumab dose_form=100mg|400mg针 unlock=hard category=靶向抗肿瘤药|生物制剂 subject=肿瘤|眼科 indication=结直肠癌|肺癌|黄斑变性 contraindication=近期手术|出血史 interaction=与抗凝血药并用增加出血 note=抗VEGF
+[ITEM] id=MG1-368 name=西妥昔单抗 alias=Cetuximab dose_form=100mg|500mg针 unlock=hard category=靶向抗肿瘤药|生物制剂 subject=肿瘤 indication=结直肠癌|头颈癌 contraindication=RAS突变 interaction=与CYP3A4底物并用降低浓度 note=抗EGFR
+[ITEM] id=MG1-369 name=伊马替尼 alias=Imatinib dose_form=100mg|400mg锭 unlock=hard category=靶向抗肿瘤药 subject=肿瘤|血液 indication=CML|GIST contraindication=严重肝损|妊娠 interaction=与CYP3A4底物并用增加浓度 note=BCR-ABL抑制
+[ITEM] id=MG1-370 name=厄洛替尼 alias=Erlotinib dose_form=100mg|150mg锭 unlock=hard category=靶向抗肿瘤药 subject=肿瘤 indication=肺癌|胰腺癌 contraindication=严重肝损|妊娠 interaction=与CYP3A4抑制剂并用增加浓度 note=EGFR-TKI
+[ITEM] id=MG1-371 name=吉非替尼 alias=Gefitinib dose_form=250mg锭 unlock=hard category=靶向抗肿瘤药 subject=肿瘤 indication=肺癌 contraindication=严重肝损|妊娠 interaction=与CYP3A4抑制剂并用增加浓度 note=EGFR-TKI
+[ITEM] id=MG1-372 name=索拉非尼 alias=Sorafenib dose_form=200mg锭 unlock=hard category=靶向抗肿瘤药 subject=肿瘤 indication=肝癌|肾癌|甲状腺癌 contraindication=严重肝损|妊娠 interaction=与CYP3A4诱导剂并用降低浓度 note=多靶点TKI
+[ITEM] id=MG1-373 name=舒尼替尼 alias=Sunitinib dose_form=12.5mg|25mg|50mg胶囊 unlock=hard category=靶向抗肿瘤药 subject=肿瘤 indication=肾癌|GIST|胰腺神经内分泌瘤 contraindication=严重肝损|妊娠 interaction=与CYP3A4诱导剂并用降低浓度 note=多靶点TKI
+[ITEM] id=MG1-374 name=砒霜 alias=Arsenic Trioxide dose_form=10mg/10mL针 unlock=hard category=靶向抗肿瘤药 subject=肿瘤|血液 indication=急性早幼粒细胞白血病（APL） contraindication=孕妇|严重肝肾功能不全 interaction=与QT延长药物并用需监测心电图 note=中医以毒攻毒|需严格监测
+[ITEM] id=MG1-375 name=维A酸 alias=Tretinoin dose_form=10mg胶囊|0.05%软膏 unlock=hard category=靶向抗肿瘤药|皮肤用药 subject=肿瘤|皮肤 indication=APL|痤疮|银屑病 contraindication=妊娠 interaction=与四环素并用增加颅内压 note=维生素A衍生物
+[ITEM] id=MG1-376 name=门冬酰胺酶 alias=Asparaginase dose_form=5000IU|10000IU针 unlock=hard category=其他抗肿瘤药 subject=肿瘤|血液 indication=急性淋巴细胞白血病 contraindication=胰腺炎史|凝血障碍 interaction=与长春新碱并用增加神经毒 note=酶制剂
+
+# ── 免疫/生物 ──────────────────────────────────────
+[ITEM] id=MG1-377 name=环孢素 alias=Cyclosporine dose_form=25mg|100mg胶囊|50mg/mL针 unlock=hard category=免疫抑制剂 subject=风湿|肿瘤|皮肤 indication=器官移植|RA|银屑病 contraindication=严重感染|肾损 interaction=与CYP3A4抑制剂并用增加浓度 note=钙调磷酸酶抑制
+[ITEM] id=MG1-378 name=他克莫司 alias=Tacrolimus dose_form=0.5mg|1mg胶囊|5mg/mL针|0.03%软膏 unlock=hard category=免疫抑制剂 subject=风湿|皮肤|肿瘤 indication=器官移植|AD|银屑病 contraindication=严重感染|肾损 interaction=与CYP3A4抑制剂并用增加浓度 note=钙调磷酸酶抑制
+[ITEM] id=MG1-379 name=西罗莫司 alias=Sirolimus dose_form=0.5mg|1mg锭 unlock=hard category=免疫抑制剂 subject=风湿|肿瘤 indication=器官移植 contraindication=严重感染|高血脂 interaction=与CYP3A4抑制剂并用增加浓度 note=mTOR抑制
+[ITEM] id=MG1-380 name=霉酚酸酯 alias=Mycophenolate dose_form=250mg|500mg胶囊 unlock=hard category=免疫抑制剂 subject=风湿|肿瘤 indication=器官移植|SLE|RA contraindication=妊娠|严重感染 interaction=与抗酸药并用降低吸收 note=嘌呤合成抑制
+[ITEM] id=MG1-381 name=硫唑嘌呤 alias=Azathioprine dose_form=50mg|100mg锭 unlock=hard category=免疫抑制剂 subject=风湿|肿瘤 indication=器官移植|RA|IBD contraindication=严重感染|妊娠 interaction=与别嘌醇并用增加骨髓抑制 note=嘌呤类似物
+[ITEM] id=MG1-382 name=英夫利昔单抗 alias=Infliximab dose_form=100mg针 unlock=hard category=生物制剂 subject=风湿|消化 indication=RA|CD|UC|AS contraindication=活动性感染|心衰 interaction=与甲氨蝶呤并用协同 note=抗TNF
+[ITEM] id=MG1-383 name=阿达木单抗 alias=Adalimumab dose_form=40mg针 unlock=hard category=生物制剂 subject=风湿|消化|皮肤 indication=RA|CD|银屑病 contraindication=活动性感染|心衰 interaction=与甲氨蝶呤并用协同 note=抗TNF
+[ITEM] id=MG1-384 name=依那西普 alias=Etanercept dose_form=25mg针 unlock=hard category=生物制剂 subject=风湿 indication=RA|AS|银屑病 contraindication=活动性感染|MS interaction=与甲氨蝶呤并用协同 note=抗TNF
+[ITEM] id=MG1-385 name=托珠单抗 alias=Tocilizumab dose_form=80mg|200mg|400mg针 unlock=hard category=生物制剂 subject=风湿|急诊 indication=RA|CRS|COVID重症 contraindication=活动性感染|肝损 interaction=与CYP3A4底物并用降低浓度 note=抗IL-6
+[ITEM] id=MG1-386 name=奥马珠单抗 alias=Omalizumab dose_form=150mg针 unlock=hard category=生物制剂 subject=呼吸|皮肤 indication=重症哮喘|荨麻疹 contraindication=过敏 interaction=无 note=抗IgE
+[ITEM] id=MG1-387 name=干扰素α alias=Interferon Alpha dose_form=300万IU|500万IU针 unlock=hard category=生物制剂 subject=内科|消化|肿瘤 indication=乙肝|丙肝|白血病|Kaposi肉瘤 contraindication=严重抑郁|自身免疫病 interaction=与利巴韦林并用协同 note=广谱抗病毒
+[ITEM] id=MG1-388 name=干扰素β alias=Interferon Beta dose_form=22μg|44μg针 unlock=hard category=生物制剂 subject=神经 indication=多发性硬化 contraindication=严重抑郁|癫痫 interaction=无 note=免疫调节
+[ITEM] id=MG1-389 name=干扰素γ alias=Interferon Gamma dose_form=100万IU针 unlock=hard category=生物制剂 subject=内科 indication=慢性肉芽肿病|骨硬化症 contraindication=自身免疫病 interaction=无 note=免疫调节
+[ITEM] id=MG1-390 name=白介素-2 alias=Interleukin-2 dose_form=18万IU|100万IU针 unlock=hard category=生物制剂 subject=肿瘤 indication=肾癌|黑色素瘤 contraindication=严重心衰|肺功能不全 interaction=与化疗并用协同 note=免疫治疗
+[ITEM] id=MG1-391 name=集落刺激因子 alias=G-CSF dose_form=75μg|150μg|300μg针 unlock=hard category=生物制剂 subject=肿瘤|血液 indication=中性粒细胞减少 contraindication=严重骨髓抑制 interaction=与化疗并用协同 note=升白细胞
+[ITEM] id=MG1-392 name=促红细胞生成素 alias=Erythropoietin dose_form=2000IU|4000IU|10000IU针 unlock=hard category=生物制剂 subject=血液|肿瘤|内科 indication=肾性贫血|化疗后贫血 contraindication=未控制高血压 interaction=与铁剂并用协同 note=升红细胞
+[ITEM] id=MG1-393 name=促血小板生成素 alias=Thrombopoietin dose_form=3mg针 unlock=hard category=生物制剂 subject=血液|肿瘤 indication=血小板减少 contraindication=骨髓纤维化 interaction=无 note=升血小板
+[ITEM] id=MG1-394 name=静脉免疫球蛋白 alias=IVIG dose_form=2.5g|5g针 unlock=hard category=血液制品|生物制剂 subject=急诊|内科|神经 indication=GBS|ITP|重症感染|川崎病 contraindication=IgA缺乏|严重肾损 interaction=与减毒活疫苗并用降低疗效 note=免疫调节
+[ITEM] id=MG1-395 name=抗胸腺细胞球蛋白 alias=ATG dose_form=25mg针 unlock=hard category=生物制剂 subject=血液|肿瘤 indication=再生障碍性贫血|器官移植预防 contraindication=严重感染 interaction=与环孢素并用协同 note=免疫抑制
+[ITEM] id=MG1-396 name=巴利昔单抗 alias=Basiliximab dose_form=20mg针 unlock=hard category=生物制剂 subject=肿瘤 indication=器官移植预防排斥 contraindication=过敏 interaction=无 note=抗CD25
+
+# ── 血液 ──────────────────────────────────────
+[ITEM] id=MG1-397 name=维生素K1 alias=Vitamin K1 dose_form=10mg/mL针|10mg锭 unlock=normal category=止血药|维生素类 subject=血液|急诊|内科 indication=华法林过量|维生素K缺乏 contraindication=严重肝损 interaction=与华法林并用拮抗 note=促凝血
+[ITEM] id=MG1-398 name=氨甲环酸 alias=Tranexamic Acid dose_form=250mg|500mg锭|0.5g/5mL针 unlock=normal category=止血药(抗纤溶) subject=急诊|外科|妇产 indication=出血|月经过多|创伤止血 contraindication=活动性血栓|DIC interaction=与抗凝血药并用拮抗 note=抗纤溶
+[ITEM] id=MG1-399 name=氨甲苯酸 alias=Aminomethylbenzoic Acid dose_form=100mg|250mg锭|50mg/5mL针 unlock=normal category=止血药(抗纤溶) subject=急诊|外科 indication=出血 contraindication=活动性血栓 interaction=与抗凝血药并用拮抗 note=抗纤溶
+[ITEM] id=MG1-400 name=酚磺乙胺 alias=Etamsylate dose_form=250mg|500mg锭|0.25g/2mL针 unlock=normal category=止血药 subject=急诊|外科 indication=出血 contraindication=活动性血栓 interaction=与抗凝血药并用拮抗 note=促凝血
+[ITEM] id=MG1-401 name=鱼精蛋白 alias=Protamine dose_form=50mg/5mL针 unlock=normal category=特异性解毒剂 subject=急诊|心血管 indication=肝素过量 contraindication=过敏 interaction=与肝素并用拮抗 note=肝素拮抗
+[ITEM] id=MG1-402 name=硫酸亚铁 alias=Ferrous Sulfate dose_form=300mg锭 unlock=easy category=抗贫血药(补铁) subject=血液|内科 indication=缺铁性贫血 contraindication=血色病|溶血性贫血 interaction=与四环素并用降低吸收 note=补铁
+[ITEM] id=MG1-403 name=琥珀酸亚铁 alias=Ferrous Succinate dose_form=100mg锭 unlock=easy category=抗贫血药(补铁) subject=血液|内科 indication=缺铁性贫血 contraindication=血色病 interaction=与四环素并用降低吸收 note=补铁
+[ITEM] id=MG1-404 name=蔗糖铁 alias=Iron Sucrose dose_form=100mg/5mL针 unlock=normal category=抗贫血药(补铁) subject=血液|内科 indication=缺铁性贫血 contraindication=血色病|严重肝损 interaction=与口服铁剂并用降低吸收 note=静脉补铁
+[ITEM] id=MG1-405 name=叶酸 alias=Folic Acid dose_form=5mg锭 unlock=easy category=抗贫血药|维生素类 subject=血液|妇产|内科 indication=巨幼贫|妊娠预防 contraindication=维生素B12缺乏未纠正 interaction=与甲氨蝶呤并用拮抗 note=补叶酸
+[ITEM] id=MG1-406 name=维生素B12 alias=Vitamin B12 dose_form=0.5mg|1mg针|25μg锭 unlock=easy category=抗贫血药|维生素类 subject=血液|神经 indication=巨幼贫|周围神经病 contraindication=过敏 interaction=与氯霉素并用降低疗效 note=补B12
+[ITEM] id=MG1-407 name=羟基脲 alias=Hydroxyurea dose_form=500mg锭 unlock=hard category=抗代谢类抗肿瘤药 subject=血液|肿瘤 indication=慢性粒细胞白血病|镰状细胞病 contraindication=严重骨髓抑制|妊娠 interaction=与齐多夫定并用增加骨髓抑制 note=抗代谢
+[ITEM] id=MG1-408 name=阿那格雷 alias=Anagrelide dose_form=0.5mg胶囊 unlock=hard category=抗血小板药 subject=血液 indication=原发性血小板增多症 contraindication=严重心衰|QT延长 interaction=与阿司匹林并用增加出血 note=降血小板
+[ITEM] id=MG1-409 name=芦可替尼 alias=Ruxolitinib dose_form=5mg|10mg|15mg|20mg锭 unlock=hard category=免疫抑制剂|靶向抗肿瘤药 subject=血液|肿瘤 indication=骨髓纤维化|PV|GVHD contraindication=严重感染|血小板减少 interaction=与CYP3A4抑制剂并用增加浓度 note=JAK抑制
+
+# ── 电解质/营养 ──────────────────────────────────────
+[ITEM] id=MG1-410 name=乳酸钠 alias=Sodium Lactate dose_form=11.2% 20mL针 unlock=normal category=电解质/营养液 subject=急诊|内科 indication=代酸 contraindication=高钠|心衰 interaction=与钙剂并用沉淀 note=纠酸
+[ITEM] id=MG1-411 name=复方电解质 alias=Electrolyte Complex dose_form=500mL|1000mL unlock=easy category=电解质/营养液 subject=全部 indication=补液|电解质补充 contraindication=高钾|肾衰 interaction=与保钾利尿并用增加高钾 note=平衡液
+[ITEM] id=MG1-412 name=氨基酸 alias=Amino Acids dose_form=8.5%|11.4% 500mL unlock=normal category=电解质/营养液 subject=全部 indication=营养支持 contraindication=严重肝损|氮质血症 interaction=与抗生素并用降低稳定性 note=营养支持
+[ITEM] id=MG1-413 name=脂肪乳 alias=Fat Emulsion dose_form=10%|20% 250mL unlock=normal category=电解质/营养液 subject=全部 indication=营养支持 contraindication=严重肝损|脂代谢障碍 interaction=与肝素并用增加脂肪清除 note=营养支持
+[ITEM] id=MG1-414 name=丙氨酰谷氨酰胺 alias=Alanyl-Glutamine dose_form=10g|20g针 unlock=normal category=电解质/营养液 subject=全部 indication=肠外营养|肠黏膜保护 contraindication=严重肝损|肾衰 interaction=无 note=营养支持
+[ITEM] id=MG1-415 name=维生素C alias=Vitamin C dose_form=100mg|500mg锭|1g/5mL针 unlock=easy category=维生素类 subject=全部 indication=坏血病|抗氧化|感冒辅助 contraindication=肾结石|G6PD缺乏 interaction=与华法林并用降低INR note=水溶性维生素
+[ITEM] id=MG1-416 name=维生素B1 alias=Vitamin B1 dose_form=10mg|100mg锭|100mg/2mL针 unlock=easy category=维生素类 subject=全部 indication=脚气病|Wernicke脑病 contraindication=过敏 interaction=无 note=水溶性维生素
+[ITEM] id=MG1-417 name=维生素B6 alias=Vitamin B6 dose_form=10mg|50mg锭|100mg/2mL针 unlock=easy category=维生素类 subject=全部 indication=周围神经病|异烟肼中毒|妊娠呕吐 contraindication=过敏 interaction=与左旋多巴并用降低疗效 note=水溶性维生素
+[ITEM] id=MG1-418 name=维生素B2 alias=Vitamin B2 dose_form=5mg|10mg锭 unlock=easy category=维生素类 subject=全部 indication=口角炎|舌炎 contraindication=过敏 interaction=无 note=水溶性维生素
+[ITEM] id=MG1-419 name=烟酰胺 alias=Nicotinamide dose_form=50mg|100mg锭|50mg/mL针 unlock=easy category=维生素类 subject=全部 indication=糙皮病|高血脂 contraindication=严重肝损|活动性溃疡 interaction=无 note=水溶性维生素
+[ITEM] id=MG1-420 name=维生素A alias=Vitamin A dose_form=5000IU|25000IU胶囊|50000IU针 unlock=easy category=维生素类 subject=全部 indication=夜盲症|维生素A缺乏 contraindication=妊娠过量|高钙 interaction=与异维A酸并用增加毒性 note=脂溶性维生素
+[ITEM] id=MG1-421 name=维生素D alias=Vitamin D dose_form=400IU|1000IU|5000IU胶囊 unlock=easy category=维生素类 subject=全部 indication=骨质疏松|维生素D缺乏|甲减辅助 contraindication=高钙|肾结石 interaction=与噻嗪类并用增加高钙 note=脂溶性维生素
+[ITEM] id=MG1-422 name=维生素E alias=Vitamin E dose_form=10mg|100mg胶囊 unlock=easy category=维生素类 subject=全部 indication=维生素E缺乏|抗氧化 contraindication=维生素K缺乏 interaction=与华法林并用增加INR note=脂溶性维生素
+[ITEM] id=MG1-423 name=复合维生素 alias=Multivitamin dose_form=锭|胶囊|针 unlock=easy category=维生素类 subject=全部 indication=维生素缺乏|营养支持 contraindication=过敏 interaction=与多种药物交互 note=营养补充
+[ITEM] id=MG1-424 name=锌 alias=Zinc dose_form=10mg|20mg锭|25mg/mL针 unlock=easy category=微量元素 subject=全部 indication=锌缺乏|伤口愈合|腹泻辅助 contraindication=过敏 interaction=与喹诺酮并用降低吸收 note=微量元素
+[ITEM] id=MG1-425 name=硒 alias=Selenium dose_form=50μg|100μg锭 unlock=normal category=微量元素 subject=全部 indication=硒缺乏 contraindication=过量 interaction=与维生素C并用降低吸收 note=微量元素
+[ITEM] id=MG1-426 name=钙剂 alias=Calcium dose_form=500mg|600mg锭|10% 10mL针 unlock=easy category=微量元素|电解质/营养液 subject=全部 indication=补钙|低钙|骨质疏松 contraindication=高钙|肾结石 interaction=与头孢曲松并用沉淀 note=矿物质
+[ITEM] id=MG1-427 name=磷剂 alias=Phosphate dose_form=500mg锭|1g针 unlock=normal category=电解质/营养液 subject=全部 indication=低磷|营养支持 contraindication=高磷|肾衰 interaction=与钙剂并用沉淀 note=矿物质
+[ITEM] id=MG1-428 name=镁剂 alias=Magnesium dose_form=250mg|500mg锭|25% 10mL针 unlock=normal category=电解质/营养液 subject=全部 indication=低镁|子痫|心律不整 contraindication=严重肾损|心脏传导阻滞 interaction=与钙剂并用拮抗 note=矿物质
+
+# ── 解毒剂（补充） ──────────────────────────────────────
+[ITEM] id=MG1-429 name=解磷定 alias=Pralidoxime dose_form=0.4g|0.5g针 unlock=hard category=特异性解毒剂 subject=急诊|毒物 indication=有机磷中毒 contraindication=严重肾损 interaction=与阿托品并用协同 note=有机磷解毒
+[ITEM] id=MG1-430 name=亚甲蓝 alias=Methylene Blue dose_form=20mg/2mL针 unlock=hard category=特异性解毒剂 subject=急诊|毒物 indication=高铁血红蛋白血症|氰化物中毒 contraindication=G6PD缺乏|严重肾损 interaction=与SSRI并用增加血清素 note=解毒剂
+[ITEM] id=MG1-431 name=亚硝酸钠 alias=Sodium Nitrite dose_form=3% 10mL针 unlock=hard category=特异性解毒剂 subject=急诊|毒物 indication=氰化物中毒 contraindication=低血压|严重贫血 interaction=与硫代硫酸钠并用协同 note=氰化物解毒
+[ITEM] id=MG1-432 name=硫代硫酸钠 alias=Sodium Thiosulfate dose_form=0.64g|12.8g针 unlock=hard category=特异性解毒剂 subject=急诊|毒物 indication=氰化物中毒|顺铂解毒 contraindication=过敏 interaction=与亚硝酸钠并用协同 note=氰化物解毒
+[ITEM] id=MG1-433 name=二巯丙醇 alias=Dimercaprol dose_form=0.1g/1mL针 unlock=hard category=特异性解毒剂 subject=急诊|毒物 indication=砷|汞|金中毒 contraindication=严重肝损|G6PD缺乏 interaction=与铁剂并用增加毒性 note=重金属解毒
+[ITEM] id=MG1-434 name=二巯丁二酸 alias=Succimer dose_form=100mg胶囊 unlock=hard category=特异性解毒剂 subject=急诊|毒物 indication=铅|砷|汞中毒 contraindication=严重肝损 interaction=与铁剂并用增加毒性 note=重金属解毒
+[ITEM] id=MG1-435 name=依地酸钙钠 alias=Calcium Disodium Edetate dose_form=1g/5mL针 unlock=hard category=特异性解毒剂 subject=急诊|毒物 indication=铅中毒 contraindication=严重肾损 interaction=与锌剂并用降低疗效 note=重金属解毒
+[ITEM] id=MG1-436 name=青霉胺 alias=Penicillamine dose_form=125mg|250mg胶囊 unlock=hard category=特异性解毒剂|抗风湿药 subject=急诊|风湿 indication=铜中毒|Wilson病|RA|胱氨酸尿 contraindication=青霉素过敏|严重肾损 interaction=与铁剂并用降低吸收 note=重金属解毒
+[ITEM] id=MG1-437 name=去铁胺 alias=Deferoxamine dose_form=500mg针 unlock=hard category=特异性解毒剂 subject=急诊|血液 indication=铁中毒|地中海贫血铁过载 contraindication=严重肾损|无尿 interaction=与维生素C并用增加铁释放 note=铁螯合
+[ITEM] id=MG1-438 name=乙醇 alias=Ethanol dose_form=10%|95% 溶液 unlock=hard category=特异性解毒剂 subject=急诊|毒物 indication=甲醇|乙二醇中毒 contraindication=严重肝损 interaction=与多种药物交互 note=竞争性解毒
+[ITEM] id=MG1-439 name=甲吡唑 alias=Fomepizole dose_form=1g/1mL针 unlock=hard category=特异性解毒剂 subject=急诊|毒物 indication=甲醇|乙二醇中毒 contraindication=过敏 interaction=与乙醇并用拮抗 note=竞争性解毒
+[ITEM] id=MG1-440 name=左卡尼汀 alias=Levocarnitine dose_form=1g/5mL针|330mg锭 unlock=hard category=特异性解毒剂|营养补充剂 subject=急诊|内科 indication=丙戊酸中毒|卡尼汀缺乏 contraindication=过敏 interaction=与华法林并用增加INR note=代谢解毒
+
+# ── 妇产 ──────────────────────────────────────
+[ITEM] id=MG1-441 name=缩宫素 alias=Oxytocin dose_form=10U/mL针 unlock=normal category=妇产科用药 subject=妇产 indication=引产|产后出血 contraindication=胎位不正|头盆不称 interaction=与前列腺素并用增加子宫破裂 note=子宫收缩
+[ITEM] id=MG1-442 name=麦角新碱 alias=Ergonovine dose_form=0.2mg/mL针|0.2mg锭 unlock=normal category=妇产科用药 subject=妇产 indication=产后出血 contraindication=高血压|心脏病|子痫 interaction=与缩宫素并用增加子宫破裂 note=子宫收缩
+[ITEM] id=MG1-443 name=米索前列醇 alias=Misoprostol dose_form=200μg锭 unlock=normal category=妇产科用药|抗溃疡药 subject=妇产|消化 indication=引产|产后出血|胃溃疡 contraindication=前列腺素过敏|青光眼 interaction=与缩宫素并用增加子宫破裂 note=前列腺素
+[ITEM] id=MG1-444 name=米非司酮 alias=Mifepristone dose_form=25mg|200mg锭 unlock=normal category=妇产科用药 subject=妇产 indication=药流|库欣综合征 contraindication=异位妊娠|肾上腺功能不全 interaction=与米索前列醇并用协同 note=抗孕激素
+[ITEM] id=MG1-445 name=利托君 alias=Ritodrine dose_form=10mg/mL针|10mg锭 unlock=hard category=妇产科用药 subject=妇产 indication=早产抑制宫缩 contraindication=严重心脏病|甲亢 interaction=与β阻断剂并用拮抗 note=β2激动
+[ITEM] id=MG1-446 name=阿托西班 alias=Atosiban dose_form=6.75mg/0.9mL针 unlock=hard category=妇产科用药 subject=妇产 indication=早产抑制宫缩 contraindication=过敏 interaction=与缩宫素并用拮抗 note=催产素拮抗
+[ITEM] id=MG1-447 name=地屈孕酮 alias=Dydrogesterone dose_form=10mg锭 unlock=normal category=性激素 subject=妇产 indication=黄体不足|先兆流产 contraindication=严重肝损 interaction=与利福平并用降低疗效 note=孕激素
+[ITEM] id=MG1-448 name=黄体酮 alias=Progesterone dose_form=10mg|20mg胶囊|20mg/mL针 unlock=normal category=性激素 subject=妇产 indication=黄体不足|先兆流产|激素替代 contraindication=严重肝损|血栓史 interaction=与利福平并用降低疗效 note=孕激素
+[ITEM] id=MG1-449 name=雌二醇 alias=Estradiol dose_form=1mg|2mg锭|0.5mg凝胶 unlock=normal category=性激素 subject=妇产|内分泌 indication=更年期|激素替代 contraindication=乳腺癌|血栓史 interaction=与华法林并用增加INR note=雌激素
+[ITEM] id=MG1-450 name=雌三醇 alias=Estriol dose_form=1mg|2mg锭|0.5mg软膏 unlock=normal category=性激素 subject=妇产 indication=更年期|阴道萎缩 contraindication=乳腺癌|血栓史 interaction=与华法林并用增加INR note=雌激素
+[ITEM] id=MG1-451 name=氯米芬 alias=Clomiphene dose_form=50mg锭 unlock=normal category=促排卵药 subject=妇产 indication=促排卵 contraindication=妊娠|肝病|卵巢囊肿 interaction=与雌激素并用拮抗 note=促排卵
+[ITEM] id=MG1-452 name=尿促性素 alias=HMG dose_form=75IU|150IU针 unlock=hard category=促排卵药 subject=妇产 indication=促排卵|辅助生殖 contraindication=妊娠|卵巢囊肿 interaction=与HCG并用协同 note=促性腺激素
+[ITEM] id=MG1-453 name=绒促性素 alias=HCG dose_form=1000IU|5000IU针 unlock=hard category=促排卵药 subject=妇产|内分泌 indication=促排卵|黄体支持|隐睾 contraindication=性早熟|前列腺癌 interaction=与HMG并用协同 note=促性腺激素
+[ITEM] id=MG1-454 name=溴隐亭 alias=Bromocriptine dose_form=2.5mg锭 unlock=normal category=内分泌用药 subject=妇产|内分泌|神经 indication=高泌乳素血症|肢端肥大症|帕金森 contraindication=严重心衰|精神病 interaction=与麦角类并用增加毒性 note=多巴胺激动
+[ITEM] id=MG1-455 name=卡麦角林 alias=Cabergoline dose_form=0.5mg锭 unlock=hard category=内分泌用药 subject=妇产|内分泌 indication=高泌乳素血症|帕金森 contraindication=严重心衰|瓣膜病 interaction=与CYP3A4抑制剂并用增加浓度 note=多巴胺激动
+[ITEM] id=MG1-456 name=达那唑 alias=Danazol dose_form=100mg|200mg胶囊 unlock=hard category=性激素 subject=妇产 indication=子宫内膜异位|遗传性血管水肿 contraindication=妊娠|血栓史 interaction=与华法林并用增加INR note=抗促性腺激素
+
+# ── 儿科 ──────────────────────────────────────
+[ITEM] id=MG1-457 name=小儿氨酚黄那敏 alias=Pediatric Cold Medicine dose_form=颗粒|糖浆 unlock=easy category=复方感冒药 subject=儿科 indication=感冒|发热|鼻塞 contraindication=严重肝损|新生儿 interaction=与对乙酰氨基酚并用增加肝毒 note=复方感冒药
+[ITEM] id=MG1-458 name=口服补液盐 alias=ORS dose_form=粉剂|溶液 unlock=easy category=电解质/营养液 subject=儿科|急诊 indication=腹泻|脱水 contraindication=肠梗阻|无尿 interaction=无 note=补液
+[ITEM] id=MG1-459 name=蒙脱石散（儿科） alias=Montmorillonite Pediatric dose_form=3g粉 unlock=easy category=止泻药 subject=儿科|消化 indication=腹泻 contraindication=肠梗阻 interaction=与口服药并用降低吸收 note=止泻
+[ITEM] id=MG1-460 name=双歧杆菌（儿科） alias=Bifidobacterium Pediatric dose_form=活菌颗粒 unlock=easy category=微生态制剂 subject=儿科|消化 indication=腹泻|菌群失调 contraindication=过敏 interaction=与抗生素并用降低疗效 note=益生菌
+[ITEM] id=MG1-461 name=维生素D（儿科） alias=Vitamin D Pediatric dose_form=400IU滴剂 unlock=easy category=维生素类 subject=儿科 indication=佝偻病预防 contraindication=高钙 interaction=与噻嗪类并用增加高钙 note=营养补充
+[ITEM] id=MG1-462 name=铁剂（儿科） alias=Iron Pediatric dose_form=滴剂|糖浆 unlock=easy category=抗贫血药(补铁) subject=儿科 indication=缺铁性贫血 contraindication=血色病 interaction=与四环素并用降低吸收 note=补铁
+[ITEM] id=MG1-463 name=驱虫药（儿科） alias=Anthelmintic Pediatric dose_form=锭|糖浆 unlock=easy category=抗寄生虫药 subject=儿科 indication=蛔虫|蛲虫 contraindication=妊娠|2岁以下 interaction=与地塞米松并用增加浓度 note=广谱驱虫
+
+# ── 皮肤 ──────────────────────────────────────
+[ITEM] id=MG1-464 name=氢化可的松乳膏 alias=Hydrocortisone Cream dose_form=1%|2.5%软膏 unlock=easy category=糖皮质激素(局部) subject=皮肤 indication=湿疹|皮炎|瘙痒 contraindication=皮肤感染|痤疮 interaction=无 note=弱效激素
+[ITEM] id=MG1-465 name=糠酸莫米松 alias=Mometasone dose_form=0.1%乳膏|50μg鼻喷 unlock=normal category=糖皮质激素(局部) subject=皮肤|耳鼻喉 indication=湿疹|银屑病|过敏性鼻炎 contraindication=皮肤感染|痤疮 interaction=无 note=中效激素
+[ITEM] id=MG1-466 name=卤米松 alias=Halometasone dose_form=0.05%乳膏 unlock=normal category=糖皮质激素(局部) subject=皮肤 indication=湿疹|银屑病 contraindication=皮肤感染|面部 interaction=无 note=强效激素
+[ITEM] id=MG1-467 name=他克莫司软膏 alias=Tacrolimus Ointment dose_form=0.03%|0.1%软膏 unlock=normal category=免疫抑制剂(局部) subject=皮肤 indication=AD|湿疹 contraindication=皮肤感染 interaction=无 note=钙调磷酸酶抑制
+[ITEM] id=MG1-468 name=吡美莫司 alias=Pimecrolimus dose_form=1%乳膏 unlock=normal category=免疫抑制剂(局部) subject=皮肤 indication=AD|湿疹 contraindication=皮肤感染 interaction=无 note=钙调磷酸酶抑制
+[ITEM] id=MG1-469 name=维A酸乳膏 alias=Tretinoin Cream dose_form=0.025%|0.05%乳膏 unlock=normal category=皮肤用药(维A酸类) subject=皮肤 indication=痤疮|银屑病|光老化 contraindication=妊娠|湿疹 interaction=与过氧化苯甲酰并用降低疗效 note=维A酸
+[ITEM] id=MG1-470 name=过氧化苯甲酰 alias=Benzoyl Peroxide dose_form=2.5%|5%|10%凝胶 unlock=easy category=皮肤用药(抗菌) subject=皮肤 indication=痤疮 contraindication=过敏 interaction=与维A酸并用降低疗效 note=抗菌
+[ITEM] id=MG1-471 name=阿达帕林 alias=Adapalene dose_form=0.1%凝胶 unlock=normal category=皮肤用药(维A酸类) subject=皮肤 indication=痤疮 contraindication=妊娠|湿疹 interaction=与维A酸并用增加刺激 note=维A酸
+[ITEM] id=MG1-472 name=异维A酸 alias=Isotretinoin dose_form=10mg胶囊 unlock=hard category=皮肤用药(维A酸类) subject=皮肤 indication=重度痤疮 contraindication=妊娠|高血脂|抑郁 interaction=与四环素并用增加颅内压 note=维A酸
+[ITEM] id=MG1-473 name=氯雷他定 alias=Loratadine dose_form=10mg锭|1mg/mL糖浆 unlock=easy category=抗组胺药 subject=皮肤|呼吸|儿科 indication=过敏性鼻炎|荨麻疹|瘙痒 contraindication=严重肝损 interaction=与CYP3A4抑制剂并用增加浓度 note=抗组胺
+[ITEM] id=MG1-474 name=西替利嗪 alias=Cetirizine dose_form=10mg锭|1mg/mL滴剂 unlock=easy category=抗组胺药 subject=皮肤|呼吸|儿科 indication=过敏性鼻炎|荨麻疹|瘙痒 contraindication=严重肾损 interaction=与镇静剂并用增加镇静 note=抗组胺
+[ITEM] id=MG1-475 name=依巴斯汀 alias=Ebastine dose_form=10mg锭 unlock=easy category=抗组胺药 subject=皮肤 indication=荨麻疹|过敏性鼻炎 contraindication=QT延长 interaction=与酮康唑并用增加QT延长 note=抗组胺
+[ITEM] id=MG1-476 name=非索非那定 alias=Fexofenadine dose_form=60mg|120mg|180mg锭 unlock=easy category=抗组胺药 subject=皮肤|呼吸 indication=过敏性鼻炎|荨麻疹 contraindication=过敏 interaction=与抗酸药并用降低吸收 note=抗组胺
+[ITEM] id=MG1-477 name=氯苯那敏 alias=Chlorpheniramine dose_form=4mg锭|10mg/mL针 unlock=easy category=抗组胺药 subject=皮肤|儿科 indication=过敏性鼻炎|荨麻疹|瘙痒 contraindication=青光眼|前列腺肥大 interaction=与镇静剂并用增加镇静 note=第一代抗组胺
+[ITEM] id=MG1-478 name=赛庚啶 alias=Cyproheptadine dose_form=2mg|4mg锭 unlock=easy category=抗组胺药 subject=皮肤|儿科|内分泌 indication=荨麻疹|偏头痛预防|食欲促进 contraindication=青光眼|前列腺肥大 interaction=与SSRI并用增加血清素 note=第一代抗组胺
+[ITEM] id=MG1-479 name=炉甘石洗剂 alias=Calamine Lotion dose_form=洗剂 unlock=easy category=皮肤用药(止痒) subject=皮肤|儿科 indication=瘙痒|痱子|湿疹 contraindication=皮肤破损 interaction=无 note=止痒
+[ITEM] id=MG1-480 name=氧化锌 alias=Zinc Oxide dose_form=软膏|洗剂 unlock=easy category=皮肤用药(收敛) subject=皮肤|儿科 indication=尿布疹|湿疹|防晒 contraindication=皮肤感染 interaction=无 note=收敛
+[ITEM] id=MG1-481 name=莫匹罗星软膏 alias=Mupirocin Ointment dose_form=2%软膏 unlock=easy category=其他抗菌药 subject=皮肤|儿科 indication=皮肤感染|脓疱疮 contraindication=过敏 interaction=无 note=局部抗生素
+[ITEM] id=MG1-482 name=夫西地酸乳膏 alias=Fusidic Acid Cream dose_form=2%乳膏 unlock=normal category=其他抗菌药 subject=皮肤 indication=皮肤感染|脓疱疮 contraindication=过敏 interaction=无 note=局部抗生素
+[ITEM] id=MG1-483 name=特比萘芬乳膏 alias=Terbinafine Cream dose_form=1%乳膏 unlock=easy category=抗真菌药 subject=皮肤 indication=皮肤癣|足癣 contraindication=过敏 interaction=无 note=抗真菌
+
+# ── 眼科/耳鼻喉 ──────────────────────────────────────
+[ITEM] id=MG1-484 name=左氧氟沙星滴眼液 alias=Levofloxacin Eye Drops dose_form=0.5%滴眼液 unlock=easy category=喹诺酮类抗菌药(眼用) subject=眼科 indication=细菌性结膜炎|角膜炎 contraindication=过敏 interaction=无 note=眼科抗生素
+[ITEM] id=MG1-485 name=妥布霉素滴眼液 alias=Tobramycin Eye Drops dose_form=0.3%滴眼液|眼膏 unlock=easy category=氨基糖苷类抗菌药(眼用) subject=眼科 indication=细菌性结膜炎|角膜炎 contraindication=过敏 interaction=无 note=眼科抗生素
+[ITEM] id=MG1-486 name=氯霉素滴眼液 alias=Chloramphenicol Eye Drops dose_form=0.25%滴眼液 unlock=easy category=酰胺醇类抗菌药(眼用) subject=眼科 indication=细菌性结膜炎 contraindication=骨髓抑制|新生儿 interaction=无 note=眼科抗生素
+[ITEM] id=MG1-487 name=阿昔洛韦滴眼液 alias=Acyclovir Eye Drops dose_form=0.1%滴眼液|3%眼膏 unlock=normal category=抗病毒药(眼用) subject=眼科 indication=单纯疱疹性角膜炎 contraindication=过敏 interaction=无 note=眼科抗病毒
+[ITEM] id=MG1-488 name=更昔洛韦眼用凝胶 alias=Ganciclovir Gel dose_form=0.15%凝胶 unlock=normal category=抗病毒药(眼用) subject=眼科 indication=单纯疱疹性角膜炎 contraindication=过敏 interaction=无 note=眼科抗病毒
+[ITEM] id=MG1-489 name=毛果芸香碱 alias=Pilocarpine dose_form=1%|2%滴眼液 unlock=normal category=眼科用药(缩瞳/降眼压) subject=眼科 indication=青光眼|缩瞳 contraindication=虹膜睫状体炎|哮喘 interaction=与阿托品并用拮抗 note=拟胆碱
+[ITEM] id=MG1-490 name=噻吗洛尔 alias=Timolol dose_form=0.25%|0.5%滴眼液 unlock=normal category=眼科用药(降眼压) subject=眼科 indication=青光眼 contraindication=哮喘|心衰|II-III度AVB interaction=与β阻断剂并用协同 note=β阻断剂
+[ITEM] id=MG1-491 name=布林佐胺 alias=Brinzolamide dose_form=1%滴眼液 unlock=normal category=眼科用药(降眼压) subject=眼科 indication=青光眼 contraindication=磺胺过敏|严重肾损 interaction=与碳酸酐酶抑制剂并用协同 note=碳酸酐酶抑制
+[ITEM] id=MG1-492 name=拉坦前列素 alias=Latanoprost dose_form=0.005%滴眼液 unlock=normal category=眼科用药(降眼压) subject=眼科 indication=青光眼|高眼压 contraindication=妊娠|虹膜炎 interaction=与噻吗洛尔并用协同 note=前列腺素类似物
+[ITEM] id=MG1-493 name=曲伏前列素 alias=Travoprost dose_form=0.004%滴眼液 unlock=normal category=眼科用药(降眼压) subject=眼科 indication=青光眼|高眼压 contraindication=妊娠|虹膜炎 interaction=与噻吗洛尔并用协同 note=前列腺素类似物
+[ITEM] id=MG1-494 name=溴莫尼定 alias=Brimonidine dose_form=0.2%滴眼液 unlock=normal category=眼科用药(降眼压) subject=眼科 indication=青光眼 contraindication=MAO抑制剂|严重心血管病 interaction=与β阻断剂并用协同 note=α2激动
+[ITEM] id=MG1-495 name=阿托品滴眼液 alias=Atropine Eye Drops dose_form=0.5%|1%滴眼液 unlock=easy category=眼科用药(散瞳) subject=眼科 indication=散瞳|虹膜炎 contraindication=青光眼|前列腺肥大 interaction=与毛果芸香碱并用拮抗 note=抗胆碱
+[ITEM] id=MG1-496 name=托吡卡胺 alias=Tropicamide dose_form=0.5%|1%滴眼液 unlock=easy category=眼科用药(散瞳) subject=眼科 indication=散瞳|眼底检查 contraindication=青光眼 interaction=与阿托品并用协同 note=抗胆碱
+[ITEM] id=MG1-497 name=荧光素钠 alias=Fluorescein dose_form=10%|20%针|1%滴眼液 unlock=normal category=眼科用药(诊断) subject=眼科 indication=眼底造影|角膜检查 contraindication=严重肾损|过敏 interaction=无 note=诊断用药
+[ITEM] id=MG1-498 name=玻璃酸钠滴眼液 alias=Sodium Hyaluronate dose_form=0.1%|0.3%滴眼液 unlock=easy category=眼科用药(人工泪液) subject=眼科 indication=干眼症|角膜保护 contraindication=过敏 interaction=无 note=人工泪液
+[ITEM] id=MG1-499 name=重组人表皮生长因子 alias=rhEGF dose_form=滴眼液|凝胶 unlock=normal category=皮肤用药(促愈合)|眼科用药 subject=眼科|皮肤 indication=角膜损伤|创面愈合 contraindication=过敏 interaction=无 note=生长因子
+[ITEM] id=MG1-500 name=氧氟沙星滴耳液 alias=Ofloxacin Ear Drops dose_form=0.3%滴耳液 unlock=easy category=喹诺酮类抗菌药(耳用) subject=耳鼻喉 indication=中耳炎|外耳道炎 contraindication=鼓膜穿孔 interaction=无 note=耳科抗生素
+[ITEM] id=MG1-501 name=硼酸冰片滴耳液 alias=Boric Acid Ear Drops dose_form=滴耳液 unlock=easy category=耳鼻喉用药 subject=耳鼻喉 indication=中耳炎|外耳道炎 contraindication=鼓膜穿孔 interaction=无 note=耳科用药
+[ITEM] id=MG1-502 name=麻黄碱滴鼻液 alias=Ephedrine Nasal Drops dose_form=0.5%|1%滴鼻液 unlock=easy category=耳鼻喉用药(减充血) subject=耳鼻喉 indication=鼻塞 contraindication=高血压|甲亢|青光眼 interaction=与MAO抑制剂并用增加升压 note=鼻减充血
+[ITEM] id=MG1-503 name=糠酸莫米松鼻喷 alias=Mometasone Nasal Spray dose_form=50μg/喷 unlock=easy category=糖皮质激素(局部) subject=耳鼻喉|呼吸 indication=过敏性鼻炎 contraindication=鼻部感染 interaction=无 note=鼻用激素
+[ITEM] id=MG1-504 name=布地奈德鼻喷 alias=Budesonide Nasal Spray dose_form=64μg/喷 unlock=easy category=糖皮质激素(局部) subject=耳鼻喉|呼吸 indication=过敏性鼻炎 contraindication=鼻部感染 interaction=无 note=鼻用激素
+[ITEM] id=MG1-505 name=氮卓斯汀鼻喷 alias=Azelastine Nasal Spray dose_form=0.1%喷 unlock=normal category=抗组胺药(局部) subject=耳鼻喉 indication=过敏性鼻炎 contraindication=过敏 interaction=与镇静剂并用增加镇静 note=抗组胺
+[ITEM] id=MG1-506 name=桉柠蒎 alias=Eucalyptol dose_form=300mg胶囊 unlock=easy category=化痰药 subject=呼吸|耳鼻喉 indication=化痰|鼻窦炎 contraindication=过敏 interaction=无 note=化痰
+[ITEM] id=MG1-507 name=标准桃金娘油 alias=Myrtol dose_form=300mg胶囊 unlock=easy category=化痰药 subject=呼吸|耳鼻喉 indication=化痰|鼻窦炎 contraindication=过敏 interaction=无 note=化痰
+[ITEM] id=MG1-508 name=地喹氯铵 alias=Dequalinium dose_form=0.25mg含片 unlock=easy category=口腔用药(抗菌) subject=口腔|耳鼻喉 indication=咽炎|口腔感染 contraindication=过敏 interaction=无 note=局部抗菌
+[ITEM] id=MG1-509 name=西地碘 alias=Cydiodine dose_form=1.5mg含片 unlock=easy category=口腔用药(抗菌) subject=口腔|耳鼻喉 indication=咽炎|口腔感染 contraindication=碘过敏|甲亢 interaction=无 note=局部抗菌
+[ITEM] id=MG1-510 name=复方硼砂溶液 alias=Compound Borax Solution dose_form=溶液 unlock=easy category=口腔用药(消毒) subject=口腔|耳鼻喉 indication=口腔消毒|咽炎 contraindication=过敏 interaction=无 note=消毒
+[ITEM] id=MG1-511 name=甲硝唑口颊片 alias=Metronidazole Buccal dose_form=5mg口颊片 unlock=normal category=抗厌氧菌药 subject=口腔 indication=牙龈炎|牙周炎 contraindication=妊娠早期|酒精 interaction=与酒精并用双硫仑反应 note=口腔厌氧菌
+[ITEM] id=MG1-512 name=碘甘油 alias=Iodine Glycerol dose_form=1%甘油 unlock=easy category=口腔用药(消毒) subject=口腔 indication=口腔溃疡|咽炎 contraindication=碘过敏|甲亢 interaction=无 note=消毒
+[ITEM] id=MG1-513 name=丁卡因 alias=Tetracaine dose_form=1%|2%溶液|0.5%软膏 unlock=normal category=局部麻醉药 subject=口腔|眼科|皮肤 indication=表面麻醉 contraindication=过敏|严重心衰 interaction=与琥珀胆碱并用增加肌松 note=表面麻醉
+[ITEM] id=MG1-514 name=氯己定含漱液 alias=Chlorhexidine dose_form=0.02%|0.2%溶液 unlock=easy category=口腔用药(消毒) subject=口腔 indication=口腔消毒|牙龈炎 contraindication=过敏 interaction=与阴离子表面活性剂并用拮抗 note=消毒
+[ITEM] id=MG1-515 name=过氧化氢 alias=Hydrogen Peroxide dose_form=3%溶液 unlock=easy category=消毒防腐药 subject=口腔|皮肤 indication=伤口消毒|口腔消毒 contraindication=深部伤口 interaction=与碘剂并用协同 note=消毒
+
+# ── 中药/中成药 ──────────────────────────────────────
+[ITEM] id=MG1-516 name=阿胶 alias=Ejiao dose_form=250g胶块 unlock=easy category=中药/中成药 subject=中药|血液|妇产 indication=补血|止血|滋阴 contraindication=脾胃虚弱|痰湿 interaction=与大黄并用拮抗 note=补血
+[ITEM] id=MG1-517 name=人参 alias=Ginseng dose_form=3g|9g饮片|胶囊 unlock=easy category=中药/中成药 subject=中药|全部 indication=补气|扶正 contraindication=实证|热证|高血压 interaction=与华法林并用降低INR note=补气
+[ITEM] id=MG1-518 name=黄芪 alias=Astragalus dose_form=9g|30g饮片|注射剂 unlock=easy category=中药/中成药 subject=中药|全部 indication=补气|固表|利水 contraindication=实证|阴虚阳亢 interaction=与免疫抑制剂并用拮抗 note=补气
+[ITEM] id=MG1-519 name=当归 alias=Angelica dose_form=6g|12g饮片 unlock=easy category=中药/中成药 subject=中药|妇产|血液 indication=补血|活血|调经 contraindication=湿盛|大便溏泄 interaction=与华法林并用增加INR note=补血
+[ITEM] id=MG1-520 name=川芎 alias=Ligusticum dose_form=3g|9g饮片 unlock=easy category=中药/中成药 subject=中药|心血管|神经 indication=活血|行气|祛风 contraindication=阴虚火旺|月经过多 interaction=与抗凝血药并用增加出血 note=活血
+[ITEM] id=MG1-521 name=丹参 alias=Salvia dose_form=9g|15g饮片|注射剂 unlock=easy category=中药/中成药 subject=中药|心血管 indication=活血|调经|安神 contraindication=无瘀血|孕妇 interaction=与华法林并用增加INR note=活血
+[ITEM] id=MG1-522 name=三七 alias=Notoginseng dose_form=3g|9g粉 unlock=normal category=中药/中成药 subject=中药|心血管|外科 indication=止血|活血|止痛 contraindication=孕妇 interaction=与抗凝血药并用增加出血 note=止血活血
+[ITEM] id=MG1-523 name=红花 alias=Safflower dose_form=3g|9g饮片 unlock=easy category=中药/中成药 subject=中药|妇产|心血管 indication=活血|通经|散瘀 contraindication=孕妇|月经过多 interaction=与抗凝血药并用增加出血 note=活血
+[ITEM] id=MG1-524 name=桃仁 alias=Peach Kernel dose_form=5g|10g饮片 unlock=easy category=中药/中成药 subject=中药|妇产 indication=活血|润肠|通便 contraindication=孕妇|便溏 interaction=与抗凝血药并用增加出血 note=活血
+[ITEM] id=MG1-525 name=赤芍 alias=Red Peony dose_form=6g|12g饮片 unlock=easy category=中药/中成药 subject=中药|心血管 indication=清热|凉血|活血 contraindication=血虚无瘀|孕妇 interaction=与抗凝血药并用增加出血 note=活血
+[ITEM] id=MG1-526 name=甘草 alias=Licorice dose_form=2g|6g饮片 unlock=easy category=中药/中成药 subject=中药|全部 indication=补气|调和诸药|止咳 contraindication=水肿|高血压|低钾 interaction=与糖皮质激素并用增加低钾 note=调和
+[ITEM] id=MG1-527 name=黄连 alias=Coptis dose_form=2g|5g饮片 unlock=easy category=中药/中成药 subject=中药|消化 indication=清热|燥湿|解毒 contraindication=脾胃虚寒 interaction=与益生菌并用拮抗 note=清热
+[ITEM] id=MG1-528 name=黄芩 alias=Scutellaria dose_form=3g|9g饮片 unlock=easy category=中药/中成药 subject=中药|呼吸|消化 indication=清热|燥湿|解毒|安胎 contraindication=脾胃虚寒 interaction=与益生菌并用拮抗 note=清热
+[ITEM] id=MG1-529 name=黄柏 alias=Phellodendron dose_form=3g|9g饮片 unlock=easy category=中药/中成药 subject=中药|消化|皮肤 indication=清热|燥湿|解毒 contraindication=脾胃虚寒 interaction=与益生菌并用拮抗 note=清热
+[ITEM] id=MG1-530 name=金银花 alias=Honeysuckle dose_form=6g|15g饮片 unlock=easy category=中药/中成药 subject=中药|呼吸|皮肤 indication=清热|解毒|疏风 contraindication=脾胃虚寒 interaction=与益生菌并用拮抗 note=清热
+[ITEM] id=MG1-531 name=连翘 alias=Forsythia dose_form=6g|15g饮片 unlock=easy category=中药/中成药 subject=中药|呼吸|皮肤 indication=清热|解毒|散结 contraindication=脾胃虚寒 interaction=与益生菌并用拮抗 note=清热
+[ITEM] id=MG1-532 name=板蓝根 alias=Isatis dose_form=9g|15g饮片|颗粒 unlock=easy category=中药/中成药 subject=中药|呼吸 indication=清热|解毒|利咽 contraindication=脾胃虚寒 interaction=与益生菌并用拮抗 note=清热
+[ITEM] id=MG1-533 name=大青叶 alias=Isatis Leaf dose_form=9g|15g饮片 unlock=easy category=中药/中成药 subject=中药|呼吸 indication=清热|解毒|凉血 contraindication=脾胃虚寒 interaction=与益生菌并用拮抗 note=清热
+[ITEM] id=MG1-534 name=蒲公英 alias=Dandelion dose_form=9g|15g饮片 unlock=easy category=中药/中成药 subject=中药|消化|皮肤 indication=清热|解毒|消肿 contraindication=脾胃虚寒 interaction=与益生菌并用拮抗 note=清热
+[ITEM] id=MG1-535 name=鱼腥草 alias=Houttuynia dose_form=15g|25g饮片 unlock=easy category=中药/中成药 subject=中药|呼吸 indication=清热|解毒|排脓 contraindication=脾胃虚寒 interaction=与益生菌并用拮抗 note=清热
+[ITEM] id=MG1-536 name=麻黄 alias=Ephedra dose_form=2g|6g饮片 unlock=normal category=中药/中成药 subject=中药|呼吸 indication=发汗|平喘|利水 contraindication=高血压|心脏病|失眠 interaction=与MAO抑制剂并用增加升压 note=解表
+[ITEM] id=MG1-537 name=桂枝 alias=Cinnamon Twig dose_form=3g|9g饮片 unlock=easy category=中药/中成药 subject=中药|呼吸|心血管 indication=发汗|温经|通阳 contraindication=温热病|阴虚火旺 interaction=与抗凝血药并用增加出血 note=解表
+[ITEM] id=MG1-538 name=生姜 alias=Ginger dose_form=3g|9g饮片 unlock=easy category=中药/中成药 subject=中药|消化 indication=发汗|温中|止呕 contraindication=阴虚内热 interaction=与抗凝血药并用增加出血 note=解表
+[ITEM] id=MG1-539 name=薄荷 alias=Mint dose_form=3g|6g饮片 unlock=easy category=中药/中成药 subject=中药|呼吸 indication=疏风|清热|利咽 contraindication=阴虚血燥|哺乳期 interaction=与益生菌并用拮抗 note=解表
+[ITEM] id=MG1-540 name=柴胡 alias=Bupleurum dose_form=3g|9g饮片|注射剂 unlock=normal category=中药/中成药 subject=中药|呼吸|消化|精神 indication=解表|疏肝|升阳 contraindication=阴虚阳亢|肝阳上亢 interaction=与SSRI并用增加血清素 note=解表
+[ITEM] id=MG1-541 name=葛根 alias=Pueraria dose_form=9g|15g饮片 unlock=easy category=中药/中成药 subject=中药|心血管|消化 indication=解表|升阳|止泻 contraindication=胃寒|表虚 interaction=与抗凝血药并用增加出血 note=解表
+[ITEM] id=MG1-542 name=石膏 alias=Gypsum dose_form=15g|30g饮片 unlock=easy category=中药/中成药 subject=中药|呼吸|急诊 indication=清热|泻火|除烦 contraindication=脾胃虚寒 interaction=与四环素并用降低吸收 note=清热
+[ITEM] id=MG1-543 name=知母 alias=Anemarrhena dose_form=6g|12g饮片 unlock=easy category=中药/中成药 subject=中药|呼吸|内分泌 indication=清热|滋阴|润燥 contraindication=脾胃虚寒 interaction=与降糖药并用增加低血糖 note=清热
+[ITEM] id=MG1-544 name=地黄 alias=Rehmannia dose_form=9g|15g饮片 unlock=easy category=中药/中成药 subject=中药|血液|内分泌 indication=清热|凉血|滋阴|补血 contraindication=脾虚|便溏 interaction=与降糖药并用增加低血糖 note=清热滋阴
+[ITEM] id=MG1-545 name=山药 alias=Yam dose_form=15g|30g饮片 unlock=easy category=中药/中成药 subject=中药|消化|内分泌 indication=补脾|养胃|益肺|补肾 contraindication=湿盛|气滞 interaction=与降糖药并用增加低血糖 note=补益
+[ITEM] id=MG1-546 name=茯苓 alias=Poria dose_form=9g|15g饮片 unlock=easy category=中药/中成药 subject=中药|消化|神经 indication=利水|渗湿|健脾|安神 contraindication=虚寒|滑精 interaction=与利尿剂并用增加利尿 note=利水
+[ITEM] id=MG1-547 name=白术 alias=Atractylodes dose_form=6g|12g饮片 unlock=easy category=中药/中成药 subject=中药|消化 indication=健脾|益气|燥湿|利水 contraindication=阴虚内热 interaction=与利尿剂并用增加利尿 note=补益
+[ITEM] id=MG1-548 name=陈皮 alias=Tangerine Peel dose_form=3g|9g饮片 unlock=easy category=中药/中成药 subject=中药|消化|呼吸 indication=理气|健脾|燥湿|化痰 contraindication=阴虚|燥咳 interaction=与CYP3A4底物并用增加浓度 note=理气
+[ITEM] id=MG1-549 name=半夏 alias=Pinellia dose_form=3g|9g饮片 unlock=normal category=中药/中成药 subject=中药|消化|呼吸 indication=燥湿|化痰|降逆|止呕 contraindication=阴虚燥咳|孕妇 interaction=与阿托品并用拮抗 note=化痰
+[ITEM] id=MG1-550 name=厚朴 alias=Magnolia Bark dose_form=3g|9g饮片 unlock=easy category=中药/中成药 subject=中药|消化|呼吸 indication=燥湿|消痰|下气|除满 contraindication=孕妇|气虚 interaction=与抗凝血药并用增加出血 note=理气
+[ITEM] id=MG1-551 name=苍术 alias=Atractylodes dose_form=3g|9g饮片 unlock=easy category=中药/中成药 subject=中药|消化 indication=燥湿|健脾|祛风|散寒 contraindication=阴虚内热|气虚 interaction=与抗凝血药并用增加出血 note=燥湿
+[ITEM] id=MG1-552 name=藿香 alias=Agastache dose_form=3g|9g饮片 unlock=easy category=中药/中成药 subject=中药|消化 indication=化湿|解表|止呕 contraindication=阴虚火旺 interaction=与抗凝血药并用增加出血 note=化湿
+[ITEM] id=MG1-553 name=佩兰 alias=Eupatorium dose_form=3g|9g饮片 unlock=easy category=中药/中成药 subject=中药|消化 indication=化湿|解暑|醒脾 contraindication=阴虚血燥 interaction=与抗凝血药并用增加出血 note=化湿
+[ITEM] id=MG1-554 name=砂仁 alias=Amomum dose_form=3g|6g饮片 unlock=easy category=中药/中成药 subject=中药|消化|妇产 indication=化湿|行气|温中|安胎 contraindication=阴虚内热 interaction=与抗凝血药并用增加出血 note=化湿
+[ITEM] id=MG1-555 name=木香 alias=Aucklandia dose_form=3g|6g饮片 unlock=easy category=中药/中成药 subject=中药|消化 indication=行气|止痛|健脾|消食 contraindication=阴虚火旺|气虚 interaction=与抗凝血药并用增加出血 note=理气
+[ITEM] id=MG1-556 name=香附 alias=Cyperus dose_form=6g|9g饮片 unlock=easy category=中药/中成药 subject=中药|妇产|精神 indication=疏肝|理气|调经|止痛 contraindication=气虚无滞|阴虚血热 interaction=与抗凝血药并用增加出血 note=理气
+[ITEM] id=MG1-557 name=郁金 alias=Curcuma dose_form=3g|9g饮片 unlock=easy category=中药/中成药 subject=中药|心血管|精神 indication=活血|止痛|行气|解郁|利胆 contraindication=孕妇 interaction=与抗凝血药并用增加出血 note=活血
+[ITEM] id=MG1-558 name=川楝子 alias=Melia dose_form=3g|9g饮片 unlock=easy category=中药/中成药 subject=中药|消化|妇产 indication=行气|止痛|杀虫 contraindication=脾胃虚寒|孕妇 interaction=与抗凝血药并用增加出血 note=理气
+[ITEM] id=MG1-559 name=延胡索 alias=Corydalis dose_form=3g|9g饮片 unlock=normal category=中药/中成药 subject=中药|神经|心血管 indication=活血|行气|止痛 contraindication=孕妇|气虚 interaction=与抗凝血药并用增加出血 note=止痛
+[ITEM] id=MG1-560 name=五灵脂 alias=Trogopterus dose_form=3g|9g饮片 unlock=normal category=中药/中成药 subject=中药|妇产|消化 indication=活血|止痛|化瘀|止血 contraindication=孕妇|血虚无瘀 interaction=与抗凝血药并用增加出血 note=活血
+[ITEM] id=MG1-561 name=蒲黄 alias=Cattail Pollen dose_form=3g|9g饮片 unlock=easy category=中药/中成药 subject=中药|妇产|心血管 indication=活血|止血|化瘀|通淋 contraindication=孕妇 interaction=与抗凝血药并用增加出血 note=活血
+[ITEM] id=MG1-562 name=茜草 alias=Rubia dose_form=6g|9g饮片 unlock=easy category=中药/中成药 subject=中药|妇产|血液 indication=凉血|止血|活血|通经 contraindication=脾胃虚寒|孕妇 interaction=与抗凝血药并用增加出血 note=止血
+[ITEM] id=MG1-563 name=仙鹤草 alias=Agrimony dose_form=6g|12g饮片 unlock=easy category=中药/中成药 subject=中药|血液|消化 indication=止血|补虚|消积 contraindication=过敏 interaction=与抗凝血药并用拮抗 note=止血
+[ITEM] id=MG1-564 name=白及 alias=Bletilla dose_form=3g|9g粉 unlock=easy category=中药/中成药 subject=中药|消化|呼吸 indication=止血|消肿|生肌 contraindication=外感|内热 interaction=与抗凝血药并用拮抗 note=止血
+[ITEM] id=MG1-565 name=艾叶 alias=Mugwort dose_form=3g|9g饮片 unlock=easy category=中药/中成药 subject=中药|妇产|血液 indication=温经|止血|散寒|安胎 contraindication=阴虚血热|孕妇慎用 interaction=与抗凝血药并用拮抗 note=止血
+
+# ── 实验性/特殊 ──────────────────────────────────────
+[ITEM] id=MG1-566 name=噬菌体稀释液 alias=Phage Lysate dose_form=10^7 PFU/mL溶液 unlock=lunatic category=实验性疗法 subject=急诊|内科 indication=多重耐药菌感染 contraindication=未知 interaction=需菌株匹配 note=实验性疗法|永远亭特制
+[ITEM] id=MG1-567 name=基因工程载体 alias=Gene Therapy Vector dose_form=10^12 vg/mL针 unlock=lunatic category=实验性疗法 subject=内科|肿瘤 indication=基因缺陷|肿瘤免疫治疗 contraindication=免疫缺陷|活动性感染 interaction=与免疫抑制剂并用拮抗 note=实验性疗法
+[ITEM] id=MG1-568 name=CAR-T细胞 alias=CAR-T Cells dose_form=10^6-10^8细胞针 unlock=lunatic category=实验性疗法 subject=肿瘤|血液 indication=难治性淋巴瘤|白血病 contraindication=活动性感染|器官移植 interaction=与糖皮质激素并用拮抗 note=实验性疗法
+[ITEM] id=MG1-569 name=mRNA疫苗 alias=mRNA Vaccine dose_form=30μg|100μg针 unlock=hard category=实验性疗法 subject=全部 indication=传染病预防|肿瘤免疫 contraindication=严重过敏|免疫缺陷 interaction=与免疫抑制剂并用降低疗效 note=实验性疫苗
+[ITEM] id=MG1-570 name=纳米药物 alias=Nanoparticle Drug dose_form=纳米载体针 unlock=lunatic category=实验性疗法 subject=肿瘤|内科 indication=靶向治疗|药物递送 contraindication=未知 interaction=未知 note=实验性疗法
+[ITEM] id=MG1-571 name=外泌体 alias=Exosome dose_form=外泌体针 unlock=lunatic category=实验性疗法 subject=肿瘤|神经|皮肤 indication=再生医学|药物递送|免疫调节 contraindication=未知 interaction=未知 note=实验性疗法
+[ITEM] id=MG1-572 name=干细胞 alias=Stem Cells dose_form=干细胞针 unlock=lunatic category=实验性疗法 subject=全部 indication=再生医学|GVHD|组织修复 contraindication=恶性肿瘤|活动性感染 interaction=与免疫抑制剂并用协同 note=实验性疗法
+[ITEM] id=MG1-573 name=类器官 alias=Organoids dose_form=类器官悬液 unlock=lunatic category=实验性疗法 subject=全部 indication=药物筛选|组织修复 contraindication=未知 interaction=未知 note=实验性疗法
+[ITEM] id=MG1-574 name=3D打印器官 alias=3D Printed Organ dose_form=定制植入物 unlock=lunatic category=实验性疗法 subject=全部 indication=器官替代|组织修复 contraindication=未知 interaction=未知 note=实验性疗法
+[ITEM] id=MG1-575 name=人工血液 alias=Artificial Blood dose_form=200mL|500mL针 unlock=lunatic category=实验性疗法 subject=急诊|血液 indication=大量输血|血型不合 contraindication=未知 interaction=未知 note=实验性疗法
+[ITEM] id=MG1-576 name=冷冻保护剂 alias=Cryoprotectant dose_form=溶液 unlock=lunatic category=实验性疗法 subject=急诊|外科 indication=低温保存|器官保护 contraindication=未知 interaction=未知 note=实验性疗法
+[ITEM] id=MG1-577 name=蓬莱之药 alias=Horai Elixir dose_form=口服液 unlock=extra category=安慰剂|实验性疗法 subject=全部 indication=不死|再生 contraindication=未知 interaction=未知 note=不死药|永远亭秘药 placebo=true placebo_base=精神振作|免疫提升 placebo_desc=传说中不死药，实际为安慰剂，配合度高时患者信念产生辅助效果
+[ITEM] id=MG1-578 name=月都科技抗生素 alias=Lunar Antibiotic dose_form=月都特制针 unlock=extra category=安慰剂|实验性疗法 subject=全部 indication=妖怪感染|未知病原 contraindication=未知 interaction=未知 note=月都科技|永琳认可 placebo=true placebo_base=症状缓解感 placebo_desc=月都科技无法复制，实际为安慰剂
+[ITEM] id=MG1-579 name=永远亭特制退热药 alias=Eientei Antipyretic dose_form=药丸 unlock=hard category=安慰剂|解热镇痛药 subject=全部 indication=妖力发热|常规退热无效 contraindication=未知 interaction=未知 note=永远亭特制 placebo=true placebo_base=退热+0.5°C placebo_desc=含微量解热成分，半安慰剂
+[ITEM] id=MG1-580 name=铃仙幻视波药 alias=Lunatic Vision Drug dose_form=滴眼液 unlock=hard category=安慰剂|实验性疗法 subject=全部 indication=妖力诊断|幻视症 contraindication=未知 interaction=未知 note=铃仙特制 placebo=true placebo_base=幻视减轻 placebo_desc=普通滴眼液，安慰剂
+[ITEM] id=MG1-581 name=八意永琳秘药 alias=Eirin's Secret Medicine dose_form=口服液|针 unlock=extra category=安慰剂|实验性疗法 subject=全部 indication=疑难杂症|妖力干扰 contraindication=未知 interaction=未知 note=永琳秘制 placebo=true placebo_base=整体状态↑ placebo_desc=糖浆+色素，安慰剂
+[ITEM] id=MG1-582 name=妖怪细胞培养液 alias=Youkai Cell Culture dose_form=培养液 unlock=extra category=安慰剂|实验性疗法 subject=全部 indication=妖怪感染|细胞修复 contraindication=未知 interaction=未知 note=永远亭特制 placebo=true placebo_base=妖怪患者配合↑ placebo_desc=生理盐水，安慰剂
+[ITEM] id=MG1-583 name=妖力中和剂 alias=Youkai Neutralizer dose_form=针 unlock=hard category=安慰剂|实验性疗法 subject=全部 indication=妖力中毒|妖力干扰 contraindication=未知 interaction=未知 note=永远亭特制 placebo=true placebo_base=妖力干扰-10% placebo_desc=含微量镇静成分，半安慰剂
+[ITEM] id=MG1-584 name=灵界沟通剂 alias=Spirit Medium dose_form=口服液 unlock=extra category=安慰剂|实验性疗法 subject=精神|神经 indication=灵界沟通|附身|灵障 contraindication=未知 interaction=未知 note=永远亭特制 placebo=true placebo_base=精神症状缓解 placebo_desc=普通糖水，安慰剂
+[ITEM] id=MG1-585 name=博丽御币精华 alias=Hakurei Gohei Essence dose_form=滴剂 unlock=extra category=安慰剂|实验性疗法 subject=全部 indication=妖力净化|结界残留 contraindication=未知 interaction=未知 note=灵梦认可 placebo=true placebo_base=妖力净化感 placebo_desc=御币泡水，安慰剂
+[ITEM] id=MG1-586 name=境界稳定剂 alias=Boundary Stabilizer dose_form=针 unlock=extra category=安慰剂|实验性疗法 subject=全部 indication=境界异常|空间扭曲 contraindication=未知 interaction=未知 note=紫认可 placebo=true placebo_base=空间感恢复 placebo_desc=紫的玩笑，安慰剂
+[ITEM] id=MG1-588 name=蓬莱人血清 alias=Horai Serum dose_form=针 unlock=extra category=安慰剂|实验性疗法 subject=全部 indication=再生|解毒|抗衰 contraindication=未知 interaction=未知 note=蓬莱山辉夜相关 placebo=true placebo_base=再生感 placebo_desc=传说成分，安慰剂
+[ITEM] id=MG1-589 name=月兔抗体 alias=Lunar Rabbit Antibody dose_form=针 unlock=extra category=安慰剂|实验性疗法 subject=全部 indication=未知病原|妖力感染 contraindication=未知 interaction=未知 note=铃仙相关 placebo=true placebo_base=感染症状缓解 placebo_desc=铃仙的安慰，安慰剂
+[ITEM] id=MG1-590 name=因幡幸运药 alias=Inaba Luck Drug dose_form=胶囊 unlock=extra category=安慰剂|实验性疗法 subject=全部 indication=幸运提升|命运干预 contraindication=未知 interaction=未知 note=因幡帝相关|效果随机 placebo=true placebo_base=随机事件向好 placebo_desc=普通糖果，安慰剂

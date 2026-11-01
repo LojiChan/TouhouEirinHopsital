@@ -1,0 +1,161 @@
+# ============================================================
+# 永远亭医疗模拟器 — 短句池 sentences.tehp
+# 格式：[SENTENCE] difficulty=... text=...
+# 右下角随时间/行动切换，按难度分组
+# ============================================================
+
+[POOL]
+id = Sentences
+version = 0.2.0
+lang = zh-CN
+author = Loji_
+
+# ============================================================
+# easy — 基础医疗常识，温馨
+# ============================================================
+
+[SENTENCE] difficulty=easy text=健康比娱乐更重要！
+[SENTENCE] difficulty=easy text=多喝热水。
+[SENTENCE] difficulty=easy text=早点睡觉，别熬夜。
+[SENTENCE] difficulty=easy text=按时吃饭，身体才好。
+[SENTENCE] difficulty=easy text=感冒了要多休息。
+[SENTENCE] difficulty=easy text=药别乱吃，听医生的。
+[SENTENCE] difficulty=easy text=运动是最好的药。
+[SENTENCE] difficulty=easy text=心情好，病就好一半。
+[SENTENCE] difficulty=easy text=定期体检，防患未然。
+[SENTENCE] difficulty=easy text=喝水，喝水，还是喝水。
+[SENTENCE] difficulty=easy text=别逞强，累了就歇。
+[SENTENCE] difficulty=easy text=身体是革命的本钱。
+[SENTENCE] difficulty=easy text=小病不治，大病难医。
+[SENTENCE] difficulty=easy text=今天也要好好吃饭哦。
+[SENTENCE] difficulty=easy text=永远亭欢迎你，但别常来。
+[SENTENCE] difficulty=easy text=早睡早起，精神百倍。
+[SENTENCE] difficulty=easy text=吃饭七分饱，健康活到老。
+[SENTENCE] difficulty=easy text=笑一笑，十年少。
+[SENTENCE] difficulty=easy text=病来如山倒，病去如抽丝。
+[SENTENCE] difficulty=easy text=预防胜于治疗。
+[SENTENCE] difficulty=easy text=一天一苹果，医生远离我。
+[SENTENCE] difficulty=easy text=勤洗手，少生病。
+[SENTENCE] difficulty=easy text=晒太阳，补补钙。
+[SENTENCE] difficulty=easy text=深呼吸，放轻松。
+[SENTENCE] difficulty=easy text=别着凉，多穿衣。
+
+# ============================================================
+# normal — 医学常识，日常
+# ============================================================
+
+[SENTENCE] difficulty=normal text=对许多人来说，医院是很忌讳的场所。
+[SENTENCE] difficulty=normal text=你知道吗：鸡蛋是最廉价的蛋白质给养。
+[SENTENCE] difficulty=normal text=抗生素不是万能药。
+[SENTENCE] difficulty=normal text=发烧是身体的防御反应。
+[SENTENCE] difficulty=normal text=咳嗽是清除异物的本能。
+[SENTENCE] difficulty=normal text=疼痛是身体的警报。
+[SENTENCE] difficulty=normal text=血压高，别忽视。
+[SENTENCE] difficulty=normal text=血糖高，要控制。
+[SENTENCE] difficulty=normal text=心电图能看出很多秘密。
+[SENTENCE] difficulty=normal text=验血是最基础的检查。
+[SENTENCE] difficulty=normal text=别小看一次感冒。
+[SENTENCE] difficulty=normal text=药有三分毒。
+[SENTENCE] difficulty=normal text=医嘱要听，别自作主张。
+[SENTENCE] difficulty=normal text=病从口入，祸从口出。
+[SENTENCE] difficulty=normal text=永远亭的茶，喝了会好一点。
+[SENTENCE] difficulty=normal text=铃仙的耳朵，能听到你的心跳。
+[SENTENCE] difficulty=normal text=因幡帝的幸运，也许能帮到你。
+[SENTENCE] difficulty=normal text=永琳医生，什么病都见过。
+[SENTENCE] difficulty=normal text=幻想乡的医疗，靠的是经验。
+[SENTENCE] difficulty=normal text=别怕，我们尽力。
+[SENTENCE] difficulty=normal text=体温计不会说谎。
+[SENTENCE] difficulty=normal text=听诊器能听见你的秘密。
+[SENTENCE] difficulty=normal text=血压计上的数字，是生命的刻度。
+[SENTENCE] difficulty=normal text=感染，往往从一个伤口开始。
+[SENTENCE] difficulty=normal text=休息，也是治疗的一部分。
+
+# ============================================================
+# hard — 急诊压力，专业
+# ============================================================
+
+[SENTENCE] difficulty=hard text=任务多？医者，那是你的职责！
+[SENTENCE] difficulty=hard text=你知道吗：抗生素不能打败病毒。
+[SENTENCE] difficulty=hard text=时间就是生命，别浪费。
+[SENTENCE] difficulty=hard text=诊断错了，比不诊断更糟。
+[SENTENCE] difficulty=hard text=用药如用兵，剂量是关键。
+[SENTENCE] difficulty=hard text=手术刀下，没有第二次机会。
+[SENTENCE] difficulty=hard text=监护仪上的每一个数字，都是线索。
+[SENTENCE] difficulty=hard text=病情变化，往往在几分钟内。
+[SENTENCE] difficulty=hard text=别相信直觉，相信数据。
+[SENTENCE] difficulty=hard text=患者的沉默，可能是最危险的信号。
+[SENTENCE] difficulty=hard text=永远亭的夜晚，从不安静。
+[SENTENCE] difficulty=hard text=急诊室的门，永远开着。
+[SENTENCE] difficulty=hard text=你救不了所有人，但你可以尽力。
+[SENTENCE] difficulty=hard text=压力是医生的日常。
+[SENTENCE] difficulty=hard text=别倒下，你是最后的防线。
+[SENTENCE] difficulty=hard text=幻想乡的医生，不只是医生。
+[SENTENCE] difficulty=hard text=妖力干扰，是诊断的一部分。
+[SENTENCE] difficulty=hard text=永远亭的药，不是凡间的药。
+[SENTENCE] difficulty=hard text=博丽的结界，有时也是治疗。
+[SENTENCE] difficulty=hard text=你确定，你判断对了吗？
+[SENTENCE] difficulty=hard text=休克，是沉默的杀手。
+[SENTENCE] difficulty=hard text=呼吸停了，一切都停了。
+[SENTENCE] difficulty=hard text=心率不齐，是心脏在求救。
+[SENTENCE] difficulty=hard text=血压掉下来，是最后的警告。
+[SENTENCE] difficulty=hard text=别犹豫，犹豫就是失败。
+
+# ============================================================
+# lunatic — 疯狂，诡异
+# ============================================================
+
+[SENTENCE] difficulty=lunatic text=医生精神失常的概率往往比病人更高。
+[SENTENCE] difficulty=lunatic text=这是更加……疯狂的永远亭。
+[SENTENCE] difficulty=lunatic text=你听见了吗？那是心跳，还是钟摆？
+[SENTENCE] difficulty=lunatic text=病房的灯，从不熄灭。
+[SENTENCE] difficulty=lunatic text=凌晨三点，谁在走廊上走？
+[SENTENCE] difficulty=lunatic text=铃仙的眼睛，看见了什么？
+[SENTENCE] difficulty=lunatic text=因幡帝的幸运，用完了吗？
+[SENTENCE] difficulty=lunatic text=永琳医生的药，你敢吃吗？
+[SENTENCE] difficulty=lunatic text=幻想乡的边界，在哪里？
+[SENTENCE] difficulty=lunatic text=生与死，只是一线之隔。
+[SENTENCE] difficulty=lunatic text=你确定，患者还活着吗？
+[SENTENCE] difficulty=lunatic text=监护仪上的直线，是安静还是终结？
+[SENTENCE] difficulty=lunatic text=别回头，后面没有东西。
+[SENTENCE] difficulty=lunatic text=永远亭的地下，还有什么？
+[SENTENCE] difficulty=lunatic text=月都的科技，你无法理解。
+[SENTENCE] difficulty=lunatic text=蓬莱之药，真的存在吗？
+[SENTENCE] difficulty=lunatic text=你，还是你吗？
+[SENTENCE] difficulty=lunatic text=疯狂，是医生的职业病。
+[SENTENCE] difficulty=lunatic text=欢迎来到，永远的急诊。
+[SENTENCE] difficulty=lunatic text=你救的，是人，还是妖？
+[SENTENCE] difficulty=lunatic text=这里的钟表，都在倒着走。
+[SENTENCE] difficulty=lunatic text=你的影子，比你更早下班。
+[SENTENCE] difficulty=lunatic text=病历上的名字，不是患者写的。
+[SENTENCE] difficulty=lunatic text=你已经连续工作了……多久？
+[SENTENCE] difficulty=lunatic text=下一床，永远在等着你。
+
+# ============================================================
+# extra — 诗意，意识流
+# ============================================================
+
+[SENTENCE] difficulty=extra text=白光苍白的打在瓷砖上面……
+[SENTENCE] difficulty=extra text=生与死的交界处，弥散着氯的气息……
+[SENTENCE] difficulty=extra text=走廊尽头，有一扇不该存在的门。
+[SENTENCE] difficulty=extra text=你听见自己的心跳，像鼓点。
+[SENTENCE] difficulty=extra text=病房的窗外，没有月亮。
+[SENTENCE] difficulty=extra text=消毒水的味道，掩盖不了什么。
+[SENTENCE] difficulty=extra text=时间在这里，失去了意义。
+[SENTENCE] difficulty=extra text=你确定，这是现实吗？
+[SENTENCE] difficulty=extra text=患者的眼睛里，映出你的脸。
+[SENTENCE] difficulty=extra text=永远亭的钟，停了。
+[SENTENCE] difficulty=extra text=你写下诊断，笔尖在颤抖。
+[SENTENCE] difficulty=extra text=药瓶上的标签，写着你的名字。
+[SENTENCE] difficulty=extra text=你，是医生，还是患者？
+[SENTENCE] difficulty=extra text=幻想乡的梦，醒不过来了。
+[SENTENCE] difficulty=extra text=氯的气息，越来越浓。
+[SENTENCE] difficulty=extra text=生与死，只隔一层纱布。
+[SENTENCE] difficulty=extra text=你听见了吗？有人在叫你。
+[SENTENCE] difficulty=extra text=永远亭的夜，没有尽头。
+[SENTENCE] difficulty=extra text=你，还在这里吗？
+[SENTENCE] difficulty=extra text=欢迎回来，永琳。
+[SENTENCE] difficulty=extra text=白色的走廊，白色的墙，白色的……
+[SENTENCE] difficulty=extra text=心跳声，呼吸声，然后什么都听不见。
+[SENTENCE] difficulty=extra text=手术灯下，一双手，不属于任何人。
+[SENTENCE] difficulty=extra text=病历翻到最后一页，是空白。
+[SENTENCE] difficulty=extra text=永远亭的门，从此不再关上。
